@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quran Ilm Academy - Admission & Free Trial</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              deepBlue: '#013977',
+              gold: '#D97706',
+              lilac: '#D6C7F0',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Section -->
+    <header class="bg-deepBlue border-b border-slate-800 py-4 px-6 shadow-md flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-xl font-extrabold text-gold tracking-wide">Online Quran Ilm Academy</span>
+        </div>
+        <div>
+            <!-- Button to open Modal -->
+            <button onclick="openAdmissionModal()" class="bg-gold hover:bg-amber-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 text-sm">
+                Book Free Trial
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content / Hero Demonstration -->
+    <main class="flex-grow container mx-auto px-4 py-12 flex flex-col items-center justify-center text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Learn Quran Online with Certified Tutors</h1>
+        <p class="text-slate-300 max-w-xl mb-8 text-base">Experience one-to-one live interactive Quran classes with expert male and female tutors tailored for all ages.</p>
+        
+        <!-- Trigger Modal Button -->
+        <button onclick="openAdmissionModal()" class="bg-gold hover:bg-amber-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-xl transition transform hover:scale-105 text-lg">
+            Register For Free Trial Now
+        </button>
+
+        <!-- Direct Inline Form Section (Can be pasted on any admission page) -->
+        <section class="mt-16 w-full max-w-lg bg-deepBlue/50 border border-slate-700 p-8 rounded-3xl shadow-2xl text-left">
+            <h2 class="text-2xl font-bold text-white mb-2">Direct Admission Form</h2>
+            <p class="text-slate-400 text-sm mb-6">Fill out the details below to secure your spot.</p>
+            
+            <!-- Reusable Admission Form Template -->
+            <div id="inline-form-container">
+                <form name="admission-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event, this)" class="space-y-4">
+                    <input type="hidden" name="form-name" value="admission-form" />
+                    <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+                    <input type="hidden" name="subject" value="New Free Trial Admission Inquiry - Online Quran Ilm Academy" />
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Parent's Full Name</label>
+                        <input type="text" name="parent_name" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="Enter parent name">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Student's Name & Age</label>
+                        <input type="text" name="student_details" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="e.g. Ahmed, 8 years">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">WhatsApp Number</label>
+                        <input type="tel" name="whatsapp_number" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="+92 319 8427973">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Preferred Course</label>
+                        <select name="course" class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition">
+                            <option value="Quran Reading with Tajweed">Quran Reading with Tajweed</option>
+                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+                            <option value="Islamic Studies for Kids">Islamic Studies for Kids</option>
+                            <option value="Arabic Language">Arabic Language Course</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-gold hover:bg-amber-600 text-white font-bold rounded-xl transition shadow-lg text-base">
+                        Submit & Book Free Trial
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup Admission Modal -->
+    <div id="admissionModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-deepBlue border border-slate-700 w-full max-w-lg p-8 rounded-3xl shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <!-- Close Button -->
+            <button onclick="closeAdmissionModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl font-bold bg-slate-800/60 hover:bg-slate-700 w-9 h-9 rounded-full flex items-center justify-center transition">
+                &times;
+            </button>
+            
+            <div class="mb-6">
+                <h3 class="text-2xl font-extrabold text-white">Book Free Trial Class</h3>
+                <p class="text-slate-300 text-xs mt-1">Fill out the form below and start your Quran learning journey.</p>
+            </div>
+
+            <!-- Modal Form Container -->
+            <div id="modal-form-container">
+                <form name="admission-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event, this)" class="space-y-4">
+                    <input type="hidden" name="form-name" value="admission-form" />
+                    <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+                    <input type="hidden" name="subject" value="New Free Trial Admission Inquiry - Online Quran Ilm Academy" />
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Parent's Full Name</label>
+                        <input type="text" name="parent_name" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="Enter parent name">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Student's Name & Age</label>
+                        <input type="text" name="student_details" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="e.g. Ahmed, 8 years">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">WhatsApp Number</label>
+                        <input type="tel" name="whatsapp_number" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="+92 319 8427973">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Preferred Course</label>
+                        <select name="course" class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition">
+                            <option value="Quran Reading with Tajweed">Quran Reading with Tajweed</option>
+                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+                            <option value="Islamic Studies for Kids">Islamic Studies for Kids</option>
+                            <option value="Arabic Language">Arabic Language Course</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-gold hover:bg-amber-600 text-white font-bold rounded-xl transition shadow-lg text-sm">
+                        Submit & Book Free Trial
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-deepBlue border-t border-slate-800 py-6 text-center text-slate-400 text-xs">
+        &copy; 2026 Online Quran Ilm Academy. All rights reserved.
+    </footer>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        // Modal Control Functions
+        function openAdmissionModal() {
+            const modal = document.getElementById('admissionModal');
+            const content = document.getElementById('modalContent');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }
+
+        function closeAdmissionModal() {
+            const modal = document.getElementById('admissionModal');
+            const content = document.getElementById('modalContent');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+        }
+
+        // Close modal when clicking outside background
+        window.onclick = function(event) {
+            const modal = document.getElementById('admissionModal');
+            if (event.target === modal) {
+                closeAdmissionModal();
+            }
+        }
+
+        // Unified AJAX Form Submission & Success Handler
+        function handleFormSubmit(event, formElement) {
+            event.preventDefault();
+
+            const formData = new FormData(formElement);
+            
+            // Extract values for WhatsApp message creation
+            const parentName = formData.get('parent_name');
+            const studentDetails = formData.get('student_details');
+            const whatsappNumber = formData.get('whatsapp_number');
+            const course = formData.get('course');
+
+            // 1. Submit data asynchronously to Netlify (No page reload)
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            }).then(() => {
+                console.log("Form successfully submitted to Netlify backend.");
+            }).catch((error) => {
+                console.warn("Netlify submission error or running locally:", error);
+            });
+
+            // 2. Trigger background WhatsApp automated chat link to +923198427973
+            const waMessage = `New Free Trial Inquiry:%0A- Parent Name: ${parentName}%0A- Student Details: ${studentDetails}%0A- WhatsApp: ${whatsappNumber}%0A- Course: ${course}`;
+            const targetWhatsapp = "923198427973";
+            
+            // Open silent hidden link / tab to dispatch self message
+            setTimeout(() => {
+                window.open(`https://wa.me/${targetWhatsapp}?text=${waMessage}`, '_blank');
+            }, 500);
+
+            // 3. Render Custom Success State UI inside the container without page reload
+            const successHTML = `
+                <div class="py-6 px-4 text-center space-y-4 animate-fade-in">
+                    <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-3xl font-bold border border-emerald-500/30">
+                        ✓
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white">Registration Successful!</h3>
+                    <div class="space-y-3 text-slate-300 text-sm leading-relaxed text-left bg-slate-900/60 p-5 rounded-2xl border border-slate-700">
+                        <p class="font-bold text-gold text-base">Your Quran Learning Journey Starts Here</p>
+                        <p>You just joined a dedicated community of Quran and Arabic learners. Check your e-mail to take your first step.</p>
+                        <p class="text-xs text-slate-400 pt-2 border-t border-slate-800">
+                            Thank you for choosing Online Quran Ilm Academy.<br>
+                            We have received your Free Trial Class request, and a coordinator from our support desk will contact you shortly to confirm your preferred schedule and introduce you to your tutor.<br><br>
+                            We are excited to help you begin your Quran learning journey with confidence and ease.
+                        </p>
+                    </div>
+                    <button onclick="location.reload()" class="mt-4 px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition">
+                        Back to Website
+                    </button>
+                </div>
+            `;
+
+            // Inject into whichever container (Inline or Modal) was submitted
+            const parentContainer = formElement.closest('#inline-form-container') || formElement.closest('#modal-form-container');
+            if (parentContainer) {
+                parentContainer.innerHTML = successHTML;
+            }
+        }
+    </script>
+</body>
+</html>

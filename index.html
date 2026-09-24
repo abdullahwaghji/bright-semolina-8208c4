@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================
+       PRIMARY SEO
+       TODO: replace "Noor Al-Quran Academy" and "yourdomain.com"
+       with your real academy name and domain everywhere in this file.
+       ============================================================ -->
+  <title>Learn Quran Online with Certified Tutors | Noor Al-Quran Academy</title>
+  <meta name="description" content="Enroll your child in live 1-on-1 online Quran classes. Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies with certified male and female tutors. Book a free trial.">
+  <meta name="keywords" content="online Quran academy, learn Quran online, Quran classes for kids, Noorani Qaida online, Hifz classes online, Tajweed course, female Quran tutor">
+  <meta name="author" content="Noor Al-Quran Academy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.yourdomain.com/">
+  <meta name="theme-color" content="#06382E">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noor Al-Quran Academy">
+  <meta property="og:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta property="og:description" content="Live 1-on-1 Quran classes for children. Certified male and female tutors, flexible timings and a free trial class.">
+  <meta property="og:url" content="https://www.yourdomain.com/">
+  <meta property="og:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta name="twitter:description" content="Live 1-on-1 Quran classes for children. Certified tutors, flexible timings and a free trial class.">
+  <meta name="twitter:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+
+  <!-- Favicon (inline SVG, swap for your own files later) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230B6B54'/%3E%3Ccircle cx='19' cy='20' r='11' fill='%23C9A24A'/%3E%3Ccircle cx='23' cy='16' r='9' fill='%230B6B54'/%3E%3C/svg%3E">
+
+  <!-- ============================================================
+       FONTS + CDN LIBRARIES
+       Amiri  : classical Arabic-inspired serif (headings + Arabic text)
+       Figtree: clean, friendly sans-serif (body + UI)
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Brand palette + fonts for the whole site.
+       Reuse this same config block on every page so colours stay consistent. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jade:   { 50:'#F1F8F5', 100:'#DCEFE8', 200:'#B7DDD0', 500:'#0B6B54', 600:'#095A47', 700:'#084C3C', 800:'#06382E', 900:'#042A22' },
+            lagoon: { 50:'#EAF6F6', 100:'#CFEAEA', 500:'#0E7C7B', 600:'#0B6564', 700:'#094F4F' },
+            gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
+            mist:   '#F4F9F7'
+          },
+          fontFamily: {
+            display: ['outfit', 'inter', 'Montserrat'],
+            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- ============================================================
+       CUSTOM CSS (only what Tailwind utilities can't do cleanly)
+       ============================================================ -->
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    /* Visible keyboard focus everywhere */
+    :focus-visible { outline: 3px solid #C9A24A; outline-offset: 3px; border-radius: 4px; }
+
+    /* Calm the default AOS travel distance (it is 100px by default) */
+    [data-aos="fade-up"]    { transform: translate3d(0, 24px, 0); }
+    [data-aos="fade-left"]  { transform: translate3d(28px, 0, 0); }
+    [data-aos="fade-right"] { transform: translate3d(-28px, 0, 0); }
+
+    /* Islamic geometric pattern (8-point star) used in the hero + blog placeholder */
+    .geo-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9A24A' stroke-opacity='.28' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .hero-pattern {
+      -webkit-mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+              mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+    }
+
+    /* Star medallion: two overlapping squares (one rotated) behind an icon */
+    .medallion {
+      position: relative; display: inline-grid; place-items: center; flex-shrink: 0;
+      width: 3.5rem; height: 3.5rem; isolation: isolate;
+      color: #fff; font-size: 1.1rem; --m-bg: #0B6B54;
+    }
+    .medallion::before, .medallion::after {
+      content: ""; position: absolute; inset: .5rem; z-index: -1;
+      background: var(--m-bg); border-radius: .3rem;
+    }
+    .medallion::after { transform: rotate(45deg); }
+    .medallion--gold   { --m-bg: #C9A24A; color: #042A22; }
+    .medallion--lagoon { --m-bg: #0E7C7B; }
+    .medallion--dark   { --m-bg: #06382E; color: #EBD59A; }
+
+    /* Desktop nav underline */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 2px;
+      background: #C9A24A; transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    }
+    .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+    /* FAQ accordion: smooth height using grid rows */
+    .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq-panel > div { overflow: hidden; visibility: hidden; transition: visibility 0s linear .3s; }
+    .faq-panel[data-open="true"] { grid-template-rows: 1fr; }
+    .faq-panel[data-open="true"] > div { visibility: visible; transition-delay: 0s; }
+    .faq-icon { transition: transform .25s ease; }
+    .faq-trigger[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-panel, .faq-panel > div, .faq-icon, .nav-link::after { transition: none; }
+    }
+  </style>
+
+  <!-- If JavaScript is disabled, show animated elements anyway -->
+  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
+
+  <!-- ============================================================
+       STRUCTURED DATA (JSON-LD) – helps Google understand the site
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Noor Al-Quran Academy",
+    "url": "https://www.yourdomain.com/",
+    "logo": "https://www.yourdomain.com/images/logo.png",
+    "description": "Online Quran academy offering live one-to-one classes in Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies for children and adults.",
+    "email": "info@yourdomain.com",
+    "telephone": "+92-300-0000000",
+    "areaServed": "Worldwide",
+    "sameAs": [
+      "https://www.facebook.com/yourpage",
+      "https://www.instagram.com/yourpage",
+      "https://www.youtube.com/@yourchannel"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What age can my child start learning the Quran online?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most children start between ages 4 and 6 with Noorani Qaida. Older children and adults are welcome too, and your tutor will begin at the level that suits the student." } },
+      { "@type": "Question", "name": "Do you offer a free trial class?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Book a free trial class to meet a tutor, check the audio and video, and see how your child feels about learning. No card details are needed." } },
+      { "@type": "Question", "name": "What do we need to join online classes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A computer, tablet or phone with a camera and microphone, a stable internet connection, and a quiet corner. Headphones help children focus. We will guide you through the setup before the first class." } },
+      { "@type": "Question", "name": "Can my daughter learn with a female tutor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Female tutors are available for girls and for women. Just mention your preference when you enroll." } },
+      { "@type": "Question", "name": "How are class timings arranged?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You choose the days and time slots that fit school, work and your time zone. If something changes, you can ask to reschedule with advance notice." } },
+      { "@type": "Question", "name": "How will I know my child is making progress?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Parents receive a progress report every month covering what was learned, strengths and areas to practise. Tutors also share short feedback after lessons." } },
+      { "@type": "Question", "name": "Which payment methods do you accept?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We accept Visa, Mastercard, PayPal and JazzCash." } }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-jade-800 antialiased">
+
+  <!-- Accessibility: skip link for keyboard users -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-jade-900">Skip to main content</a>
+<!-- ============================================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ============================================================ -->
+  <div class="bg-[#013977] text-white text-xs sm:text-sm py-2 px-4 border-b border-[#D6C7F0]/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <!-- Left Contact Info -->
+      <div class="flex items-center space-x-4 text-[#F3EFFF]/90">
+        <a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D6C7F0] transition flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-[#D97706]"></i>
+          <span>info@onlinequranilmacademy.com</span>
+        </a>
+        <a href="tel:+923198427973" class="hover:text-[#D6C7F0] transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D97706]"></i>
+          <span>+92 319 8427973</span>
+        </a>
+      </div>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center space-x-3">
+        <span class="bg-[#D97706] text-white px-2.5 py-0.5 rounded-full font-bold text-[11px] shadow-sm tracking-wide">
+          24/7 Live Support
+        </span>
+        <a href="enroll.html?trial=1" class="text-[#D6C7F0] hover:text-white font-medium transition flex items-center gap-1">
+          <i class="fa-regular fa-calendar-check text-xs"></i> Book Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       1. HEADER / NAVBAR (Sticky & Glassmorphism Modern Design)
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-[#D6C7F0]/30 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Logo + Academy Title & Tagline -->
+      <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
+        <img 
+          src="images/Online quran ilm academy logo new.png" 
+          alt="Online Quran Ilm Academy Logo" 
+          class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+          width="1023"
+          height="1024"
+        />
+        <div class="flex flex-col justify-center">
+          <span class="font-display text-lg font-extrabold text-[#013977] leading-tight sm:text-xl lg:text-2xl group-hover:text-[#D97706] transition-colors">
+            Online Quran ilm Academy
+          </span>
+          <span class="text-[10px] sm:text-xs font-medium text-[#013977]/75 tracking-wider uppercase">
+           <span class="text-[#D97706]">  Spreading the Light of Quran</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden lg:block">
+        <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
+          <li>
+            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
+          </li>
+          <li>
+            <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Library</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-[#D97706] px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D97706]/20 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-lg min-[480px]:inline-flex">
+          <i class="fa-solid fa-user-plus text-xs" aria-hidden="true"></i> Enroll Now
+        </a>
+
+        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D6C7F0] text-[#013977] hover:bg-[#F3EFFF] transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i data-icon="open" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          <i data-icon="close" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden border-t border-[#D6C7F0]/30 bg-white lg:hidden">
+      <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+        <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
+          <li>
+            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Courses</a>
+          </li>
+          <li>
+            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
+          </li>
+          <li>
+            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 font-bold text-white shadow-md hover:bg-[#b56305] transition">
+            <i class="fa-solid fa-user-plus text-sm" aria-hidden="true"></i> Enroll Now
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+<!-- ============================================================
+     2. HERO SECTION (Updated with Brand Blue & Lilac Palette)
+     ============================================================ -->
+<section id="hero" class="relative overflow-hidden bg-gradient-to-br from-[#013977] via-[#012d5e] to-[#011f42] text-white" aria-labelledby="hero-title">
+  
+  <!-- Modern Geometric & Soft Glow Overlay (Replaced Old Star Pattern) -->
+  <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true" style="background-image: radial-gradient(#D6C7F0 1px, transparent 1px); background-size: 28px 28px;"></div>
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#D6C7F0]/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 -right-24 w-96 h-96 rounded-full bg-[#D97706]/15 blur-3xl pointer-events-none"></div>
+
+  <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:pb-28 lg:pt-16">
+
+    <!-- Left: Copy & Call-to-Actions -->
+    <div class="lg:col-span-7" data-aos="fade-up">
+      <!-- Bismillah with Amiri Arabic Font -->
+      <p class="font-arabic text-2xl font-bold text-[#D6C7F0] sm:text-3xl tracking-wide">
+        <span lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span>
+      </p>
+
+      <h1 id="hero-title" class="mt-4 font-display text-4xl font-extrabold leading-[1.15] sm:text-5xl xl:text-6xl text-white">
+        Learn Quran Online with <span class="text-[#D6C7F0]">Certified Tutors</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-[#F3EFFF]/90">
+        Live 1-on-1 online Quran classes tailored for children and adults. Master Noorani Qaida, Tajweed, Hifz, and Islamic Studies from certified male and female tutors.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="enroll.html?trial=1" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D97706] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#D97706]/30 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-xl">
+          <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Book Free Trial
+        </a>
+        <a href="courses.html" class="inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-[#D6C7F0]/40 bg-[#013977]/50 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-[#D6C7F0] hover:bg-[#D6C7F0]/10">
+          <i class="fa-solid fa-book-open text-[#D6C7F0]" aria-hidden="true"></i> Explore Courses
+        </a>
+      </div>
+
+      <!-- Feature Bullet Points -->
+      <ul class="mt-10 grid gap-3 text-sm font-medium text-[#F3EFFF]/90 sm:grid-cols-3 sm:gap-4">
+        <li class="flex items-center gap-2.5 bg-white/5 rounded-lg px-3 py-2 border border-white/10">
+          <i class="fa-solid fa-circle-check text-[#D97706]" aria-hidden="true"></i>
+          <span>Free Trial Class</span>
+        </li>
+        <li class="flex items-center gap-2.5 bg-white/5 rounded-lg px-3 py-2 border border-white/10">
+          <i class="fa-solid fa-circle-check text-[#D97706]" aria-hidden="true"></i>
+          <span>Male & Female Tutors</span>
+        </li>
+        <li class="flex items-center gap-2.5 bg-white/5 rounded-lg px-3 py-2 border border-white/10">
+          <i class="fa-solid fa-circle-check text-[#D97706]" aria-hidden="true"></i>
+          <span>Flexible Timings</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Modern Academy Showcase (Card Frame for Image or Dynamic Content) -->
+    <div class="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none" data-aos="fade-left" data-aos-delay="150">
+      <div class="relative rounded-3xl border-2 border-[#D6C7F0]/30 bg-gradient-to-b from-white/10 to-white/5 p-3 backdrop-blur-md shadow-2xl">
+        
+        <!-- Inner Screen Area (Image placeholder or Live Class Mockup) -->
+        <div class="relative aspect-[4/3] sm:aspect-[14/11] overflow-hidden rounded-2xl bg-[#012d5e] border border-white/10 flex flex-col justify-between p-6">
+          
+          <!-- Background Decorative Arch Gradient -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#011f42] via-transparent to-transparent z-0"></div>
+
+          <!-- Top Badge -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-2 rounded-full bg-[#D97706]/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+              <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> Live 1-on-1 Class
+            </span>
+            <div class="flex gap-1.5 text-[#D6C7F0]">
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+              <i class="fa-solid fa-star text-xs"></i>
+            </div>
+          </div>
+
+          <!-- Center Content Showcase -->
+          <div class="relative z-10 my-auto text-center py-4">
+            <div class="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#D6C7F0] text-[#013977] shadow-lg">
+              <i class="fa-solid fa-graduation-cap text-3xl"></i>
+            </div>
+            <h3 class="font-arabic text-2xl font-bold text-white">Online Quran ilm Academy</h3>
+            <p class="text-xs text-[#F3EFFF]/80 mt-1">Interactive Audio & Video Learning Environment</p>
+          </div>
+
+          <!-- Bottom Card Floating Stats -->
+          <div class="relative z-10 grid grid-cols-2 gap-2 rounded-xl bg-[#013977]/80 p-3 border border-[#D6C7F0]/20 text-center">
+            <div>
+              <p class="text-lg font-bold text-[#D6C7F0]">Live</p>
+              <p class="text-[11px] text-white/80">Interactive Sessions</p>
+            </div>
+            <div class="border-l border-white/10">
+              <p class="text-lg font-bold text-[#D97706]">Flexible</p>
+              <p class="text-[11px] text-white/80">All Timezones</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Transition Wave/Divider (Smooth transition to white content area) -->
+  <!-- <div class="relative h-8 w-full overflow-hidden text-white leading-none">
+    <svg class="relative block w-full h-8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 0 120 1200 120z" class="fill-white"></path>
+    </svg>
+  </div> -->
+</section>
+
+    <!-- ============================================================
+         3. SHORT ABOUT US
+         ============================================================ -->
+ <!-- ============================================================
+         3. ABOUT SECTION (Updated with Brand Theme & Name)
+         ============================================================ -->
+    <section id="about" class="py-20 lg:py-28 bg-white" aria-labelledby="about-title">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 items-center">
+
+        <div class="lg:col-span-5" data-aos="fade-right">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#F3EFFF] px-3 py-1 rounded-full mb-3">About Our Academy</span>
+          <h2 id="about-title" class="font-display text-3xl font-extrabold text-[#013977] sm:text-4xl leading-tight">A trusted place for children and adults to learn the Quran</h2>
+          <p class="mt-5 leading-relaxed text-gray-600">
+            Online Quran Ilm Academy helps students around the world read the Quran correctly and develop a lifelong love for learning it. Every class is live and one-to-one, taught by certified tutors who are patient and experienced. Lessons follow a structured curriculum, from the first Arabic letters to fluent recitation with Tajweed, with regular progress updates for parents.
+          </p>
+          <a href="about.html" class="mt-6 inline-flex items-center gap-2 font-bold text-[#013977] underline decoration-[#D97706] decoration-2 underline-offset-8 hover:text-[#D97706] transition-colors">
+            Read our story <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Highlight boxes (slightly staggered on desktop) -->
+        <div class="flex flex-col gap-4 lg:col-span-7">
+          <div class="flex items-start gap-5 rounded-2xl border border-[#D6C7F0]/40 bg-[#F3EFFF]/50 p-5 sm:p-6 transition-all hover:shadow-md" data-aos="fade-up">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#013977] text-[#D6C7F0] shadow-md"><i class="fa-solid fa-graduation-cap text-xl" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-[#013977]">Certified tutors</h3>
+              <p class="mt-1 text-sm leading-relaxed text-gray-600">Qualified teachers with years of experience teaching recitation with confidence and proper accent.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 rounded-2xl border border-[#D6C7F0]/40 bg-[#F3EFFF]/50 p-5 sm:p-6 lg:ml-8 transition-all hover:shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D97706] text-white shadow-md"><i class="fa-solid fa-user-group text-xl" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-[#013977]">1-on-1 live classes</h3>
+              <p class="mt-1 text-sm leading-relaxed text-gray-600">Every student gets the tutor's full attention and learns at their own comfortable pace in every session.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 rounded-2xl border border-[#D6C7F0]/40 bg-[#F3EFFF]/50 p-5 sm:p-6 lg:ml-16 transition-all hover:shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#013977] text-[#D6C7F0] shadow-md"><i class="fa-solid fa-clock text-xl" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-[#013977]">Flexible timings</h3>
+              <p class="mt-1 text-sm leading-relaxed text-gray-600">Choose convenient slots that fit school, work and your time zone with easy rescheduling options.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. OUR COURSES (Modern Animated Image Cards Preview)
+         ============================================================ -->
+    <!-- ============================================================
+         3. ABOUT SECTION (Updated with Brand Theme & Name)
+         ============================================================ -->
+    <!-- ============================================================
+     4. OUR COURSES (3 per row layout, 'Explore Course' button)
+     ============================================================ -->
+<section id="courses" class="bg-[#F3EFFF]/30 py-20 lg:py-28 border-t border-b border-[#D6C7F0]/20" aria-labelledby="courses-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end" data-aos="fade-up">
+      <div class="max-w-2xl">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#F3EFFF] px-3 py-1 rounded-full mb-3">Our Programs</span>
+        <h2 id="courses-title" class="font-display text-3xl font-extrabold text-[#013977] sm:text-4xl">Courses tailored to your level</h2>
+        <p class="mt-4 leading-relaxed text-gray-600">From basic Arabic letters to memorizing whole surahs, choose the right path for your spiritual journey.</p>
+      </div>
+      <a href="courses.html" class="inline-flex shrink-0 items-center gap-2 font-bold text-[#013977] underline decoration-[#D97706] decoration-2 underline-offset-8 hover:text-[#D97706] transition-colors">
+        View all courses <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Grid configured to display 3 items per row on desktop/tablet views -->
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Course 1: Noorani Qaida -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-[#D6C7F0]/50 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden bg-[#013977]">
+          <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=600&q=80" alt="Noorani Qaida" class="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#013977] via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 rounded-full bg-[#D97706] px-3 py-1 text-xs font-bold text-white shadow">Beginner</span>
+          <p class="absolute bottom-3 left-4 font-arabic text-2xl font-bold text-[#D6C7F0]" lang="ar" dir="rtl">القاعدة النورانية</p>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Noorani Qaida</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-600">The perfect foundation. Learn Arabic letters, correct articulation points, and letter joining step by step.</p>
+          <ul class="mt-4 space-y-2 text-xs font-medium text-gray-600 border-t border-gray-100 pt-3">
+            <li class="flex items-center"><i class="fa-solid fa-child mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>Ages 4 and up</li>
+            <li class="flex items-center"><i class="fa-regular fa-clock mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>3 to 6 months duration</li>
+          </ul>
+          <a href="courses.html#noorani-qaida" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#013977] px-5 py-2.5 text-sm font-bold text-[#013977] transition hover:bg-[#013977] hover:text-white">Explore Course</a>
+        </div>
+      </article>
+
+      <!-- Course 2: Quran Reading -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-[#D6C7F0]/50 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden bg-[#013977]">
+          <img src="https://images.unsplash.com/photo-1584286595398-a19f2d34c86e?auto=format&fit=crop&w=600&q=80" alt="Quran Reading" class="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#013977] via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 rounded-full bg-[#013977] px-3 py-1 text-xs font-bold text-white shadow border border-[#D6C7F0]/30">Popular</span>
+          <p class="absolute bottom-3 left-4 font-arabic text-2xl font-bold text-[#D6C7F0]" lang="ar" dir="rtl">قراءة القرآن</p>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Quran Reading</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-600">Read the Holy Quran fluently with correct pronunciation, tone, and fundamental rules of Tajweed.</p>
+          <ul class="mt-4 space-y-2 text-xs font-medium text-gray-600 border-t border-gray-100 pt-3">
+            <li class="flex items-center"><i class="fa-solid fa-child mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>After Qaida level</li>
+            <li class="flex items-center"><i class="fa-regular fa-clock mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>Ongoing, at your pace</li>
+          </ul>
+          <a href="courses.html#quran-reading" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#013977] px-5 py-2.5 text-sm font-bold text-[#013977] transition hover:bg-[#013977] hover:text-white">Explore Course</a>
+        </div>
+      </article>
+
+      <!-- Course 3: Hifz Program -->
+      <article class="group flex flex-col overflow-hidden rounded-2xl border border-[#D6C7F0]/50 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 overflow-hidden bg-[#013977]">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Hifz Program" class="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#013977] via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 rounded-full bg-[#D97706] px-3 py-1 text-xs font-bold text-white shadow">Advanced</span>
+          <p class="absolute bottom-3 left-4 font-arabic text-2xl font-bold text-[#D6C7F0]" lang="ar" dir="rtl">تحفيظ القرآن</p>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Hifz Program</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-600">Memorize the Quran systematically with a daily lesson plan, steady revision, and expert guidance.</p>
+          <ul class="mt-4 space-y-2 text-xs font-medium text-gray-600 border-t border-gray-100 pt-3">
+            <li class="flex items-center"><i class="fa-solid fa-child mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>Basic reading proficiency</li>
+            <li class="flex items-center"><i class="fa-regular fa-clock mr-2 w-4 text-[#D97706]" aria-hidden="true"></i>Personalized schedule</li>
+          </ul>
+          <a href="courses.html#hifz" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#013977] px-5 py-2.5 text-sm font-bold text-[#013977] transition hover:bg-[#013977] hover:text-white">Explore Course</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ============================================================
+     WHATSAPP FLOATING BUTTON (Bottom Right Integration)
+     ============================================================ -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+  <!-- Tooltip message bubble -->
+  <div class="hidden sm:flex items-center gap-2 bg-white text-[#013977] px-4 py-2 rounded-2xl shadow-lg border border-[#D6C7F0]/40 text-xs font-bold animate-bounce">
+    <span>Chat with us on WhatsApp! 👋</span>
+  </div>
+  <!-- Floating WhatsApp Icon Button -->
+  <a href="https://wa.me/923198427973?text=Assalam-o-Alaikum,%20I%20want%20to%20get%20information%20about%20Online%20Quran%20Ilm%20Academy" 
+     target="_blank" 
+     aria-label="Contact us on WhatsApp"
+     class="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white text-3xl shadow-xl shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 hover:bg-[#20ba5a]">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+<!-- QuranHost Trial Form Section -->
+<section class="py-16 bg-gray-900 font-sans">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Main Banner Container -->
+    <div class="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden border border-gray-800 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+      
+      <!-- Left Side Text Content -->
+      <div class="lg:w-1/2 space-y-4">
+        <span class="text-emerald-400 font-semibold tracking-wide uppercase text-sm">Why are you waiting for?</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Book Your 3-Days <br><span class="text-emerald-400">Free Trial Class Now!</span>
+        </h2>
+        <p class="text-gray-300 text-base md:text-lg">
+          Book Now & Experience Personalized Quran Learning with Online Quran Ilm Academy.
+        </p>
+      </div>
+
+      <!-- Right Side Form Card -->
+      <div class="lg:w-1/2 w-full max-w-md bg-white text-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 relative">
+        
+        <!-- Form Element (Netlify AJAX ready) -->
+        <form id="quranTrialForm" name="free-trial-admission" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-3.5">
+          <!-- Netlify Hidden Fields -->
+          <input type="hidden" name="form-name" value="free-trial-admission" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Full Name *</label>
+            <input type="text" name="full_name" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="Muhammad Ali">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">WhatsApp Number *</label>
+            <input type="tel" name="whatsapp_number" id="formWhatsapp" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="+923198427973">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Email Address</label>
+            <input type="email" name="email" id="formEmail" class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="name@example.com">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Country *</label>
+            <input type="text" name="country" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="Pakistan / USA / UK / etc.">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Preferred Course *</label>
+            <select name="preferred_course" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm">
+              <option value="" disabled selected>Select a course</option>
+              <option value="Nazra Quran with Tajweed">Nazra Quran with Tajweed</option>
+              <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+              <option value="Basic Islamic Education">Basic Islamic Education</option>
+              <option value="Arabic Language Course">Arabic Language Course</option>
+            </select>
+          </div>
+
+          <button type="submit" id="formSubmitBtn" class="w-full bg-zinc-800 hover:bg-zinc-900 text-white font-semibold py-3 rounded-xl transition duration-200 shadow-md text-sm mt-2">
+            Send Message
+          </button>
+        </form>
+
+        <!-- Success State Box (Hidden by default, appears right inside on successful submission) -->
+        <div id="formSuccessBox" class="hidden text-center py-2 space-y-3">
+          <div class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-1">
+            ✓ Submitted Successfully
+          </div>
+          <h3 class="text-lg font-bold text-gray-900">JazakAllah Khair!</h3>
+          <p class="text-gray-600 text-xs leading-relaxed text-left bg-gray-50 p-3.5 rounded-xl border border-gray-100">
+            Thank you for choosing <strong>Online Quran Ilm Academy</strong>.<br>
+            We have received your Free Trial Class request. Our coordinator will contact you on WhatsApp shortly.<br><br>
+            You can also directly send your details to our admin via WhatsApp below:
+          </p>
+
+          <!-- Direct WhatsApp Admin Button with Dynamic Data -->
+          <a id="whatsappAdminBtn" href="#" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-xl text-sm transition text-center shadow-lg flex items-center justify-center gap-2">
+            📲 Send Details to Admin WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Seamless AJAX Submission & WhatsApp Integration -->
+<script>
+  document.getElementById('quranTrialForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page refresh rokne ke liye
+
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    // Values extract karna WhatsApp message ke liye
+    const fullName = formData.get('full_name');
+    const whatsapp = formData.get('whatsapp_number');
+    const email = formData.get('email') || 'Not Provided';
+    const country = formData.get('country');
+    const course = formData.get('preferred_course');
+
+    // Netlify par background mein data submit karna bina redirect ke
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Form hide kar ke success message show karna
+      form.style.display = 'none';
+      document.getElementById('formSuccessBox').classList.remove('hidden');
+
+      // Admin WhatsApp Link generate karna (+923198427973)
+      const adminPhone = "923198427973";
+      const textMessage = `🔔 *New Free Trial Registration*\n\n👤 Name: ${fullName}\n📞 WhatsApp: ${whatsapp}\n📧 Email: ${email}\n🌍 Country: ${country}\n📚 Course: ${course}\n\n_Submitted via Online Quran Ilm Academy Website_`;
+      
+      const whatsappLink = `https://wa.me/${adminPhone}?text=${encodeURIComponent(textMessage)}`;
+      document.getElementById('whatsappAdminBtn').href = whatsappLink;
+    })
+    .catch((error) => {
+      console.error('Submission error:', error);
+      // Fallback agar local environment ya netlify test mein ho toh bhi WhatsApp open karwa dein taake testing na ruke
+      form.style.display = 'none';
+      document.getElementById('formSuccessBox').classList.remove('hidden');
+      
+      const adminPhone = "923198427973";
+      const textMessage = `🔔 *New Free Trial Registration*\n\n👤 Name: ${fullName}\n📞 WhatsApp: ${whatsapp}\n📧 Email: ${email}\n🌍 Country: ${country}\n📚 Course: ${course}`;
+      document.getElementById('whatsappAdminBtn').href = `https://wa.me/${adminPhone}?text=${encodeURIComponent(textMessage)}`;
+    });
+  });
+</script>
+
+<!-- ============================================================
+     PRICING PLANS SECTION (Vanilla JS & ID-based Currency Switcher)
+     ============================================================ -->
+<section id="pricing" class="py-20 lg:py-28 bg-white relative overflow-hidden" aria-labelledby="pricing-title">
+  
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#F3EFFF] px-3 py-1 rounded-full mb-3">Affordable Investment</span>
+      <h2 id="pricing-title" class="font-display text-3xl font-extrabold text-[#013977] sm:text-4xl lg:text-5xl">Choose Your Learning Plan</h2>
+      <p class="mt-4 text-gray-600 text-base leading-relaxed">Simple monthly hadya. Every plan includes live 1-on-1 classes, 3 Free Trial CLasses<br>& monthly progress report. Pick the number of days that suits your child. <br>Select your region to view precise tuition rates</p>
+    </div>
+
+    <!-- Currency Switcher Buttons Bar -->
+    <div class="flex items-center justify-center gap-3 mb-16" data-aos="fade-up">
+      <div class="flex items-center gap-2 bg-[#F3EFFF] p-2 rounded-2xl border border-[#D6C7F0]/60 shadow-sm flex-wrap justify-center">
+        <button onclick="switchCurrency('USD')" id="btn-USD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 bg-[#013977] text-white shadow-md">USD Plan</button>
+        <button onclick="switchCurrency('GBP')" id="btn-GBP" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">GBP Plan</button>
+        <button onclick="switchCurrency('CAD')" id="btn-CAD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">CAD Plan</button>
+        <button onclick="switchCurrency('AUD')" id="btn-AUD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">AUD Plan</button>
+      </div>
+    </div>
+
+    <!-- Pricing Grid (4 Cards) -->
+    <div class="grid gap-8 lg:grid-cols-4 sm:grid-cols-2 items-stretch">
+
+      <!-- Plan 1: Starter -->
+      <div class="flex flex-col rounded-3xl border border-[#D6C7F0]/50 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative" data-aos="fade-up">
+        <div class="mb-5">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Starter</h3>
+          <p class="text-xs text-gray-500 mt-1">Ideal for Busy Learners</p>
+        </div>
+        <div class="flex items-baseline gap-0.5 my-2">
+          <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="40" data-gbp="35" data-cad="60" data-aud="60">40</span>
+          <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
+        </div>
+        <div class="py-3 px-3 bg-[#F3EFFF]/50 rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/30">
+          2 Classes / Week &bull; 8 Lessons
+        </div>
+        <ul class="space-y-3 text-xs text-gray-600 my-4 flex-1">
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>1-on-1 Personalized Classes</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>30 Minutes Session Duration</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Choice of Preferred Tutors</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Monthly Progress Report</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Certified Quran Tutor</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>E-Certificate</li>
+          <li class="flex items-center text-[#D97706] font-semibold"><i class="fa-solid fa-percent mr-2 w-4"></i>5% Family Discount</li>
+        </ul>
+        <a href="enroll.html?plan=starter" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#013977] px-5 py-3 text-sm font-bold text-[#013977] transition hover:bg-[#013977] hover:text-white">Start Free Trial Now</a>
+      </div>
+
+      <!-- Plan 2: Standard (Most Popular Badge) -->
+      <div class="flex flex-col rounded-3xl border-2 border-[#D97706] bg-white p-6 sm:p-8 shadow-xl relative transform lg:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D97706] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow">Most Popular</span>
+        <div class="mb-5 mt-2">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Standard</h3>
+          <p class="text-xs text-gray-500 mt-1">Best for Kids</p>
+        </div>
+        <div class="flex items-baseline gap-0.5 my-2">
+          <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="55" data-gbp="40" data-cad="70" data-aud="70">55</span>
+          <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
+        </div>
+        <div class="py-3 px-3 bg-[#F3EFFF] rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/40">
+          3 Classes / Week &bull; 12 Lessons
+        </div>
+        <ul class="space-y-3 text-xs text-gray-600 my-4 flex-1">
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>1-on-1 Personalized Classes</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>30 Minutes Session Duration</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Choice of Preferred Tutors</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Monthly Progress Report</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Certified Quran Tutor</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>E-Certificate</li>
+          <li class="flex items-center text-[#D97706] font-semibold"><i class="fa-solid fa-percent mr-2 w-4"></i>10% Family Discount</li>
+        </ul>
+        <a href="enroll.html?plan=standard" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#D97706]/30 transition hover:bg-[#b56305]">Start Free Trial Now</a>
+      </div>
+
+      <!-- Plan 3: Regular -->
+      <div class="flex flex-col rounded-3xl border border-[#D6C7F0]/50 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="mb-5">
+          <h3 class="font-display text-xl font-bold text-[#013977]">Regular</h3>
+          <p class="text-xs text-gray-500 mt-1">Accelerated growth</p>
+        </div>
+        <div class="flex items-baseline gap-0.5 my-2">
+          <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="65" data-gbp="50" data-cad="80" data-aud="80">65</span>
+          <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
+        </div>
+        <div class="py-3 px-3 bg-[#F3EFFF]/50 rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/30">
+          4 Classes / Week &bull; 16 Lessons
+        </div>
+        <ul class="space-y-3 text-xs text-gray-600 my-4 flex-1">
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>1-on-1 Personalized Classes</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>30 Minutes Session Duration</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Choice of Preferred Tutors</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Monthly Progress Report</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Certified Quran Tutor</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>E-Certificate</li>
+          <li class="flex items-center text-[#D97706] font-semibold"><i class="fa-solid fa-percent mr-2 w-4"></i>10% Family Discount</li>
+        </ul>
+        <a href="enroll.html?plan=regular" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#013977] px-5 py-3 text-sm font-bold text-[#013977] transition hover:bg-[#013977] hover:text-white">Start Free Trial Now</a>
+      </div>
+
+      <!-- Plan 4: Fast-track (Best Value) -->
+      <div class="flex flex-col rounded-3xl border border-[#013977]/30 bg-[#013977] text-white p-6 sm:p-8 shadow-xl relative transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+        <span class="absolute top-4 right-4 bg-[#D97706] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Best Value</span>
+        <div class="mb-5">
+          <h3 class="font-display text-xl font-bold text-[#D6C7F0]">Fast-track</h3>
+          <p class="text-xs text-gray-300 mt-1">Accelerated growth</p>
+        </div>
+        <div class="flex items-baseline gap-0.5 my-2">
+          <span class="currency-symbol text-3xl font-extrabold text-[#D6C7F0]">$</span>
+          <span class="plan-price text-5xl font-black text-white" data-usd="80" data-gbp="55" data-cad="100" data-aud="100">80</span>
+          <span class="text-xs text-gray-300 font-medium ml-1">/month</span>
+        </div>
+        <div class="py-3 px-3 bg-white/10 rounded-xl my-4 text-xs font-bold text-[#D6C7F0] text-center border border-white/10">
+          5 Classes / Week &bull; 20 Lessons
+        </div>
+        <ul class="space-y-3 text-xs text-gray-200 my-4 flex-1">
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>1-on-1 Personalized Classes</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>30 Minutes Session Duration</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Choice of Preferred Tutors</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Monthly Progress Report</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>Certified Quran Tutor</li>
+          <li class="flex items-center"><i class="fa-solid fa-check text-[#D97706] mr-2 w-4"></i>E-Certificate</li>
+          <li class="flex items-center text-[#D97706] font-semibold"><i class="fa-solid fa-percent mr-2 w-4"></i>10% Family Discount</li>
+        </ul>
+        <a href="enroll.html?plan=fast-track" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#b56305]">Start Free Trial Now</a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer Notice -->
+    <div class="mt-12 text-center text-xs text-gray-500 font-medium" data-aos="fade-up">
+      <p>Prices are inclusive of all materials. Save an extra 10% on every sibling you register! Need a custom plan? <a href="https://wa.me/923000000000?text=I%20need%20a%20custom%20Quran%20learning%20plan" target="_blank" class="text-[#013977] font-bold underline decoration-[#D97706] underline-offset-4 hover:text-[#D97706]">Contact us on WhatsApp</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript for Currency Switching -->
+<script>
+  function switchCurrency(currency) {
+    // Update active button styling
+    const buttons = document.querySelectorAll('.currency-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-[#013977]', 'text-white', 'shadow-md');
+      btn.classList.add('text-gray-600', 'hover:text-[#013977]');
+    });
+
+    const activeBtn = document.getElementById('btn-' + currency);
+    if(activeBtn) {
+      activeBtn.classList.remove('text-gray-600', 'hover:text-[#013977]');
+      activeBtn.classList.add('bg-[#013977]', 'text-white', 'shadow-md');
+    }
+
+    // Determine currency symbol
+    let symbol = '$';
+    if(currency === 'GBP') symbol = '£';
+    if(currency === 'CAD') symbol = 'C$';
+    if(currency === 'AUD') symbol = 'A$';
+
+    // Update symbols
+    const symbols = document.querySelectorAll('.currency-symbol');
+    symbols.forEach(el => {
+      el.textContent = symbol;
+    });
+
+    // Update prices based on data attributes
+    const prices = document.querySelectorAll('.plan-price');
+    prices.forEach(priceEl => {
+      if(currency === 'USD') priceEl.textContent = priceEl.getAttribute('data-usd');
+      if(currency === 'GBP') priceEl.textContent = priceEl.getAttribute('data-gbp');
+      if(currency === 'CAD') priceEl.textContent = priceEl.getAttribute('data-cad');
+      if(currency === 'AUD') priceEl.textContent = priceEl.getAttribute('data-aud');
+    });
+  }
+</script>
+    <!-- ============================================================
+         5. FEATURES / WHY CHOOSE US (Clean Gradient BG & Brand Icons)
+         ============================================================ -->
+    <section id="features" class="relative overflow-hidden bg-gradient-to-br from-[#013977] via-[#012d5e] to-[#011f42] py-20 text-white lg:py-28" aria-labelledby="features-title">
+      <!-- Glow ambient background shapes -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[#D6C7F0]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#D97706]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 items-center">
+
+        <div class="lg:col-span-4" data-aos="fade-right">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D6C7F0] bg-white/10 px-3 py-1 rounded-full mb-3">Why Trust Us</span>
+          <h2 id="features-title" class="font-display text-3xl font-extrabold sm:text-4xl">Why parents choose our academy</h2>
+          <p class="mt-4 leading-relaxed text-[#F3EFFF]/90">We designed our academy around what parents look for most: a secure environment, qualified teachers they trust, and clear proof of student growth.</p>
+          <a href="enroll.html?trial=1" class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#D97706] px-7 py-3.5 font-bold text-white shadow-lg shadow-[#D97706]/30 transition-all hover:-translate-y-0.5 hover:bg-[#b56305]">
+            <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Book Free Trial
+          </a>
+        </div>
+
+        <ul class="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-8">
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D97706] text-white shadow-md"><i class="fa-solid fa-person-dress text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">Female tutors available</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Dedicated female teachers are available for sisters and young daughters.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up" data-aos-delay="100">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D6C7F0] text-[#013977] shadow-md"><i class="fa-solid fa-headset text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">24/7 support</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Ask questions, manage schedules, or get assistance anytime via WhatsApp or email.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up" data-aos-delay="200">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D6C7F0] text-[#013977] shadow-md"><i class="fa-solid fa-chart-line text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">Monthly progress reports</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Track milestones, lessons covered, and areas for improvement with regular feedback.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up" data-aos-delay="300">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D97706] text-white shadow-md"><i class="fa-solid fa-microphone-lines text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">Tajweed from day one</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Proper Arabic pronunciation and phonetics are taught gently from the very first session.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up" data-aos-delay="400">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D97706] text-white shadow-md"><i class="fa-solid fa-shield-heart text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">Safe for children</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Parents are welcome to sit in on classes conducted through secure, trusted video platforms.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 border-t border-[#D6C7F0]/20 pt-6" data-aos="fade-up" data-aos-delay="500">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D6C7F0] text-[#013977] shadow-md"><i class="fa-solid fa-earth-americas text-lg" aria-hidden="true"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-bold text-white">Learn from anywhere</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#F3EFFF]/80">Accessible worldwide across all time zones with just a smartphone, tablet, or laptop and internet.</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. FEE / HADYA STRUCTURE
+         NOTE: Prices below are placeholders. Edit them to your real fees.
+         ============================================================ -->
+    
+
+    <!-- ============================================================
+         7. FEATURED BLOG POST
+         ============================================================ -->
+    <section id="blog" class="bg-mist py-20 lg:py-28" aria-labelledby="blog-title">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end" data-aos="fade-up">
+          <div class="max-w-2xl">
+            <h2 id="blog-title" class="font-display text-3xl font-bold text-jade-800 sm:text-4xl">Advice for parents, from our tutors</h2>
+            <p class="mt-4 leading-relaxed text-jade-800/80">Practical ideas to help your child enjoy the Quran at home.</p>
+          </div>
+          <a href="blog.html" class="inline-flex shrink-0 items-center gap-2 font-semibold text-jade-500 underline decoration-gold-500 decoration-2 underline-offset-8 hover:text-jade-700">
+            All articles <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <article class="mt-12 grid overflow-hidden rounded-3xl border border-jade-100 bg-white shadow-sm lg:grid-cols-2" data-aos="fade-up">
+
+          <!-- Image placeholder.
+               TODO: replace this <a> block with:
+               <a href="blog.html"><img src="images/blog-teach-kids-quran.webp" alt="Mother helping her child read the Quran at home" class="h-full w-full object-cover" loading="lazy" width="800" height="600"></a> -->
+          <!--  tabindex="-1" aria-hidden="true" class="geo-pattern relative flex min-h-[15rem] items-center justify-center bg-gradient-to-br from-lagoon-500 to-jade-700 lg:min-h-[22rem]">
+            <span class="medallion medallion--gold !h-24 !w-24 !text-4xl"><i class="fa-solid fa-book-open-reader" aria-hidden="true"></i></span>
+          </a> -->
+        <a href="blog.html"  <img src="images\Online Quran ilm Academy Post.jpg" alt=""></a>
+          <div class="flex flex-col justify-center p-6 sm:p-10">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-jade-800/70">
+              <span class="rounded-full bg-gold-100 px-3 py-1 font-semibold text-gold-700">Parenting tips</span>
+              <time datetime="2026-09-10">September 10, 2026</time>
+              <span>6 min read</span>
+            </div>
+            <h3 class="mt-4 font-display text-2xl font-bold leading-snug text-jade-800 sm:text-3xl">
+              <a href="blog.html" class="hover:text-jade-500">How to teach kids Quran at home: 7 simple habits for busy parents</a>
+            </h3>
+            <p class="mt-4 leading-relaxed text-jade-800/80">
+              You do not need to be a scholar to support your child's Quran journey. Learn how a short daily routine, a quiet corner and a little praise can build a habit that lasts, even on school days.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+              <p class="text-sm text-jade-800/70"><i class="fa-regular fa-user mr-2" aria-hidden="true"></i>By the Noor Al-Quran team</p>
+              <a href="blog.html" class="inline-flex items-center gap-2 rounded-full bg-jade-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-jade-600">
+                Read Article <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+<!-- ============================================================
+     SYLLABUS & MODULES SECTION (Functional Vanilla JS Tabs)
+     ============================================================ -->
+<section class="bg-[#0b132b] py-20 lg:py-28 text-white relative overflow-hidden" aria-labelledby="syllabus-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#D97706]/10 px-3 py-1 rounded-full mb-3">Comprehensive Curriculum</span>
+      <h2 id="syllabus-title" class="font-display text-3xl font-extrabold sm:text-4xl lg:text-5xl">Reading Syllabus & Modules</h2>
+      <div class="w-20 h-1 bg-[#D97706] mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Main Container Layout -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Side: Navigation Buttons -->
+      <div class="lg:col-span-4 flex flex-col gap-4" data-aos="fade-right">
+        
+        <!-- Button 1: Importance & Audience -->
+        <button onclick="switchTab('importance')" id="tab-btn-importance" 
+          class="syllabus-btn flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 text-left font-display font-bold group bg-[#D97706] border-[#D97706] text-white shadow-lg shadow-[#D97706]/20">
+          <span class="flex items-center gap-3">Importance & Audience</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 opacity-100"></i>
+        </button>
+
+        <!-- Button 2: Course Modules -->
+        <button onclick="switchTab('modules')" id="tab-btn-modules" 
+          class="syllabus-btn flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 text-left font-display font-bold group bg-[#1c2541] border-[#3a506b] text-gray-300 hover:border-[#D97706]">
+          <span class="flex items-center gap-3">Course Modules</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 opacity-50"></i>
+        </button>
+
+        <!-- Button 3: Learning Tech -->
+        <button onclick="switchTab('tech')" id="tab-btn-tech" 
+          class="syllabus-btn flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 text-left font-display font-bold group bg-[#1c2541] border-[#3a506b] text-gray-300 hover:border-[#D97706]">
+          <span class="flex items-center gap-3">Learning Tech</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 opacity-50"></i>
+        </button>
+
+        <!-- Button 4: Features & Benefits -->
+        <button onclick="switchTab('features')" id="tab-btn-features" 
+          class="syllabus-btn flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 text-left font-display font-bold group bg-[#1c2541] border-[#3a506b] text-gray-300 hover:border-[#D97706]">
+          <span class="flex items-center gap-3">Features & Benefits</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 opacity-50"></i>
+        </button>
+
+        <!-- Button 5: Why Us & Tips -->
+        <button onclick="switchTab('tips')" id="tab-btn-tips" 
+          class="syllabus-btn flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 text-left font-display font-bold group bg-[#1c2541] border-[#3a506b] text-gray-300 hover:border-[#D97706]">
+          <span class="flex items-center gap-3">Why Us & Tips</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 opacity-50"></i>
+        </button>
+
+      </div>
+
+      <!-- Right Side: Details Display Box with Image and Transitions -->
+      <div class="lg:col-span-8 bg-white text-gray-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative min-h-[460px] flex flex-col justify-between" data-aos="fade-left">
+        
+        <!-- Tab 1: Importance & Audience -->
+        <div id="tab-content-importance" class="syllabus-pane space-y-6 transition-all duration-300">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=300&q=80" alt="Child learning Quran online" class="w-full sm:w-36 h-28 object-cover rounded-2xl shadow-md shrink-0">
+            <div>
+              <h3 class="font-display text-2xl font-extrabold text-[#013977]">Importance & Audience</h3>
+              <p class="text-xs text-gray-500 mt-1">Who is this course designed for?</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-base">
+            Learning Quran recitation with proper Tajweed is obligatory for every Muslim to perform daily prayers correctly. This program is specially curated for beginners, children starting their Quranic journey, and adults looking to fix pronunciation flaws.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4 bg-[#F3EFFF]/50 p-5 rounded-2xl border border-[#D6C7F0]/40">
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm mb-1">Target Audience:</h4>
+              <p class="text-xs text-gray-600">Kids ages 4+ and adults of all proficiency levels.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm mb-1">Prerequisites:</h4>
+              <p class="text-xs text-gray-600">No prior Arabic knowledge required for beginners.</p>
+            </div>
+          </div>
+          <div class="pt-2 flex items-center justify-between">
+            <a href="https://wa.me/923000000000?text=I%20want%20to%20know%20more%20about%20Quran%20courses" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-[#D97706] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#b56305]">
+              Message on WhatsApp <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 2: Course Modules -->
+        <div id="tab-content-modules" class="syllabus-pane space-y-6 transition-all duration-300 hidden">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=300&q=80" alt="Quran Online Classes" class="w-full sm:w-36 h-28 object-cover rounded-2xl shadow-md shrink-0">
+            <div>
+              <h3 class="font-display text-2xl font-extrabold text-[#013977]">Structured Course Modules</h3>
+              <p class="text-xs text-gray-500 mt-1">Step-by-step learning milestones</p>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100"><i class="fa-solid fa-check text-[#D97706] mt-1"></i> <span><strong>Module 1:</strong> Arabic Alphabets pronunciation & Makharij.</span></li>
+            <li class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100"><i class="fa-solid fa-check text-[#D97706] mt-1"></i> <span><strong>Module 2:</strong> Harakaat, Tanween, and Letter Connections.</span></li>
+            <li class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100"><i class="fa-solid fa-check text-[#D97706] mt-1"></i> <span><strong>Module 3:</strong> Rules of Noon Sakinah, Meem Sakinah & Madd.</span></li>
+            <li class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl border border-gray-100"><i class="fa-solid fa-check text-[#D97706] mt-1"></i> <span><strong>Module 4:</strong> Fluent Recitation of selected Surahs & Juz Amma.</span></li>
+          </ul>
+          <div class="pt-2">
+            <a href="https://wa.me/923000000000?text=I%20want%20the%20complete%20syllabus%20modules" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-[#013977] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#012d5e]">
+              Get Syllabus on WhatsApp <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 3: Learning Tech -->
+        <div id="tab-content-tech" class="syllabus-pane space-y-6 transition-all duration-300 hidden">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=300&q=80" alt="Online Learning Technology" class="w-full sm:w-36 h-28 object-cover rounded-2xl shadow-md shrink-0">
+            <div>
+              <h3 class="font-display text-2xl font-extrabold text-[#013977]">Technology in Quran Reading Course</h3>
+              <p class="text-xs text-gray-500 mt-1">Modern tools for seamless online learning</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            Technology is a powerful tool that we use to enhance our Quran learning experience:
+          </p>
+          <div class="bg-[#F3EFFF]/50 p-4 rounded-2xl border border-[#D6C7F0]/40">
+            <h4 class="font-bold text-[#013977] text-sm mb-1">Interactive Learning for Kids</h4>
+            <p class="text-xs text-gray-600">Children learn best when they are engaged and having fun. Our teaching methods include interactive screen sharing, digital pointer tools, visual aids, and storytelling, making Quranic learning enjoyable and memorable.</p>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/923000000000?text=I%20want%20to%20book%20a%20free%20trial%20class" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-[#D97706] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#b56305]">
+              Book Free Trial <i class="fa-regular fa-calendar-check"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 4: Features & Benefits -->
+        <div id="tab-content-features" class="syllabus-pane space-y-6 transition-all duration-300 hidden">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80" alt="Student Benefits" class="w-full sm:w-36 h-28 object-cover rounded-2xl shadow-md shrink-0">
+            <div>
+              <h3 class="font-display text-2xl font-extrabold text-[#013977]">Features & Benefits</h3>
+              <p class="text-xs text-gray-500 mt-1">Why students love our online classes</p>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+              <h5 class="font-bold text-sm text-[#013977] mb-1">1-on-1 Attention</h5>
+              <p class="text-xs text-gray-600">Full concentration of the tutor on single student.</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+              <h5 class="font-bold text-sm text-[#013977] mb-1">Flexible Timings</h5>
+              <p class="text-xs text-gray-600">Pick any time slot suitable for your routine.</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+              <h5 class="font-bold text-sm text-[#013977] mb-1">Female Tutors</h5>
+              <p class="text-xs text-gray-600">Dedicated female teachers for sisters and kids.</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+              <h5 class="font-bold text-sm text-[#013977] mb-1">Monthly Reports</h5>
+              <p class="text-xs text-gray-600">Regular performance updates for parents.</p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/923000000000?text=I%20want%20to%20enroll%20in%20courses" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-[#013977] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#012d5e]">
+              Enroll Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tab 5: Why Us & Tips -->
+        <div id="tab-content-tips" class="syllabus-pane space-y-6 transition-all duration-300 hidden">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=300&q=80" alt="Why Us & Tips" class="w-full sm:w-36 h-28 object-cover rounded-2xl shadow-md shrink-0">
+            <div>
+              <h3 class="font-display text-2xl font-extrabold text-[#013977]">Why Us & Student Tips</h3>
+              <p class="text-xs text-gray-500 mt-1">Expert guidance for accelerated progress</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            We ensure certified male and female tutors with Ijaza. To get the best out of your classes, we recommend maintaining consistency, reviewing daily lessons for 15 minutes before class, and setting up a quiet study corner.
+          </p>
+          <div class="pt-2">
+            <a href="https://wa.me/923000000000?text=Hello,%20I%20have%20a%20question%20about%20classes" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-[#D97706] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#b56305]">
+              Ask Question on WhatsApp <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Tab Switching -->
+<script>
+  function switchTab(tabId) {
+    // Hide all tab panes
+    const panes = document.querySelectorAll('.syllabus-pane');
+    panes.forEach(pane => {
+      pane.classList.add('hidden');
+    });
+
+    // Reset all buttons to default inactive style
+    const buttons = document.querySelectorAll('.syllabus-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-[#D97706]', 'border-[#D97706]', 'text-white', 'shadow-lg', 'shadow-[#D97706]/20');
+      btn.classList.add('bg-[#1c2541]', 'border-[#3a506b]', 'text-gray-300', 'hover:border-[#D97706]');
+      const icon = btn.querySelector('i');
+      if(icon) {
+        icon.classList.remove('opacity-100');
+        icon.classList.add('opacity-50');
+      }
+    });
+
+    // Show target tab pane
+    const activePane = document.getElementById('tab-content-' + tabId);
+    if(activePane) {
+      activePane.classList.remove('hidden');
+    }
+
+    // Activate clicked button style
+    const activeBtn = document.getElementById('tab-btn-' + tabId);
+    if(activeBtn) {
+      activeBtn.classList.remove('bg-[#1c2541]', 'border-[#3a506b]', 'text-gray-300', 'hover:border-[#D97706]');
+      activeBtn.classList.add('bg-[#D97706]', 'border-[#D97706]', 'text-white', 'shadow-lg', 'shadow-[#D97706]/20');
+      const activeIcon = activeBtn.querySelector('i');
+      if(activeIcon) {
+        activeIcon.classList.remove('opacity-50');
+        activeIcon.classList.add('opacity-100');
+      }
+    }
+  }
+</script>
+<!-- ============================================================
+     TESTIMONIALS & REVIEWS SECTION (Slider & Clickable Header Cards)
+     ============================================================ -->
+<section class="bg-[#0b132b] py-20 lg:py-28 text-white relative overflow-hidden" aria-labelledby="testimonials-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#D97706]/10 px-3 py-1 rounded-full mb-3">Parent's Feedback</span>
+      <h2 id="testimonials-title" class="font-display text-3xl font-extrabold sm:text-4xl lg:text-5xl">Trusted by Parents Worldwide</h2>
+      <div class="w-20 h-1 bg-[#D97706] mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Clickable Platform Overview / Header Cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+      
+      <!-- Trustpilot Header Card -->
+      <a href="https://www.trustpilot.com/review/onlinequranilmacademy.com" target="_blank" class="p-6 rounded-2xl border border-[#3a506b]/50 bg-[#1c2541]/40 hover:border-[#00b67a] hover:bg-[#1c2541]/80 transition-all duration-300 text-center flex flex-col items-center group shadow-lg">
+        <div class="flex items-center gap-2 text-xl font-bold mb-2 group-hover:scale-105 transition">
+          <svg class="w-6 h-6 text-[#00b67a]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l3.709 7.512 8.291 1.206-6 5.849 1.418 8.263-7.418-3.901-7.418 3.901 1.418-8.263-6-5.849 8.291-1.206z"/></svg>
+          Trustpilot <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 ml-1"></i>
+        </div>
+        <div class="text-2xl text-yellow-400 mb-1">★★★★★ <span class="text-white text-lg font-bold">4.9 / 5.0</span></div>
+        <p class="text-xs text-gray-400">Based on verified reviews</p>
+      </a>
+
+      <!-- Facebook Header Card -->
+      <a href="https://www.facebook.com/onlinequranilmacademy/reviews" target="_blank" class="p-6 rounded-2xl border border-[#3a506b]/50 bg-[#1c2541]/40 hover:border-[#1877F2] hover:bg-[#1c2541]/80 transition-all duration-300 text-center flex flex-col items-center group shadow-lg">
+        <div class="flex items-center gap-2 text-xl font-bold mb-2 group-hover:scale-105 transition">
+          <i class="fa-brands fa-facebook text-[#1877F2] text-2xl"></i>
+          Facebook <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 ml-1"></i>
+        </div>
+        <div class="text-2xl text-yellow-400 mb-1">★★★★★ <span class="text-white text-lg font-bold">5.0 / 5.0</span></div>
+        <p class="text-xs text-gray-400">Parent community feedback</p>
+      </a>
+
+      <!-- Google Header Card (Activated for future use) -->
+      <a href="https://maps.google.com" target="_blank" class="p-6 rounded-2xl border border-[#3a506b]/50 bg-[#1c2541]/40 hover:border-red-500 hover:bg-[#1c2541]/80 transition-all duration-300 text-center flex flex-col items-center group shadow-lg">
+        <div class="flex items-center gap-2 text-xl font-bold mb-2 group-hover:scale-105 transition">
+          <i class="fa-brands fa-google text-red-500 text-xl"></i>
+          Google Reviews <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 ml-1"></i>
+        </div>
+        <div class="text-2xl text-yellow-400 mb-1">★★★★★ <span class="text-white text-lg font-bold">Coming Soon</span></div>
+        <p class="text-xs text-gray-400">Global listing in progress</p>
+      </a>
+
+    </div>
+
+    <!-- Review Cards Slider Container -->
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-12">
+      
+      <!-- Slider Track -->
+      <div id="reviewSlider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-8 pt-4 scroll-smooth">
+        
+        <!-- Card 1: Trustpilot Review -->
+        <div class="min-w-[100%] md:min-w-[calc(50%-12px)] snap-center bg-white text-gray-800 rounded-3xl p-8 shadow-2xl flex flex-col justify-between relative border border-gray-100">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+              <span class="inline-flex items-center gap-1 bg-[#00b67a]/10 text-[#00b67a] text-[11px] font-bold px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-circle-check"></i> Verified
+              </span>
+            </div>
+            <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed mb-6">
+              "I am extremely happy with my son’s progress at his online madressa. His teacher, Hafsa, is kind, patient, and very dedicated. She explains everything clearly and makes sure he understands his lessons properly. May Allah reward her for all her hard work and efforts. Ameen. I would highly recommend her!"
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm">Satisfied Parent</h4>
+              <p class="text-[11px] text-gray-500">Student Parent</p>
+            </div>
+            <a href="https://www.trustpilot.com/review/onlinequranilmacademy.com" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#00b67a] bg-[#00b67a]/10 px-3 py-1.5 rounded-xl hover:bg-[#00b67a] hover:text-white transition">
+              Trustpilot <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Facebook Review 1 -->
+        <div class="min-w-[100%] md:min-w-[calc(50%-12px)] snap-center bg-white text-gray-800 rounded-3xl p-8 shadow-2xl flex flex-col justify-between relative border border-gray-100">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+              <span class="inline-flex items-center gap-1 bg-[#1877F2]/10 text-[#1877F2] text-[11px] font-bold px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-circle-check"></i> Verified
+              </span>
+            </div>
+            <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed mb-6">
+              "As a parent living abroad, finding a trusted online Quran academy was a priority, and they have exceeded all expectations. The teachers are incredibly patient, professional, and excellent at engaging children."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm">Parent Living Abroad</h4>
+              <p class="text-[11px] text-gray-500">Facebook Share</p>
+            </div>
+            <a href="https://www.facebook.com/share/p/19TwHDjeP4/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1877F2] bg-[#1877F2]/10 px-3 py-1.5 rounded-xl hover:bg-[#1877F2] hover:text-white transition">
+              Facebook <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Facebook Review 2 -->
+        <div class="min-w-[100%] md:min-w-[calc(50%-12px)] snap-center bg-white text-gray-800 rounded-3xl p-8 shadow-2xl flex flex-col justify-between relative border border-gray-100">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+              <span class="inline-flex items-center gap-1 bg-[#1877F2]/10 text-[#1877F2] text-[11px] font-bold px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-circle-check"></i> Verified
+              </span>
+            </div>
+            <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed mb-6">
+              "We highly recommend Online Quran Ilm Academy for parents looking for quality online Quran classes for their children. The teachers are patient and professional, and the one-to-one classes make learning comfortable and engaging."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm">Community Parent</h4>
+              <p class="text-[11px] text-gray-500">Facebook Recommendation</p>
+            </div>
+            <a href="https://www.facebook.com/share/p/1FXgxwsThb/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1877F2] bg-[#1877F2]/10 px-3 py-1.5 rounded-xl hover:bg-[#1877F2] hover:text-white transition">
+              Facebook <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Additional Facebook Review Card -->
+        <div class="min-w-[100%] md:min-w-[calc(50%-12px)] snap-center bg-white text-gray-800 rounded-3xl p-8 shadow-2xl flex flex-col justify-between relative border border-gray-100">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+              <span class="inline-flex items-center gap-1 bg-[#1877F2]/10 text-[#1877F2] text-[11px] font-bold px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-circle-check"></i> Verified
+              </span>
+            </div>
+            <p class="text-gray-700 italic text-sm sm:text-base leading-relaxed mb-6">
+              "Amazing experience with Online Quran Ilm Academy! The flexibility in timings and individual attention helped my child improve his pronunciation remarkably within a short period."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div>
+              <h4 class="font-bold text-[#013977] text-sm">Parent Review</h4>
+              <p class="text-[11px] text-gray-500">Facebook Review Page</p>
+            </div>
+            <a href="https://www.facebook.com/onlinequranilmacademy/reviews" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1877F2] bg-[#1877F2]/10 px-3 py-1.5 rounded-xl hover:bg-[#1877F2] hover:text-white transition">
+              Facebook <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Navigation Controls (Arrows & Dots) -->
+      <div class="flex items-center justify-center gap-4 mt-8">
+        <button onclick="scrollReviews('left')" class="w-10 h-10 rounded-full bg-[#1c2541] border border-[#3a506b] text-white flex items-center justify-center hover:bg-[#D97706] hover:border-[#D97706] transition shadow-md">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button onclick="scrollReviews('right')" class="w-10 h-10 rounded-full bg-[#1c2541] border border-[#3a506b] text-white flex items-center justify-center hover:bg-[#D97706] hover:border-[#D97706] transition shadow-md">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom View All Link -->
+    <div class="text-center mt-12">
+      <a href="https://www.trustpilot.com/review/onlinequranilmacademy.com" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#00b67a] hover:underline">
+        View All Reviews on Trustpilot <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Slider Scroll Script -->
+<script>
+  function scrollReviews(direction) {
+    const slider = document.getElementById('reviewSlider');
+    const scrollAmount = slider.clientWidth > 768 ? slider.clientWidth / 2 : slider.clientWidth;
+    if (direction === 'left') {
+      slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+    <!-- ============================================================
+         8. FAQ (accordion, toggled with vanilla JS below)
+         ============================================================ -->
+    <section id="faq" class="py-20 lg:py-28" aria-labelledby="faq-title">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+
+        <div class="lg:col-span-4" data-aos="fade-right">
+          <h2 id="faq-title" class="font-display text-3xl font-bold text-jade-800 sm:text-4xl">Questions parents often ask</h2>
+          <p class="mt-4 leading-relaxed text-jade-800/80">Can't find your answer here? Our team replies quickly, day or night.</p>
+          <a href="contact.html" class="mt-6 inline-flex items-center gap-2 rounded-full border border-jade-500 px-6 py-3 font-semibold text-jade-500 transition hover:bg-jade-500 hover:text-white">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact Us
+          </a>
+        </div>
+
+        <div class="space-y-3 lg:col-span-8" id="faq-list" data-aos="fade-up">
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q1" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="true" aria-controls="faq-a1">
+                What age can my child start learning the Quran online?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a1" role="region" aria-labelledby="faq-q1" class="faq-panel" data-open="true">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">Most children start between ages 4 and 6 with Noorani Qaida. Older children and adults are welcome too, and your tutor will begin at the level that suits the student.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q2" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a2">
+                Do you offer a free trial class?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a2" role="region" aria-labelledby="faq-q2" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">Yes. Book a free trial class to meet a tutor, check the audio and video, and see how your child feels about learning. No card details are needed.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q3" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a3">
+                What do we need to join online classes?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a3" role="region" aria-labelledby="faq-q3" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">A computer, tablet or phone with a camera and microphone, a stable internet connection, and a quiet corner. Headphones help children focus. We will guide you through the setup before the first class.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q4" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a4">
+                Can my daughter learn with a female tutor?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a4" role="region" aria-labelledby="faq-q4" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">Yes. Female tutors are available for girls and for women. Just mention your preference when you enroll.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q5" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a5">
+                How are class timings arranged?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a5" role="region" aria-labelledby="faq-q5" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">You choose the days and time slots that fit school, work and your time zone. If something changes, you can ask to reschedule with advance notice.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q6" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a6">
+                How will I know my child is making progress?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a6" role="region" aria-labelledby="faq-q6" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">Parents receive a progress report every month covering what was learned, strengths and areas to practise. Tutors also share short feedback after lessons.</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-jade-100 bg-white">
+            <h3>
+              <button type="button" id="faq-q7" class="faq-trigger flex w-full items-center justify-between gap-4 p-5 text-left font-semibold text-jade-800" aria-expanded="false" aria-controls="faq-a7">
+                Which payment methods do you accept?
+                <i class="faq-icon fa-solid fa-plus shrink-0 text-gold-600" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-a7" role="region" aria-labelledby="faq-q7" class="faq-panel" data-open="false">
+              <div><p class="px-5 pb-5 leading-relaxed text-jade-800/80">We accept Visa, Mastercard, PayPal and JazzCash.</p></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+<!-- ============================================================
+     SOCIAL MEDIA HANDLES & FEATURED MEDIA SECTION
+     ============================================================ -->
+<section class="bg-[#060b19] py-20 lg:py-28 text-white relative overflow-hidden" aria-labelledby="social-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#D97706] bg-[#D97706]/10 px-3 py-1 rounded-full mb-3">Connect & Watch</span>
+      <h2 id="social-title" class="font-display text-3xl font-extrabold sm:text-4xl lg:text-5xl">Our Social Media Highlights</h2>
+      <p class="text-gray-400 text-sm mt-3">Explore our daily classes snippets, student success updates, and Islamic learning reels.</p>
+      <div class="w-20 h-1 bg-[#D97706] mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Social Media Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Instagram Featured Card -->
+      <div class="bg-[#1c2541]/60 border border-[#3a506b]/40 rounded-3xl p-6 flex flex-col justify-between hover:border-[#E1306C]/60 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 flex items-center justify-center text-white text-xl shadow-md">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-white">Instagram</h3>
+                <p class="text-xs text-gray-400">@onlinequranilmacademy</p>
+              </div>
+            </div>
+            <a href="https://www.instagram.com/onlinequranilmacademy/" target="_blank" class="text-xs bg-pink-500/10 text-pink-400 font-bold px-3 py-1.5 rounded-full hover:bg-pink-500 hover:text-white transition">Follow</a>
+          </div>
+          <!-- Mock / Featured Image Preview -->
+          <div class="relative rounded-2xl overflow-hidden mb-4 group-hover:scale-[1.02] transition duration-300">
+            <!-- https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=600&q=80 -->
+            <img src="images\Online Quran ilm Academy Admission Post.png" alt="Instagram Featured Post" class="w-full h-52 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p class="text-xs text-gray-200 font-medium line-clamp-2">🌟 Welcome to Online Quran Ilm Academy! Start your journey with certified tutors today.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.instagram.com" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-[#1c2541] border border-[#3a506b] text-sm font-bold text-gray-200 hover:bg-pink-600 hover:border-pink-600 hover:text-white transition">
+          View Instagram Feed <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Facebook Featured Card -->
+      <div class="bg-[#1c2541]/60 border border-[#3a506b]/40 rounded-3xl p-6 flex flex-col justify-between hover:border-[#1877F2]/60 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#1877F2] flex items-center justify-center text-white text-xl shadow-md">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-white">Facebook Page</h3>
+                <p class="text-xs text-gray-400">Online Quran Ilm Academy</p>
+              </div>
+            </div>
+            <a href="https://www.facebook.com/onlinequranilmacademy/" target="_blank" class="text-xs bg-[#1877F2]/10 text-[#1877F2] font-bold px-3 py-1.5 rounded-full hover:bg-[#1877F2] hover:text-white transition">Like Page</a>
+          </div>
+          <!-- Mock / Featured Image Preview -->
+          <div class="relative rounded-2xl overflow-hidden mb-4 group-hover:scale-[1.02] transition duration-300">
+            <img src="images\Online Quran Academy Hadees.png" alt="Facebook Featured Post" class="w-full h-52 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <p class="text-xs text-gray-200 font-medium line-clamp-2">💡 Special 1-on-1 classes designed for kids & adults living abroad with flexible timings.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.facebook.com/onlinequranilmacademy/" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-[#1c2541] border border-[#3a506b] text-sm font-bold text-gray-200 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition">
+          Visit Facebook Page <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+        </a>
+      </div>
+
+      <!-- YouTube Featured Card -->
+      <div class="bg-[#1c2541]/60 border border-[#3a506b]/40 rounded-3xl p-6 flex flex-col justify-between hover:border-red-500/60 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white text-xl shadow-md">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-white">YouTube Channel</h3>
+                <p class="text-xs text-gray-400">Quran Classes & Shorts</p>
+              </div>
+            </div>
+            <a href="https://www.youtube.com/@OnlineQuranilmAcademy/" target="_blank" class="text-xs bg-red-500/10 text-red-400 font-bold px-3 py-1.5 rounded-full hover:bg-red-600 hover:text-white transition">Subscribe</a>
+          </div>
+          <!-- Mock / Featured Video Thumbnail -->
+          <div class="relative rounded-2xl overflow-hidden mb-4 group-hover:scale-[1.02] transition duration-300">
+            <img src="images\quran academy.jpeg" alt="YouTube Featured Video" class="w-full h-52 object-cover">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                <i class="fa-solid fa-play ml-1"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.youtube.com" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-[#1c2541] border border-[#3a506b] text-sm font-bold text-gray-200 hover:bg-red-600 hover:border-red-600 hover:text-white transition">
+          Watch Videos on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- ============================================================
+       9. FOOTER
+       ============================================================ -->
+  <footer class="relative bg-jade-900 text-jade-100/85">
+    <!-- Arcade edge (mirrors the hero) -->
+    <svg class="block h-6 w-full rotate-180 sm:h-8" aria-hidden="true" preserveAspectRatio="none">
+      <defs>
+        <pattern id="footer-domes" x="0" y="0" width="64" height="32" patternUnits="userSpaceOnUse">
+          <path d="M0 32A32 32 0 0 1 64 32Z" fill="#fff"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#footer-domes)"/>
+    </svg>
+
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-12 lg:px-8">
+
+      <!-- Brand + newsletter -->
+      <div class="lg:col-span-4">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Noor Al-Quran Academy home">
+          <svg class="h-10 w-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <defs>
+              <mask id="logo-crescent-f"><rect width="40" height="40" fill="#fff"/><circle cx="24" cy="15" r="9.5" fill="#000"/></mask>
+            </defs>
+            <rect width="40" height="40" rx="10" fill="#0B6B54"/>
+            <circle cx="19" cy="21" r="11" fill="#C9A24A" mask="url(#logo-crescent-f)"/>
+            <path d="M27 8.5 L28.3 12.7 L32.5 14 L28.3 15.3 L27 19.5 L25.7 15.3 L21.5 14 L25.7 12.7 Z" fill="#fff"/>
+          </svg>
+          <span class="font-display text-2xl font-bold text-white">Noor Al-Quran</span>
+        </a>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed">Live one-to-one Quran classes for children, taught by certified tutors, at times that suit your family.</p>
+
+        <!-- Form uses Web3Forms: emails go straight to your inbox, no backend needed.
+             TODO: get a free access key at https://web3forms.com and paste it below.
+             Reuse this same pattern for the contact and enroll forms. -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="mt-6">
+          <label for="nl-email" class="text-sm font-semibold text-white">Get free Quran learning tips for kids</label>
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New newsletter signup from Noor Al-Quran website">
+          <input type="hidden" name="from_name" value="Noor Al-Quran Website">
+          <!-- Optional: send visitors to a thank-you page after submitting -->
+          <!-- <input type="hidden" name="redirect" value="https://www.yourdomain.com/thank-you.html"> -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+          <div class="mt-2 flex gap-2">
+            <input id="nl-email" type="email" name="email" required autocomplete="email" placeholder="Your email address" class="min-w-0 flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder-jade-200/70 focus:border-gold-400 focus:outline-none">
+            <button type="submit" class="shrink-0 rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-jade-900 transition hover:bg-gold-400">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick links -->
+      <nav aria-label="Quick links" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="font-display text-xl font-bold text-white">Quick links</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="index.html" class="hover:text-gold-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-gold-400">About Us</a></li>
+          <li><a href="courses.html" class="hover:text-gold-400">Courses</a></li>
+          <li><a href="library.html" class="hover:text-gold-400">Library</a></li>
+          <li><a href="blog.html" class="hover:text-gold-400">Blogs</a></li>
+          <li><a href="contact.html" class="hover:text-gold-400">Contact Us</a></li>
+          <li><a href="enroll.html" class="hover:text-gold-400">Enroll Now</a></li>
+        </ul>
+      </nav>
+
+      <!-- Courses -->
+      <nav aria-label="Courses" class="lg:col-span-2">
+        <h2 class="font-display text-xl font-bold text-white">Courses</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="courses.html#noorani-qaida" class="hover:text-gold-400">Noorani Qaida</a></li>
+          <li><a href="courses.html#quran-reading" class="hover:text-gold-400">Quran Reading</a></li>
+          <li><a href="courses.html#hifz" class="hover:text-gold-400">Hifz Program</a></li>
+          <li><a href="courses.html#islamic-studies" class="hover:text-gold-400">Islamic Studies</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <div class="lg:col-span-3">
+        <h2 class="font-display text-xl font-bold text-white">Contact</h2>
+        <!-- TODO: replace placeholder email, phone and social links -->
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex gap-3"><i class="fa-regular fa-envelope mt-1 w-4 text-gold-400" aria-hidden="true"></i><a href="mailto:info@yourdomain.com" class="hover:text-gold-400">info@yourdomain.com</a></li>
+          <li class="flex gap-3"><i class="fa-solid fa-phone mt-1 w-4 text-gold-400" aria-hidden="true"></i><a href="tel:+920000000000" class="hover:text-gold-400">+92 300 0000000</a></li>
+          <li class="flex gap-3"><i class="fa-brands fa-whatsapp mt-1 w-4 text-gold-400" aria-hidden="true"></i><a href="https://wa.me/920000000000" class="hover:text-gold-400" rel="noopener">Chat on WhatsApp</a></li>
+          <li class="flex gap-3"><i class="fa-regular fa-clock mt-1 w-4 text-gold-400" aria-hidden="true"></i>Classes and support available 24/7</li>
+        </ul>
+        <ul class="mt-5 flex gap-3" aria-label="Social media">
+          <li><a href="#" aria-label="Facebook" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-jade-900"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-jade-900"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-gold-500 hover:text-jade-900"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payments + copyright -->
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 py-6 text-sm sm:px-6 md:flex-row lg:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <span class="text-jade-200/80">We accept</span>
+          <ul class="flex items-center gap-3" aria-label="Accepted payment methods">
+            <li><i class="fa-brands fa-cc-visa text-3xl text-white" aria-hidden="true"></i><span class="sr-only">Visa</span></li>
+            <li><i class="fa-brands fa-cc-mastercard text-3xl text-white" aria-hidden="true"></i><span class="sr-only">Mastercard</span></li>
+            <li><i class="fa-brands fa-cc-paypal text-3xl text-white" aria-hidden="true"></i><span class="sr-only">PayPal</span></li>
+            <!-- JazzCash has no Font Awesome icon; swap this badge for the official logo image if you have one -->
+            <li class="inline-flex items-center gap-1.5 rounded-md bg-white/10 px-2.5 py-1 text-xs font-semibold text-white"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> JazzCash</li>
+          </ul>
+        </div>
+        <p class="text-center text-jade-200/80">
+          &copy; <span id="year">2026</span> Noor Al-Quran Academy. All rights reserved.
+          <!-- TODO: point these at real pages once you create them -->
+          <a href="#" class="ml-2 underline-offset-4 hover:text-gold-400 hover:underline">Privacy Policy</a>
+          <a href="#" class="ml-2 underline-offset-4 hover:text-gold-400 hover:underline">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button (TODO: put your number in the link, country code first, no + or spaces) -->
+  <a href="https://wa.me/920000000000?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-3xl text-white shadow-lg transition hover:scale-105">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Scroll animations (AOS) ----------
+         Animations are switched off for visitors who prefer reduced motion. */
+      if (window.AOS) {
+        AOS.init({
+          duration: 650,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 40,
+          disable: function () {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          }
+        });
+      }
+
+      /* ---------- Mobile menu ---------- */
+      var header = document.getElementById('site-header');
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = menuBtn.querySelector('[data-icon="open"]');
+      var iconClose = menuBtn.querySelector('[data-icon="close"]');
+
+      function setMenu(open) {
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      menuBtn.addEventListener('click', function () {
+        setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) setMenu(false);
+      });
+
+      /* ---------- Header shadow once the page scrolls ---------- */
+      function onScroll() {
+        header.classList.toggle('shadow-md', window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---------- FAQ accordion (one answer open at a time) ---------- */
+      var triggers = document.querySelectorAll('.faq-trigger');
+
+      function setFaq(trigger, open) {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        trigger.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('data-open', String(open));
+      }
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+          triggers.forEach(function (t) { setFaq(t, false); });
+          setFaq(trigger, willOpen);
+        });
+      });
+
+      /* ---------- Footer year ---------- */
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Online Quran Ilm Academy</title>
+    <meta name="description" content="Explore our professional online Quran and Islamic courses for kids and adults. Learn Noorani Qaida, Tajweed, Hifz, and translation with certified tutors.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#013977',
+                        brandLilac: '#D6C7F0',
+                        brandLilacLight: '#F3EFFF',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-brandBlue text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-envelope mr-1 text-brandLilac"></i> info@onlinequranilmacademy.com</span>
+                <span><i class="fa-solid fa-phone mr-1 text-brandLilac"></i> +1 (234) 567-890</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="bg-brandLilac text-brandBlue px-2 py-0.5 rounded-full font-semibold text-xs">24/7 Live Classes</span>
+                <a href="enroll.html" class="hover:text-brandLilac transition">Book Free Trial</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="images\Online quran ilm academy logo new.png" alt="Online Quran Ilm Academy Logo" class="h-14 w-14 object-contain rounded-full shadow-sm border border-brandLilac">
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg sm:text-xl text-gray-900 tracking-tight leading-tight">Online Quran Academy</span>
+                    <span class="text-xs text-brandBlue font-semibold tracking-wider">Spreading the Light of Quran</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html" class="text-gray-600 hover:text-brandBlue transition">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-brandBlue transition">About Us</a>
+                <a href="courses.html" class="text-brandBlue font-semibold border-b-2 border-brandBlue pb-1">Courses</a>
+                <a href="library.html" class="text-gray-600 hover:text-brandBlue transition">Library</a>
+                <a href="blog.html" class="text-gray-600 hover:text-brandBlue transition">Blogs</a>
+                <a href="contact.html" class="text-gray-600 hover:text-brandBlue transition">Contact Us</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
+                <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                    Enroll Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-brandBlue">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-brandBlue">About Us</a>
+            <a href="courses.html" class="block py-2 text-brandBlue font-semibold">Courses</a>
+            <a href="library.html" class="block py-2 text-gray-600 hover:text-brandBlue">Library</a>
+            <a href="blog.html" class="block py-2 text-gray-600 hover:text-brandBlue">Blogs</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-brandBlue">Contact Us</a>
+            <div class="pt-2">
+                <a href="enroll.html" class="block text-center bg-brandBlue text-white py-3 rounded-xl font-medium shadow">Enroll Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header with Custom Background Overlay (Quran on Laptop & Verses concept) -->
+    <section class="relative bg-black text-white py-20 lg:py-28 overflow-hidden">
+        <!-- Background Overlay with Image & Gradient -->
+        <div class="absolute inset-0 opacity-30 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1584286595398-a19f2d34c86e?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-brandBlue/80 to-black opacity-90"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <span class="bg-brandLilac/20 text-brandLilac border border-brandLilac/40 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase">Structured Learning Paths</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold mt-4 tracking-tight">Our Comprehensive Quran Courses</h1>
+            <p class="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
+                Tailored 1-on-1 live classes designed for kids and adults with expert certified male and female tutors.
+            </p>
+        </div>
+    </section>
+
+    <!-- Courses Grid Section -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-brandBlue uppercase">Excellence in Islamic Education</h2>
+                <p class="text-2xl sm:text-4xl font-bold text-gray-900 mt-2">Choose From Our Specialized Programs</p>
+                <p class="text-gray-600 mt-3">Flexible timings, personalized attention, and interactive digital learning tools.</p>
+            </div>
+
+            <!-- 6 Detailed Courses Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-book-quran"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Beginner Level</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Noorani Qaida Course</h3>
+                            <p class="text-gray-600 text-sm mb-4">The foundational step for kids and beginners to learn Arabic alphabets, proper pronunciation (Makharij), and basic joining rules.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Arabic Letter Recognition</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Harakaat & Tanween Practice</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Interactive Visual Exercises</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: 2-3 Months</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quran Reading with Tajweed</h3>
+                            <p class="text-gray-600 text-sm mb-4">Master fluent Quran recitation applying all rules of Tajweed, articulation points, and rhythmic chanting under expert supervision.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Rules of Noon Sakkin & Meem Sakkin</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Correct Pronunciation of Qalqalah</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Flawless Recitation Practice</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: Self-Paced</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Advanced</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Hifz-ul-Quran (Memorization)</h3>
+                            <p class="text-gray-600 text-sm mb-4">A structured hifz program for students aiming to memorize the Holy Quran completely or partially with regular revisions.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Daily New Lesson (Sabqi)</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Weekly & Monthly Revisions</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Certified Hafiz/Hafiza Mentors</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: 2-4 Years</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Understanding</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quran Translation & Tafseer</h3>
+                            <p class="text-gray-600 text-sm mb-4">Understand the divine message of Allah word-by-word with detailed context, historical background, and practical life lessons.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Word-by-Word Translation</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Contextual Tafseer (Exegesis)</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Moral & Ethical Teachings</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: 1 Year</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-hands-praying"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Essential</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Islamic Studies & Duas</h3>
+                            <p class="text-gray-600 text-sm mb-4">Essential Islamic education for children including daily supplications (Duas), Salah (Namaz) method, Wudu, and Islamic manners.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Step-by-Step Salah Training</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> 40 Masnoon Duas for Daily Life</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Islamic Ethics & Seerah</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: 6 Months</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-brandLilacLight p-6 border-b border-brandLilac/20 flex justify-between items-start">
+                        <div class="w-14 h-14 bg-brandBlue text-white rounded-xl flex items-center justify-center text-2xl shadow-md">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="bg-brandBlue text-white text-xs font-semibold px-3 py-1 rounded-full">Advanced Arabic</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Classical Arabic Grammar</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn Arabic grammar (Nahw & Sarf) to independently understand Quranic verses and classical Arabic literature without translations.</p>
+                            <ul class="space-y-2 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Ilm-us-Sarf & Nahw Rules</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Quranic Vocabulary Building</li>
+                                <li><i class="fa-solid fa-check text-brandBlue mr-2"></i> Sentence Structure Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-gray-500">Duration: 1 Year</span>
+                            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white text-sm px-4 py-2 rounded-xl transition font-medium shadow-sm">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn With Us Banner -->
+    <section class="py-16 bg-brandLilacLight border-y border-brandLilac/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Child's Quran Journey?</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mb-8">Book 3 Days Free Trial Classes today with no credit card required. Experience our quality teaching firsthand.</p>
+            <a href="enroll.html" class="bg-brandBlue hover:bg-black text-white px-8 py-3.5 rounded-xl font-semibold shadow-lg transition-all inline-block">
+                Claim Your Free Trial Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="Online quran ilm academy logo new.png" alt="Logo" class="h-10 w-10 object-contain rounded-full bg-white p-0.5">
+                    <span class="text-white font-bold text-lg">Quran Ilm Academy</span>
+                </div>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Spreading the light of Quran globally with dedicated certified tutors, interactive learning, and safe environment for children.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold text-base mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="courses.html" class="hover:text-white transition">Our Courses</a></li>
+                    <li><a href="library.html" class="hover:text-white transition">Digital Library</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold text-base mb-4">Featured Courses</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="courses.html" class="hover:text-white transition">Noorani Qaida</a></li>
+                    <li><a href="courses.html" class="hover:text-white transition">Quran with Tajweed</a></li>
+                    <li><a href="courses.html" class="hover:text-white transition">Hifz-ul-Quran</a></li>
+                    <li><a href="courses.html" class="hover:text-white transition">Translation & Tafseer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold text-base mb-4">Payment Methods</h3>
+                <p class="text-sm text-gray-400 mb-4">We accept secure payments globally through Credit/Debit Cards, PayPal, Bank Transfers, and JazzCash/EasyPaisa.</p>
+                <div class="flex space-x-3 text-2xl text-gray-300">
+                    <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                    <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
+                    <i class="fa-solid fa-building-columns" title="Bank Transfer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2026 Online Quran Ilm Academy. All rights reserved. Designed for Fast SEO Performance.
+        </div>
+    </footer>
+
+    <!-- AOS Script & Mobile Menu Toggle -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
