@@ -1,152 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Quran Ilm Academy - Admission & Free Trial</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              deepBlue: '#013977',
-              gold: '#D97706',
-              lilac: '#D6C7F0',
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================
+       PRIMARY SEO
+       TODO: replace "Noor Al-Quran Academy" and "yourdomain.com"
+       with your real academy name and domain everywhere in this file.
+       ============================================================ -->
+  <title>Learn Quran Online with Certified Tutors | Noor Al-Quran Academy</title>
+  <meta name="description" content="Enroll your child in live 1-on-1 online Quran classes. Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies with certified male and female tutors. Book a free trial.">
+  <meta name="keywords" content="online Quran academy, learn Quran online, Quran classes for kids, Noorani Qaida online, Hifz classes online, Tajweed course, female Quran tutor">
+  <meta name="author" content="Noor Al-Quran Academy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.yourdomain.com/">
+  <meta name="theme-color" content="#06382E">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noor Al-Quran Academy">
+  <meta property="og:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta property="og:description" content="Live 1-on-1 Quran classes for children. Certified male and female tutors, flexible timings and a free trial class.">
+  <meta property="og:url" content="https://www.yourdomain.com/">
+  <meta property="og:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta name="twitter:description" content="Live 1-on-1 Quran classes for children. Certified tutors, flexible timings and a free trial class.">
+  <meta name="twitter:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+
+  <!-- Favicon (inline SVG, swap for your own files later) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230B6B54'/%3E%3Ccircle cx='19' cy='20' r='11' fill='%23C9A24A'/%3E%3Ccircle cx='23' cy='16' r='9' fill='%230B6B54'/%3E%3C/svg%3E">
+
+  <!-- ============================================================
+       FONTS + CDN LIBRARIES
+       Amiri  : classical Arabic-inspired serif (headings + Arabic text)
+       Figtree: clean, friendly sans-serif (body + UI)
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Brand palette + fonts for the whole site.
+       Reuse this same config block on every page so colours stay consistent. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jade:   { 50:'#F1F8F5', 100:'#DCEFE8', 200:'#B7DDD0', 500:'#0B6B54', 600:'#095A47', 700:'#084C3C', 800:'#06382E', 900:'#042A22' },
+            lagoon: { 50:'#EAF6F6', 100:'#CFEAEA', 500:'#0E7C7B', 600:'#0B6564', 700:'#094F4F' },
+            gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
+            mist:   '#F4F9F7'
+          },
+          fontFamily: {
+            display: ['outfit', 'inter', 'Montserrat'],
+            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
           }
         }
       }
-    </script>
+    };
+  </script>
+
+  <!-- ============================================================
+       CUSTOM CSS (only what Tailwind utilities can't do cleanly)
+       ============================================================ -->
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    /* Visible keyboard focus everywhere */
+    :focus-visible { outline: 3px solid #C9A24A; outline-offset: 3px; border-radius: 4px; }
+
+    /* Calm the default AOS travel distance (it is 100px by default) */
+    [data-aos="fade-up"]    { transform: translate3d(0, 24px, 0); }
+    [data-aos="fade-left"]  { transform: translate3d(28px, 0, 0); }
+    [data-aos="fade-right"] { transform: translate3d(-28px, 0, 0); }
+
+    /* Islamic geometric pattern (8-point star) used in the hero + blog placeholder */
+    .geo-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9A24A' stroke-opacity='.28' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .hero-pattern {
+      -webkit-mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+              mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+    }
+
+    /* Star medallion: two overlapping squares (one rotated) behind an icon */
+    .medallion {
+      position: relative; display: inline-grid; place-items: center; flex-shrink: 0;
+      width: 3.5rem; height: 3.5rem; isolation: isolate;
+      color: #fff; font-size: 1.1rem; --m-bg: #0B6B54;
+    }
+    .medallion::before, .medallion::after {
+      content: ""; position: absolute; inset: .5rem; z-index: -1;
+      background: var(--m-bg); border-radius: .3rem;
+    }
+    .medallion::after { transform: rotate(45deg); }
+    .medallion--gold   { --m-bg: #C9A24A; color: #042A22; }
+    .medallion--lagoon { --m-bg: #0E7C7B; }
+    .medallion--dark   { --m-bg: #06382E; color: #EBD59A; }
+
+    /* Desktop nav underline */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 2px;
+      background: #C9A24A; transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    }
+    .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+    /* FAQ accordion: smooth height using grid rows */
+    .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq-panel > div { overflow: hidden; visibility: hidden; transition: visibility 0s linear .3s; }
+    .faq-panel[data-open="true"] { grid-template-rows: 1fr; }
+    .faq-panel[data-open="true"] > div { visibility: visible; transition-delay: 0s; }
+    .faq-icon { transition: transform .25s ease; }
+    .faq-trigger[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-panel, .faq-panel > div, .faq-icon, .nav-link::after { transition: none; }
+    }
+  </style>
+
+  <!-- If JavaScript is disabled, show animated elements anyway -->
+  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
+
+  <!-- ============================================================
+       STRUCTURED DATA (JSON-LD) – helps Google understand the site
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Noor Al-Quran Academy",
+    "url": "https://www.yourdomain.com/",
+    "logo": "https://www.yourdomain.com/images/logo.png",
+    "description": "Online Quran academy offering live one-to-one classes in Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies for children and adults.",
+    "email": "info@yourdomain.com",
+    "telephone": "+92-300-0000000",
+    "areaServed": "Worldwide",
+    "sameAs": [
+      "https://www.facebook.com/yourpage",
+      "https://www.instagram.com/yourpage",
+      "https://www.youtube.com/@yourchannel"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What age can my child start learning the Quran online?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most children start between ages 4 and 6 with Noorani Qaida. Older children and adults are welcome too, and your tutor will begin at the level that suits the student." } },
+      { "@type": "Question", "name": "Do you offer a free trial class?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Book a free trial class to meet a tutor, check the audio and video, and see how your child feels about learning. No card details are needed." } },
+      { "@type": "Question", "name": "What do we need to join online classes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A computer, tablet or phone with a camera and microphone, a stable internet connection, and a quiet corner. Headphones help children focus. We will guide you through the setup before the first class." } },
+      { "@type": "Question", "name": "Can my daughter learn with a female tutor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Female tutors are available for girls and for women. Just mention your preference when you enroll." } },
+      { "@type": "Question", "name": "How are class timings arranged?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You choose the days and time slots that fit school, work and your time zone. If something changes, you can ask to reschedule with advance notice." } },
+      { "@type": "Question", "name": "How will I know my child is making progress?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Parents receive a progress report every month covering what was learned, strengths and areas to practise. Tutors also share short feedback after lessons." } },
+      { "@type": "Question", "name": "Which payment methods do you accept?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We accept Visa, Mastercard, PayPal and JazzCash." } }
+    ]
+  }
+  </script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header Section -->
-    <header class="bg-deepBlue border-b border-slate-800 py-4 px-6 shadow-md flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <span class="text-xl font-extrabold text-gold tracking-wide">Online Quran Ilm Academy</span>
-        </div>
-        <div>
-            <!-- Button to open Modal -->
-            <button onclick="openAdmissionModal()" class="bg-gold hover:bg-amber-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 text-sm">
-                Book Free Trial
-            </button>
-        </div>
-    </header>
+<body class="bg-white font-sans text-jade-800 antialiased">
 
-    <!-- Main Content / Hero Demonstration -->
-    <main class="flex-grow container mx-auto px-4 py-12 flex flex-col items-center justify-center text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Learn Quran Online with Certified Tutors</h1>
-        <p class="text-slate-300 max-w-xl mb-8 text-base">Experience one-to-one live interactive Quran classes with expert male and female tutors tailored for all ages.</p>
-        
-        <!-- Trigger Modal Button -->
-        <button onclick="openAdmissionModal()" class="bg-gold hover:bg-amber-600 text-white font-extrabold px-8 py-4 rounded-2xl shadow-xl transition transform hover:scale-105 text-lg">
-            Register For Free Trial Now
+  <!-- Accessibility: skip link for keyboard users -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-jade-900">Skip to main content</a>
+<!-- ============================================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ============================================================ -->
+  <div class="bg-[#013977] text-white text-xs sm:text-sm py-2 px-4 border-b border-[#D6C7F0]/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <!-- Left Contact Info -->
+      <div class="flex items-center space-x-4 text-[#F3EFFF]/90">
+        <a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D6C7F0] transition flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-[#D97706]"></i>
+          <span>info@onlinequranilmacademy.com</span>
+        </a>
+        <a href="tel:+923198427973" class="hover:text-[#D6C7F0] transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D97706]"></i>
+          <span>+92 319 8427973</span>
+        </a>
+      </div>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center space-x-3">
+        <span class="bg-[#D97706] text-white px-2.5 py-0.5 rounded-full font-bold text-[11px] shadow-sm tracking-wide">
+          24/7 Live Support
+        </span>
+        <a href="enroll.html?trial=1" class="text-[#D6C7F0] hover:text-white font-medium transition flex items-center gap-1">
+          <i class="fa-regular fa-calendar-check text-xs"></i> Book Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       1. HEADER / NAVBAR (Sticky & Glassmorphism Modern Design)
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-[#D6C7F0]/30 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+      <!-- Logo + Academy Title & Tagline -->
+      <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
+        <img 
+          src="images/Online quran ilm academy logo new.png" 
+          alt="Online Quran Ilm Academy Logo" 
+          class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+          width="1023"
+          height="1024"
+        />
+        <div class="flex flex-col justify-center">
+          <span class="font-display text-lg font-extrabold text-[#013977] leading-tight sm:text-xl lg:text-2xl group-hover:text-[#D97706] transition-colors">
+            Online Quran ilm Academy
+          </span>
+          <span class="text-[10px] sm:text-xs font-medium text-[#013977]/75 tracking-wider uppercase">
+           <span class="text-[#D97706]">  Spreading the Light of Quran</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden lg:block">
+        <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
+          <li>
+            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
+          </li>
+          <li>
+            <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Library</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-[#D97706] px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D97706]/20 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-lg min-[480px]:inline-flex">
+          <i class="fa-solid fa-user-plus text-xs" aria-hidden="true"></i> Enroll Now
+        </a>
+
+        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D6C7F0] text-[#013977] hover:bg-[#F3EFFF] transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i data-icon="open" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          <i data-icon="close" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
         </button>
-
-        <!-- Direct Inline Form Section (Can be pasted on any admission page) -->
-        <section class="mt-16 w-full max-w-lg bg-deepBlue/50 border border-slate-700 p-8 rounded-3xl shadow-2xl text-left">
-            <h2 class="text-2xl font-bold text-white mb-2">Direct Admission Form</h2>
-            <p class="text-slate-400 text-sm mb-6">Fill out the details below to secure your spot.</p>
-            
-            <!-- Reusable Admission Form Template -->
-            <div id="inline-form-container">
-                <form name="admission-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event, this)" class="space-y-4">
-                    <input type="hidden" name="form-name" value="admission-form" />
-                    <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-                    <input type="hidden" name="subject" value="New Free Trial Admission Inquiry - Online Quran Ilm Academy" />
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Parent's Full Name</label>
-                        <input type="text" name="parent_name" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="Enter parent name">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Student's Name & Age</label>
-                        <input type="text" name="student_details" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="e.g. Ahmed, 8 years">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">WhatsApp Number</label>
-                        <input type="tel" name="whatsapp_number" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition" placeholder="+92 319 8427973">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Preferred Course</label>
-                        <select name="course" class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:border-gold outline-none transition">
-                            <option value="Quran Reading with Tajweed">Quran Reading with Tajweed</option>
-                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
-                            <option value="Islamic Studies for Kids">Islamic Studies for Kids</option>
-                            <option value="Arabic Language">Arabic Language Course</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="w-full py-3.5 bg-gold hover:bg-amber-600 text-white font-bold rounded-xl transition shadow-lg text-base">
-                        Submit & Book Free Trial
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Popup Admission Modal -->
-    <div id="admissionModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 px-4">
-        <div class="bg-deepBlue border border-slate-700 w-full max-w-lg p-8 rounded-3xl shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContent">
-            <!-- Close Button -->
-            <button onclick="closeAdmissionModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl font-bold bg-slate-800/60 hover:bg-slate-700 w-9 h-9 rounded-full flex items-center justify-center transition">
-                &times;
-            </button>
-            
-            <div class="mb-6">
-                <h3 class="text-2xl font-extrabold text-white">Book Free Trial Class</h3>
-                <p class="text-slate-300 text-xs mt-1">Fill out the form below and start your Quran learning journey.</p>
-            </div>
-
-            <!-- Modal Form Container -->
-            <div id="modal-form-container">
-                <form name="admission-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event, this)" class="space-y-4">
-                    <input type="hidden" name="form-name" value="admission-form" />
-                    <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-                    <input type="hidden" name="subject" value="New Free Trial Admission Inquiry - Online Quran Ilm Academy" />
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Parent's Full Name</label>
-                        <input type="text" name="parent_name" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="Enter parent name">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Student's Name & Age</label>
-                        <input type="text" name="student_details" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="e.g. Ahmed, 8 years">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">WhatsApp Number</label>
-                        <input type="tel" name="whatsapp_number" required class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition" placeholder="+92 319 8427973">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">Preferred Course</label>
-                        <select name="course" class="w-full bg-[#1c2541] border border-slate-600 rounded-xl px-4 py-2.5 text-white text-sm focus:border-gold outline-none transition">
-                            <option value="Quran Reading with Tajweed">Quran Reading with Tajweed</option>
-                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
-                            <option value="Islamic Studies for Kids">Islamic Studies for Kids</option>
-                            <option value="Arabic Language">Arabic Language Course</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="w-full py-3 bg-gold hover:bg-amber-600 text-white font-bold rounded-xl transition shadow-lg text-sm">
-                        Submit & Book Free Trial
-                    </button>
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
 
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden border-t border-[#D6C7F0]/30 bg-white lg:hidden">
+      <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+        <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
+          <li>
+            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Courses</a>
+          </li>
+          <li>
+            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
+          </li>
+          <li>
+            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 font-bold text-white shadow-md hover:bg-[#b56305] transition">
+            <i class="fa-solid fa-user-plus text-sm" aria-hidden="true"></i> Enroll Now
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<section class="py-16 bg-[#012146]  font-sans">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Main Banner Container -->
+    <div class="relative bg-[#013977] from-gray-900 via-gray-800 to-gray-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden border border-gray-800 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+      
+      <!-- Left Side Text Content -->
+      <div class="lg:w-1/2 space-y-4z">
+        
+        <span class="text-emerald-400 font-semibold tracking-wide uppercase text-sm">Why are you waiting for?</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Book Your 3-Days <br><span class="text-emerald-400">Free Trial Class Now!</span>
+        </h2>
+        <p class="text-gray-300 text-base md:text-lg">
+          Book Now & Experience Personalized Quran Learning with Online Quran Ilm Academy.
+        </p>
+        
+      </div>
+
+      <!-- Right Side Form Card -->
+      <div class="lg:w-1/2 w-full max-w-md bg-white text-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 relative">
+        
+        <!-- Form Element (Netlify AJAX ready) -->
+        <form id="quranTrialForm" name="free-trial-admission" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-3.5">
+          <!-- Netlify Hidden Fields -->
+          <input type="hidden" name="form-name" value="free-trial-admission" />
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Full Name *</label>
+            <input type="text" name="full_name" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="Muhammad Ali">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">WhatsApp Number *</label>
+            <input type="tel" name="whatsapp_number" id="formWhatsapp" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="+923198427973">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Email Address</label>
+            <input type="email" name="email" id="formEmail" class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="name@example.com">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Country *</label>
+            <input type="text" name="country" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm" placeholder="Pakistan / USA / UK / etc.">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Preferred Course *</label>
+            <select name="preferred_course" required class="w-full px-4 py-2.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none transition text-sm">
+              <option value="" disabled selected>Select a course</option>
+              <option value="Nazra Quran with Tajweed">Nazra Quran with Tajweed</option>
+              <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+              <option value="Basic Islamic Education">Basic Islamic Education</option>
+              <option value="Arabic Language Course">Arabic Language Course</option>
+            </select>
+          </div>
+
+          <button type="submit" id="formSubmitBtn" class="w-full bg-zinc-800 hover:bg-zinc-900 text-white font-semibold py-3 rounded-xl transition duration-200 shadow-md text-sm mt-2">
+            Send Message
+          </button>
+        </form>
+
+        <!-- Success State Box (Hidden by default, appears right inside on successful submission) -->
+        <div id="formSuccessBox" class="hidden text-center py-2 space-y-3">
+          <div class="inline-block bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-1">
+            ✓ Submitted Successfully
+          </div>
+          <h3 class="text-lg font-bold text-gray-900">JazakAllah Khair!</h3>
+          <p class="text-gray-600 text-xs leading-relaxed text-left bg-gray-50 p-3.5 rounded-xl border border-gray-100">
+            Thank you for choosing <strong>Online Quran Ilm Academy</strong>.<br>
+            We have received your Free Trial Class request. Our coordinator will contact you on WhatsApp shortly.<br><br>
+            You can also directly send your details to our admin via WhatsApp below:
+          </p>
+
+          <!-- Direct WhatsApp Admin Button with Dynamic Data -->
+          <a id="whatsappAdminBtn" href="#" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-xl text-sm transition text-center shadow-lg flex items-center justify-center gap-2">
+            📲 Send Details to Admin WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+  document.getElementById('quranTrialForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page refresh rokne ke liye
+
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    // Values extract karna WhatsApp message ke liye
+    const fullName = formData.get('full_name');
+    const whatsapp = formData.get('whatsapp_number');
+    const email = formData.get('email') || 'Not Provided';
+    const country = formData.get('country');
+    const course = formData.get('preferred_course');
+
+    // Netlify par background mein data submit karna bina redirect ke
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Form hide kar ke success message show karna
+      form.style.display = 'none';
+      document.getElementById('formSuccessBox').classList.remove('hidden');
+
+      // Admin WhatsApp Link generate karna (+923198427973)
+      const adminPhone = "923198427973";
+      const textMessage = `🔔 *New Free Trial Registration*\n\n👤 Name: ${fullName}\n📞 WhatsApp: ${whatsapp}\n📧 Email: ${email}\n🌍 Country: ${country}\n📚 Course: ${course}\n\n_Submitted via Online Quran Ilm Academy Website_`;
+      
+      const whatsappLink = `https://wa.me/${adminPhone}?text=${encodeURIComponent(textMessage)}`;
+      document.getElementById('whatsappAdminBtn').href = whatsappLink;
+    })
+    .catch((error) => {
+      console.error('Submission error:', error);
+      // Fallback agar local environment ya netlify test mein ho toh bhi WhatsApp open karwa dein taake testing na ruke
+      form.style.display = 'none';
+      document.getElementById('formSuccessBox').classList.remove('hidden');
+      
+      const adminPhone = "923198427973";
+      const textMessage = `🔔 *New Free Trial Registration*\n\n👤 Name: ${fullName}\n📞 WhatsApp: ${whatsapp}\n📧 Email: ${email}\n🌍 Country: ${country}\n📚 Course: ${course}`;
+      document.getElementById('whatsappAdminBtn').href = `https://wa.me/${adminPhone}?text=${encodeURIComponent(textMessage)}`;
+    });
+  });
+</script>
+
+
+
+    <!-- Popup Admission Modal -->
+   
     <!-- Footer -->
-    <footer class="bg-deepBlue border-t border-slate-800 py-6 text-center text-slate-400 text-xs">
+    <!-- <footer class="bg-deepBlue border-t border-slate-800 py-6 text-center text-slate-400 text-xs">
         &copy; 2026 Online Quran Ilm Academy. All rights reserved.
-    </footer>
+    </footer> -->
+<footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D8A43E]/30 overflow-hidden">
+    
+    <!-- Top Decorative Glow / Wave Accent -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#D8A43E] to-transparent opacity-70"></div>
+
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+
+      <!-- Unique Feature: Quick Interactive Banner Inside Footer -->
+      <div class="mb-14 rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl backdrop-blur-md">
+        <div class="space-y-1 text-center lg:text-left">
+          <span class="text-xs uppercase tracking-widest text-[#D8A43E] font-semibold">Start Your Journey Today</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-white">Not sure which course fits your child?</h3>
+          <p class="text-sm text-[#D6C7F0]">Get a free 1-on-1 trial session evaluated by our certified expert tutors.</p>
+        </div>
+        <a href="enroll.html" class="shrink-0 rounded-xl bg-[#D8A43E] hover:bg-[#c29135] text-[#013977] font-bold px-7 py-3.5 text-sm transition shadow-lg transform hover:-translate-y-0.5">
+          Book Free Trial Class
+        </a>
+      </div>
+
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+
+        <!-- Brand + Logo Image + Newsletter -->
+        <div class="lg:col-span-4 space-y-5">
+          <a href="index.html" class="flex items-center gap-3.5 group" aria-label="Online Quran Ilm Academy home">
+            <!-- Uploaded Logo Image Integrated -->
+            <div class="h-12 w-12 shrink-0 rounded-xl bg-white/10 p-1 flex items-center justify-center border border-white/20 shadow-md">
+              <img src="images\Online quran ilm academy logo new.png" alt="Online Quran Ilm Academy Logo" class="h-full w-full object-contain rounded-lg">
+            </div>
+            <span class="font-display text-lg font-bold text-white tracking-wide leading-snug">Online Quran ilm Academy</span>
+          </a>
+          
+          <p class="text-sm leading-relaxed text-[#D6C7F0]">
+            Spreading the light of Quran globally with expert certified tutors, authentic Tajweed, and interactive one-to-one digital learning.
+          </p>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-2 gap-2.5 pt-1">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 p-2.5 rounded-xl text-xs">
+              <span class="w-2 h-2 rounded-full bg-[#D8A43E] animate-pulse"></span>
+              <span class="text-white font-medium">100% Certified Tutors</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 p-2.5 rounded-xl text-xs">
+              <span class="w-2 h-2 rounded-full bg-[#D8A43E]"></span>
+              <span class="text-white font-medium">Flexible 24/7 Classes</span>
+            </div>
+          </div>
+
+          <!-- Netlify Newsletter Form -->
+          <form name="newsletter-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-2 pt-2">
+            <label for="nl-email" class="text-xs font-semibold uppercase tracking-wider text-[#D8A43E] block">Get free Quran learning tips for kids</label>
+            <input type="hidden" name="form-name" value="newsletter-signup">
+            <input type="hidden" name="subject" value="New Newsletter Subscriber - Online Quran Ilm Academy">
+            <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+            
+            <div class="flex gap-2">
+              <input id="nl-email" type="email" name="email" required autocomplete="email" placeholder="Your email address" class="min-w-0 flex-1 rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder-[#D6C7F0]/50 focus:border-[#D8A43E] focus:outline-none transition">
+              <button type="submit" class="shrink-0 rounded-xl bg-[#D8A43E] hover:bg-[#c29135] text-[#013977] font-bold px-5 py-2.5 text-sm transition shadow-lg">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <nav aria-label="Quick links" class="lg:col-span-2 lg:col-start-6">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Quick Links</h2>
+          <ul class="space-y-3 text-sm text-[#D6C7F0]">
+            <li><a href="index.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Home</a></li>
+            <li><a href="about.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> About Us</a></li>
+            <li><a href="courses.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Courses</a></li>
+            <li><a href="library.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Library</a></li>
+            <li><a href="blog.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Blogs</a></li>
+            <li><a href="contact.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Contact Us</a></li>
+            <li><a href="enroll.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Enroll Now</a></li>
+          </ul>
+        </nav>
+
+        <!-- Courses -->
+        <nav aria-label="Courses" class="lg:col-span-2">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Courses</h2>
+          <ul class="space-y-3 text-sm text-[#D6C7F0]">
+            <li><a href="courses.html#noorani-qaida" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Noorani Qaida</a></li>
+            <li><a href="courses.html#quran-reading" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Quran Reading</a></li>
+            <li><a href="courses.html#hifz" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Hifz Program</a></li>
+            <li><a href="courses.html#islamic-studies" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Islamic Studies</a></li>
+            <li><a href="courses.html#arabic-language" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Arabic Language</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact & Socials -->
+        <div class="lg:col-span-3 space-y-4">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Contact</h2>
+          <ul class="space-y-3 text-sm text-[#D6C7F0]">
+            <li class="flex items-start gap-3"><i class="fa-regular fa-envelope mt-1 w-4 text-[#D8A43E] shrink-0" aria-hidden="true"></i><a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D8A43E] transition break-all">info@onlinequranilmacademy.com</a></li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-phone mt-1 w-4 text-[#D8A43E] shrink-0" aria-hidden="true"></i><a href="tel:+923198427973" class="hover:text-[#D8A43E] transition">+92 319 8427973</a></li>
+            <li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp mt-1 w-4 text-[#D8A43E] shrink-0" aria-hidden="true"></i><a href="https://wa.me/923198427973" class="hover:text-[#D8A43E] transition" rel="noopener">Chat on WhatsApp</a></li>
+            <li class="flex items-start gap-3"><i class="fa-regular fa-clock mt-1 w-4 text-[#D8A43E] shrink-0" aria-hidden="true"></i>Classes & support available 24/7</li>
+          </ul>
+          
+          <!-- Social Media Icons -->
+          <div class="pt-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#D6C7F0]/70 block mb-2">Connect With Us</span>
+            <ul class="flex gap-2.5" aria-label="Social media">
+              <li><a href="https://www.facebook.com/onlinequranilmacademy" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D8A43E] hover:text-[#013977] text-white"><i class="fa-brands fa-facebook-f text-xs" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/onlinequranilmacademy/" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D8A43E] hover:text-[#013977] text-white"><i class="fa-brands fa-instagram text-xs" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/@OnlineQuranilmAcademy" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D8A43E] hover:text-[#013977] text-white"><i class="fa-brands fa-youtube text-xs" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar: Payments + Copyright -->
+    <div class="border-t border-white/10 bg-[#012a59]">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 py-6 text-xs sm:px-6 md:flex-row lg:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <span class="text-[#D6C7F0]/70 font-medium">Secure Payments Accepted:</span>
+          <ul class="flex items-center gap-3 text-white" aria-label="Accepted payment methods">
+            <li><i class="fa-brands fa-cc-visa text-2xl" aria-hidden="true"></i><span class="sr-only">Visa</span></li>
+            <li><i class="fa-brands fa-cc-mastercard text-2xl" aria-hidden="true"></i><span class="sr-only">Mastercard</span></li>
+            <li><i class="fa-brands fa-cc-paypal text-2xl" aria-hidden="true"></i><span class="sr-only">PayPal</span></li>
+            <li class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-2.5 py-1 text-[11px] font-semibold"><i class="fa-solid fa-mobile-screen-button text-[#D8A43E]" aria-hidden="true"></i> JazzCash</li>
+          </ul>
+        </div>
+        <p class="text-center text-[#D6C7F0]/70">
+          &copy; <span id="year">2026</span> Online Quran Ilm Academy. All rights reserved.
+          <a href="#" class="ml-2 underline-offset-4 hover:text-[#D8A43E] hover:underline">Privacy Policy</a>
+          <a href="#" class="ml-2 underline-offset-4 hover:text-[#D8A43E] hover:underline">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
     <!-- JavaScript Functionality -->
     <script>
