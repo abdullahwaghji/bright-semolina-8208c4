@@ -17,7 +17,8 @@ collections:
       - {label: "Featured / Grid Image", name: "image", widget: "image", hint: "Yeh image blog.html ke grid card aur article ke top par show hogi."}
       - {label: "Short Excerpt / Summary", name: "excerpt", widget: "text"}
       - {label: "Body Content (Markdown & Extra Images)", name: "body", widget: "markdown", hint: "Aap yahan text ke sath sath aur bhi images insert kar sakte hain."}
-      - name: "pages"
+
+  - name: "pages"
     label: "Website Pages"
     files:
       - name: "home"

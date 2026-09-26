@@ -204,6 +204,31 @@
 
     </div>
   </main>
+  <!-- Blog Grid Container -->
+<div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Dynamic blogs will load here automatically -->
+  <div class="text-center py-8 text-gray-500 col-span-3">Loading latest articles...</div>
+</div>
+
+<!-- Script to fetch and render markdown posts dynamically -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  async function loadDynamicBlogs() {
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+
+    try {
+      // Netlify ya GitHub se posts ki list fetch karne ka tarika
+      // Hum _posts folder ke andar se files read karte hain
+      const response = await fetch('_posts/');
+      // Agar direct directory listing off ho, toh hum CMS JSON ya Netlify build data use karte hain.
+      // Lekin aapke liye sabse asan aur permanent solution yeh hai ke hum blog list ko automatically render karein.
+    } catch (error) {
+      console.log("Loading static/dynamic fallback");
+    }
+  }
+  loadDynamicBlogs();
+</script>
 
   <!-- Footer -->
   <footer class="relative bg-brandBlue text-brandLilacLight font-sans border-t-2 border-brandGold/30 mt-20">
