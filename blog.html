@@ -143,7 +143,7 @@
     </div>
 
     <!-- Blog Grid Container (CMS items will load here dynamically in future or display sample cards) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 id="blog-grid">
       
       <!-- Sample Card 1 -->
       <article class="bg-white rounded-3xl shadow-md border border-brandLilac/50 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
@@ -243,5 +243,23 @@
       document.getElementById('mobile-menu').classList.toggle('hidden');
     }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  async function loadBlogGrid() {
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+
+    try {
+      // Netlify/GitHub ke zariye _posts folder ki list fetch karna
+      // (Static site par hum file list ya build-time JSON use karte hain, ya direct parse)
+      const response = await fetch('_posts/');
+      // Agar direct folder listing on na ho, toh hum CMS ke dynamic loader ya Netlify function use karte hain.
+      // Lekin sabse asan static tareeqa yeh hai ke hum build mein list generate karein ya GitHub API use karein.
+    } catch (e) {
+      console.log("Using default sample cards or loading dynamic items");
+    }
+  }
+  loadBlogGrid();
+</script>
 </body>
 </html
