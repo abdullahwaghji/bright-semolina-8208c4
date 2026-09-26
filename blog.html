@@ -206,30 +206,101 @@
   </main>
   <!-- Blog Grid Container -->
 <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  <!-- Dynamic blogs will load here automatically -->
-  <div class="text-center py-8 text-gray-500 col-span-3">Loading latest articles...</div>
+  <!-- Loading State -->
+  <div class="text-center py-12 text-gray-500 col-span-3 font-medium">
+    <i class="fa-solid fa-spinner fa-spin text-brandGold text-2xl mb-2"></i>
+    <p>Loading latest articles from CMS...</p>
+  </div>
 </div>
 
-<!-- Script to fetch and render markdown posts dynamically -->
+<!-- Markdown Parser & GitHub API Script -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  async function loadDynamicBlogs() {
+  async function loadBlogsFromGitHub() {
     const grid = document.getElementById('blog-grid');
     if (!grid) return;
 
+    // Aapki GitHub repository ki details
+    const owner = 'abdullahwaghji';
+    const repo = 'bright-semolina-8208c4';
+    const folder = '_posts';
+
     try {
-      // Netlify ya GitHub se posts ki list fetch karne ka tarika
-      // Hum _posts folder ke andar se files read karte hain
-      const response = await fetch('_posts/');
-      // Agar direct directory listing off ho, toh hum CMS JSON ya Netlify build data use karte hain.
-      // Lekin aapke liye sabse asan aur permanent solution yeh hai ke hum blog list ko automatically render karein.
-    } catch (error) {
-      console.log("Loading static/dynamic fallback");
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${folder}`;
+      const response = await fetch(apiUrl);
+      
+      if (!response.ok) throw new Error("Could not fetch posts from GitHub");
+      
+      const files = await response.json();
+      const mdFiles = files.filter(file => file.name.endsWith('.md'));
+
+      if (mdFiles.length === 0) {
+        grid.innerHTML = '<div class="text-center col-span-3 text-gray-500 py-12">No blog posts found yet. Add one via CMS!</div>';
+        return;
+      }
+
+      grid.innerHTML = ''; // Clear loading message
+
+      for (const file of mdFiles) {
+        const fileRes = await fetch(file.download_url);
+        const mdText = await fileRes.text();
+
+        // Extracting Frontmatter data from Markdown
+        const parts = mdText.split('---');
+        let title = file.name.replace('.md', '').replace(/-/g, ' ');
+        let date = '';
+        let excerpt = '';
+        let image = '';
+        let slug = file.name.replace('.md', '');
+
+        if (parts.length >= 3) {
+          const frontmatter = parts[1];
+          
+          const titleMatch = frontmatter.match(/title:\s*"?(.*?)"?$/m);
+          if (titleMatch) title = titleMatch[1].replace(/"/g, '');
+
+          const dateMatch = frontmatter.match(/date:\s*(.*?)$/m);
+          if (dateMatch) date = dateMatch[1].trim().split('T')[0];
+
+          const excerptMatch = frontmatter.match(/excerpt:\s*"?(.*?)"?$/m);
+          if (excerptMatch) excerpt = excerptMatch[1].replace(/"/g, '');
+
+          const imageMatch = frontmatter.match(/image:\s*(.*?)$/m);
+          if (imageMatch) image = imageMatch[1].trim();
+        }
+
+        // Generating HTML Card dynamically with image and details
+        const cardHTML = `
+          <article class="bg-white rounded-3xl shadow-md border border-brandLilac/50 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+            ${image ? `<img src="${image}" alt="${title}" class="w-full h-52 object-cover">` : ''}
+            <div class="p-6 space-y-4">
+              <div class="flex items-center justify-between text-xs text-gray-400 font-semibold">
+                <span><i class="fa-regular fa-calendar text-brandGold"></i> ${date || 'Recent'}</span>
+                <span class="bg-brandLilacLight text-brandBlue px-2.5 py-0.5 rounded-md">Article</span>
+              </div>
+              <h3 class="text-xl font-bold text-brandBlue hover:text-brandGold transition">
+                <a href="post.html?slug=${slug}">${title}</a>
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                ${excerpt || 'Read the complete article to explore detailed insights and guidance.'}
+              </p>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <a href="post.html?slug=${slug}" class="text-brandBlue font-bold text-sm hover:text-brandGold transition inline-flex items-center gap-1.5">Read Article <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            </div>
+          </article>
+        `;
+        
+        grid.innerHTML += cardHTML;
+      }
+    } catch (err) {
+      console.error("Error loading blogs:", err);
+      grid.innerHTML = '<div class="text-center col-span-3 text-red-500 py-12">Failed to load dynamic blog posts.</div>';
     }
   }
-  loadDynamicBlogs();
-</script>
 
+  loadBlogsFromGitHub();
+</script>
   <!-- Footer -->
   <footer class="relative bg-brandBlue text-brandLilacLight font-sans border-t-2 border-brandGold/30 mt-20">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
