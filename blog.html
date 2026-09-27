@@ -206,21 +206,19 @@
   </main>
   <!-- Blog Grid Container -->
 <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  <!-- Loading State -->
   <div class="text-center py-12 text-gray-500 col-span-3 font-medium">
     <i class="fa-solid fa-spinner fa-spin text-brandGold text-2xl mb-2"></i>
-    <p>Loading latest articles from CMS...</p>
+    <p>Loading latest articles...</p>
   </div>
 </div>
 
 <!-- Markdown Parser & GitHub API Script -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  async function loadBlogsFromGitHub() {
+  async function loadPublicBlogs() {
     const grid = document.getElementById('blog-grid');
     if (!grid) return;
 
-    // Aapki GitHub repository ki details
     const owner = 'abdullahwaghji';
     const repo = 'bright-semolina-8208c4';
     const folder = '_posts';
@@ -229,23 +227,22 @@
       const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${folder}`;
       const response = await fetch(apiUrl);
       
-      if (!response.ok) throw new Error("Could not fetch posts from GitHub");
+      if (!response.ok) throw new Error("Could not fetch posts");
       
       const files = await response.json();
       const mdFiles = files.filter(file => file.name.endsWith('.md'));
 
       if (mdFiles.length === 0) {
-        grid.innerHTML = '<div class="text-center col-span-3 text-gray-500 py-12">No blog posts found yet. Add one via CMS!</div>';
+        grid.innerHTML = '<div class="text-center col-span-3 text-gray-500 py-12">No blog posts found yet. Add one via Decap CMS!</div>';
         return;
       }
 
-      grid.innerHTML = ''; // Clear loading message
+      grid.innerHTML = '';
 
       for (const file of mdFiles) {
         const fileRes = await fetch(file.download_url);
         const mdText = await fileRes.text();
 
-        // Extracting Frontmatter data from Markdown
         const parts = mdText.split('---');
         let title = file.name.replace('.md', '').replace(/-/g, ' ');
         let date = '';
@@ -269,7 +266,6 @@
           if (imageMatch) image = imageMatch[1].trim();
         }
 
-        // Generating HTML Card dynamically with image and details
         const cardHTML = `
           <article class="bg-white rounded-3xl shadow-md border border-brandLilac/50 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
             ${image ? `<img src="${image}" alt="${title}" class="w-full h-52 object-cover">` : ''}
@@ -294,13 +290,14 @@
         grid.innerHTML += cardHTML;
       }
     } catch (err) {
-      console.error("Error loading blogs:", err);
-      grid.innerHTML = '<div class="text-center col-span-3 text-red-500 py-12">Failed to load dynamic blog posts.</div>';
+      console.error(err);
+      grid.innerHTML = '<div class="text-center col-span-3 text-red-500 py-12">Failed to load blog posts.</div>';
     }
   }
 
-  loadBlogsFromGitHub();
+  loadPublicBlogs();
 </script>
+
   <!-- Footer -->
   <footer class="relative bg-brandBlue text-brandLilacLight font-sans border-t-2 border-brandGold/30 mt-20">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
