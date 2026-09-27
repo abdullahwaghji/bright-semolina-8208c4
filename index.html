@@ -58,6 +58,51 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#013977',
+            brandLilac: '#D6C7F0',
+            brandLilacLight: '#F3EFFF',
+            brandGold: '#D8A43E',
+          },
+          fontFamily: {
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.111s ease-in-out;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
+  <!-- <script>
     /* Brand palette + fonts for the whole site.
        Reuse this same config block on every page so colours stay consistent. */
     tailwind.config = {
@@ -76,7 +121,7 @@
         }
       }
     };
-  </script>
+  </script> -->
 
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
@@ -136,10 +181,56 @@
     @media (prefers-reduced-motion: reduce) {
       .faq-panel, .faq-panel > div, .faq-icon, .nav-link::after { transition: none; }
     }
+    /* 1. Force Lock Body and HTML Rendering to prevent page flash */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 2. Absolute Rigidity for Navbar Wrapper (Stops all jumps and movements) */
+  header#site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Prevents any sub-pixel shaking during page transitions */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  /* 3. Smooth Underline Hover Effect */
+  .nav-link { 
+    position: relative; 
+  }
+  .nav-link::after {
+    content: ""; 
+    position: absolute; 
+    left: .75rem; 
+    right: .75rem; 
+    bottom: .15rem; 
+    height: 2px;
+    background: #D8A43E; 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform .15s ease-in-out;
+  }
+  .nav-link:hover::after, .nav-link[aria-current="page"]::after { 
+    transform: scaleX(1); 
+  }
+
+  /* 4. Disable heavy fade-in animations that cause layout shifts */
+  body {
+    animation: none !important;
+  }
   </style>
 
   <!-- If JavaScript is disabled, show animated elements anyway -->
-  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
+  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</styl></noscript>
 
   <!-- ============================================================
        STRUCTURED DATA (JSON-LD) – helps Google understand the site
@@ -277,7 +368,7 @@
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+            <a href="index.htmlg" aria-current="page"  class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
           </li>
           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
@@ -771,6 +862,7 @@
       <div class="flex items-center gap-2 bg-[#F3EFFF] p-2 rounded-2xl border border-[#D6C7F0]/60 shadow-sm flex-wrap justify-center">
         <button onclick="switchCurrency('USD')" id="btn-USD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 bg-[#013977] text-white shadow-md">USD Plan</button>
         <button onclick="switchCurrency('GBP')" id="btn-GBP" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">GBP Plan</button>
+        <button onclick="switchCurrency('EURO')" id="btn-EURO" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">EURO Plan</button>
         <button onclick="switchCurrency('CAD')" id="btn-CAD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">CAD Plan</button>
         <button onclick="switchCurrency('AUD')" id="btn-AUD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">AUD Plan</button>
       </div>
@@ -787,7 +879,7 @@
         </div>
         <div class="flex items-baseline gap-0.5 my-2">
           <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
-          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="40" data-gbp="35" data-cad="60" data-aud="60">40</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="40" data-gbp="35" data-euro="40" data-cad="60" data-aud="60">40</span>
           <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
         </div>
         <div class="py-3 px-3 bg-[#F3EFFF]/50 rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/30">
@@ -814,7 +906,7 @@
         </div>
         <div class="flex items-baseline gap-0.5 my-2">
           <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
-          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="55" data-gbp="40" data-cad="70" data-aud="70">55</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="55" data-gbp="40" data-euro="45" data-cad="70" data-aud="70">55</span>
           <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
         </div>
         <div class="py-3 px-3 bg-[#F3EFFF] rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/40">
@@ -840,7 +932,7 @@
         </div>
         <div class="flex items-baseline gap-0.5 my-2">
           <span class="currency-symbol text-3xl font-extrabold text-[#013977]">$</span>
-          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="65" data-gbp="50" data-cad="80" data-aud="80">65</span>
+          <span class="plan-price text-5xl font-black text-[#013977]" data-usd="65" data-gbp="50" data-euro="55" data-cad="80" data-aud="80">65</span>
           <span class="text-xs text-gray-500 font-medium ml-1">/month</span>
         </div>
         <div class="py-3 px-3 bg-[#F3EFFF]/50 rounded-xl my-4 text-xs font-bold text-[#013977] text-center border border-[#D6C7F0]/30">
@@ -867,7 +959,7 @@
         </div>
         <div class="flex items-baseline gap-0.5 my-2">
           <span class="currency-symbol text-3xl font-extrabold text-[#D6C7F0]">$</span>
-          <span class="plan-price text-5xl font-black text-white" data-usd="80" data-gbp="55" data-cad="100" data-aud="100">80</span>
+          <span class="plan-price text-5xl font-black text-white" data-usd="80" data-gbp="55" data-euro="60" data-cad="100" data-aud="100">80</span>
           <span class="text-xs text-gray-300 font-medium ml-1">/month</span>
         </div>
         <div class="py-3 px-3 bg-white/10 rounded-xl my-4 text-xs font-bold text-[#D6C7F0] text-center border border-white/10">
@@ -914,6 +1006,7 @@
     // Determine currency symbol
     let symbol = '$';
     if(currency === 'GBP') symbol = '£';
+    if(currency === 'EURO') symbol = '€';
     if(currency === 'CAD') symbol = 'C$';
     if(currency === 'AUD') symbol = 'A$';
 
@@ -928,6 +1021,7 @@
     prices.forEach(priceEl => {
       if(currency === 'USD') priceEl.textContent = priceEl.getAttribute('data-usd');
       if(currency === 'GBP') priceEl.textContent = priceEl.getAttribute('data-gbp');
+      if(currency === 'EURO') priceEl.textContent = priceEl.getAttribute('data-euro');
       if(currency === 'CAD') priceEl.textContent = priceEl.getAttribute('data-cad');
       if(currency === 'AUD') priceEl.textContent = priceEl.getAttribute('data-aud');
     });

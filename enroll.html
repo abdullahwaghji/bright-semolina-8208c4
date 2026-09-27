@@ -76,7 +76,33 @@
       }
     };
   </script>
+<style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.12s ease-in-out;
+  }
+</style>
 
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
        ============================================================ -->
@@ -592,6 +618,10 @@
       </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/920000000000?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-3xl text-white shadow-lg transition hover:scale-105">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
     <!-- JavaScript Functionality -->
     <script>

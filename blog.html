@@ -57,25 +57,51 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brandBlue: '#013977',
-          brandLilac: '#D6C7F0',
-          brandLilacLight: '#F3EFFF',
-          brandGold: '#D8A43E',
-        },
-        fontFamily: {
-          display: ['Outfit', 'Inter', 'sans-serif'],
-          sans: ['Inter', 'sans-serif']
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#013977',
+            brandLilac: '#D6C7F0',
+            brandLilacLight: '#F3EFFF',
+            brandGold: '#D8A43E',
+          },
+          fontFamily: {
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
         }
       }
-    }
-  };
-</script>
+    };
+  </script>
+<style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.12s ease-in-out;
+  }
+</style>
 
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
        ============================================================ -->
@@ -134,17 +160,6 @@
     @media (prefers-reduced-motion: reduce) {
       .faq-panel, .faq-panel > div, .faq-icon, .nav-link::after { transition: none; }
     }
-    /* Mobile Drawer Smooth Slide & Fade Transition */
-#mobile-menu {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out;
-}
-#mobile-menu.menu-open {
-  max-height: 430px; /* Menu ki estimated height se zyada honi chahiye */
-  opacity: 1;
-}
   </style>
 
   <!-- If JavaScript is disabled, show animated elements anyway -->
@@ -230,17 +245,6 @@
     </div>
   </div>
 </div>
-    <!-- Right CTAs -->
-    <div class="flex items-center space-x-2 shrink-0">
-      <span class="bg-[#D97706] text-white px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-[11px] shadow-sm tracking-wide">
-        24/7 Live Support
-      </span>
-      <a href="enroll.html?trial=1" class="hidden sm:flex text-[#D6C7F0] hover:text-white font-medium transition items-center gap-1">
-        <i class="fa-regular fa-calendar-check text-xs"></i> Book Free Trial
-      </a>
-    </div>
-  </div>
-</div>
        
   <!-- <div class="bg-[#013977] text-white text-xs sm:text-sm py-2 px-4 border-b border-[#D6C7F0]/20">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -296,13 +300,12 @@
       <!-- Desktop Navigation Links -->
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
-          <li>
-            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+         <li>
+            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
           </li>
           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
           </li>
-          <li>
             <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
           </li>
           <li>
@@ -312,7 +315,7 @@
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
           <li>
-            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+            <a href="blog.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
           </li>
           <li>
             <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
@@ -338,7 +341,7 @@
       <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
         <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+            <a href="index.html"  class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Home</a>
           </li>
           <li>
             <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
@@ -353,7 +356,7 @@
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
           <li>
-            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+            <a href="blog.html" aria-current="page" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
           </li>
           <li>
             <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
@@ -368,7 +371,6 @@
       </nav>
     </div>
   </header>
-
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -508,8 +510,7 @@
     </div>
 
     <!-- Blog Grid Container (CMS items will load here dynamically in future or display sample cards) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 id="blog-grid">
-      
+<div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">      
       <!-- Sample Card 1 -->
       <article class="bg-white rounded-3xl shadow-md border border-brandLilac/50 overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
         <div class="p-6 space-y-4">
@@ -695,7 +696,6 @@
       </div>
     </div>
   </footer> -->
-<br>
 <footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D8A43E]/30 overflow-hidden">
     
     <!-- Top Decorative Glow / Wave Accent -->
@@ -766,7 +766,7 @@
             <li><a href="about.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> About Us</a></li>
             <li><a href="courses.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Courses</a></li>
             <li><a href="library.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Library</a></li>
-            <li><a href="blog.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Blogs</a></li>
+            <li><a href="blog.html" aria-current="page" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Blogs</a></li>
             <li><a href="contact.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Contact Us</a></li>
             <li><a href="enroll.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Enroll Now</a></li>
           </ul>
@@ -834,6 +834,108 @@
   <a href="https://wa.me/920000000000?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Quran%20classes." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" class="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-3xl text-white shadow-lg transition hover:scale-105">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Scroll animations (AOS) ----------
+         Animations are switched off for visitors who prefer reduced motion. */
+      if (window.AOS) {
+        AOS.init({
+          duration: 650,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 40,
+          disable: function () {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          }
+        });
+      }
+
+      /* ---------- Mobile menu ---------- */
+      var header = document.getElementById('site-header');
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = menuBtn.querySelector('[data-icon="open"]');
+      var iconClose = menuBtn.querySelector('[data-icon="close"]');
+
+      function setMenu(open) {
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      menuBtn.addEventListener('click', function () {
+        setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) setMenu(false);
+      });
+
+      /* ---------- Header shadow once the page scrolls ---------- */
+      function onScroll() {
+        header.classList.toggle('shadow-md', window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---------- FAQ accordion (one answer open at a time) ---------- */
+      var triggers = document.querySelectorAll('.faq-trigger');
+
+      function setFaq(trigger, open) {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        trigger.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('data-open', String(open));
+      }
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+          triggers.forEach(function (t) { setFaq(t, false); });
+          setFaq(trigger, willOpen);
+        });
+      });
+
+      /* ---------- Footer year ---------- */
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('open-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const btn = document.getElementById('menu-btn');
+      
+      const isOpen = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isOpen);
+      openIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+    }
+
+    function switchTab(stepNum) {
+      document.querySelectorAll('.journey-content').forEach(el => el.classList.add('hidden'));
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`tabBtn${i}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandLilacLight text-brandBlue hover:bg-brandLilac";
+      }
+      document.getElementById(`tabContent${stepNum}`).classList.remove('hidden');
+      document.getElementById(`tabBtn${stepNum}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandBlue text-white shadow-md";
+    }
+  </script>
   
   <script>
     function toggleMobileMenu() {

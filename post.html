@@ -57,27 +57,51 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    /* Brand palette + fonts for the whole site.
-       Reuse this same config block on every page so colours stay consistent. */
+<script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            jade:   { 50:'#F1F8F5', 100:'#DCEFE8', 200:'#B7DDD0', 500:'#0B6B54', 600:'#095A47', 700:'#084C3C', 800:'#06382E', 900:'#042A22' },
-            lagoon: { 50:'#EAF6F6', 100:'#CFEAEA', 500:'#0E7C7B', 600:'#0B6564', 700:'#094F4F' },
-            gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
-            mist:   '#F4F9F7'
+            brandBlue: '#013977',
+            brandLilac: '#D6C7F0',
+            brandLilacLight: '#F3EFFF',
+            brandGold: '#D8A43E',
           },
           fontFamily: {
-            display: ['outfit', 'inter', 'Montserrat'],
-            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
           }
         }
       }
     };
   </script>
+<style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.12s ease-in-out;
+  }
+</style>
 
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
        ============================================================ -->
@@ -277,7 +301,7 @@
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+            <a href="index.html"  class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all>Home</a>
           </li>
           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
@@ -292,7 +316,7 @@
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
           <li>
-            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+            <a href="blog.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
           </li>
           <li>
             <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
@@ -318,7 +342,7 @@
       <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
         <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+            <a href="index.html"  class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Home</a>
           </li>
           <li>
             <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
@@ -333,7 +357,7 @@
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
           <li>
-            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+            <a href="blog.html" aria-current="page" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
           </li>
           <li>
             <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
@@ -347,148 +371,30 @@
         </div>
       </nav>
     </div>
-  </header><!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="page-title">Blog Article | Online Quran Ilm Academy</title>
-  
+  </header>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: '#013977',
-            brandLilac: '#D6C7F0',
-            brandLilacLight: '#F3EFFF',
-            brandGold: '#D8A43E',
-          },
-          fontFamily: {
-            display: ['Outfit', 'Inter', 'sans-serif'],
-            sans: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
-<body class="bg-brandLilacLight font-sans text-brandBlue antialiased flex flex-col min-h-screen">
-
-
-  <div class="bg-brandBlue text-white text-xs sm:text-sm py-2 px-4 border-b border-brandLilac/25">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center space-x-4 text-brandLilac">
-        <a href="mailto:info@onlinequranilmacademy.com" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brandGold"></i> info@onlinequranilmacademy.com</a>
-        <a href="tel:+923198427973" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-brandGold"></i> +92 319 8427973</a>
-      </div>
-      <div class="flex items-center space-x-3">
-        <span class="bg-brandGold text-brandBlue px-2.5 py-0.5 rounded-full font-bold text-[11px]">24/7 Live Support</span>
-        <a href="enroll.html" class="text-brandLilac hover:text-white font-medium transition flex items-center gap-1"><i class="fa-regular fa-calendar-check text-xs"></i> Book Free Trial</a>
-      </div>
-    </div>
-  </div>
-
-
-  <header id="site-header" class="sticky top-0 z-50 border-b border-brandLilac/40 bg-white/95 backdrop-blur-md shadow-sm">
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="flex items-center gap-3 group py-1">
-        <img src="Online quran ilm academy logo new.png" alt="Logo" class="h-12 w-auto sm:h-14 md:h-16 object-contain">
-        <div class="flex flex-col justify-center">
-          <span class="font-display text-lg font-extrabold text-brandBlue leading-tight sm:text-xl">Online Quran ilm Academy</span>
-          <span class="text-[10px] sm:text-xs font-medium text-brandBlue/75 uppercase"><span class="text-brandGold">Spreading the Light of Quran</span></span>
-        </div>
-      </a>
-      <nav class="hidden lg:block">
-        <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
-          <li><a href="index.html" class="rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Home</a></li>
-          <li><a href="about.html" class="rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">About Us</a></li>
-          <li><a href="courses.html" class="rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Courses</a></li>
-          <li><a href="library.html" class="rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Library</a></li>
-          <li><a href="blog.html" class="rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold">Blogs</a></li>
-          <li><a href="contact.html" class="rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div class="flex items-center gap-3">
-        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-brandGold px-6 py-2.5 text-sm font-bold text-brandBlue shadow-md min-[480px]:inline-flex hover:bg-[#c29135] transition">Enroll Now</a>
-        <button id="menu-btn" type="button" onclick="toggleMobileMenu()" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brandLilac text-brandBlue hover:bg-brandLilacLight lg:hidden"><i class="fa-solid fa-bars text-xl"></i></button>
-      </div>
-    </div>
-
-    <div id="mobile-menu" class="hidden border-t border-brandLilac/30 bg-white lg:hidden px-4 py-5">
-      <ul class="space-y-1 text-base font-semibold text-gray-700">
-        <li><a href="index.html" class="block px-4 py-2">Home</a></li>
-        <li><a href="about.html" class="block px-4 py-2">About Us</a></li>
-        <li><a href="courses.html" class="block px-4 py-2">Courses</a></li>
-        <li><a href="library.html" class="block px-4 py-2">Library</a></li>
-        <li><a href="blog.html" class="block px-4 py-2 text-brandBlue font-bold bg-brandLilacLight rounded-xl">Blogs</a></li>
-        <li><a href="contact.html" class="block px-4 py-2">Contact Us</a></li>
-      </ul>
-    </div>
-  </header> -->
-
-  <!-- Main Article Container -->
-  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-12 w-full">
+  <!-- MAIN ARTICLE CONTAINER (Standard Medium Layout) -->
+  <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-10 w-full space-y-8">
     
-    <!-- Back to blog link -->
-    <div class="mb-6">
-      <a href="blog.html" class="inline-flex items-center gap-2 text-sm font-bold text-brandBlue hover:text-brandGold transition bg-white px-4 py-2 rounded-xl shadow-sm border border-brandLilac/40">
-        <i class="fa-solid fa-arrow-left"><span> Back to All Articles</span></i>
+    <!-- Back Button -->
+    <div>
+      <a href="blog.html" class="inline-flex items-center gap-2 text-xs font-bold text-brandBlue hover:text-brandGold transition bg-white px-3.5 py-2 rounded-xl shadow-sm border border-brandLilac/50">
+        <i class="fa-solid fa-arrow-left"></i><span>Back to Articles</span>
       </a>
     </div>
 
-    <article id="article-container" class="bg-white rounded-3xl p-6 sm:p-12 shadow-xl border border-brandLilac/50 space-y-8">
-      <!-- Loading state -->
-      <div id="loading" class="text-center py-20 text-gray-500 font-medium space-y-3">
+    <!-- Article Wrapper -->
+    <article id="article-container" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-gray-200/80 space-y-6">
+      <!-- Loading State -->
+      <div id="loading" class="text-center py-20 text-gray-400 font-medium space-y-3">
         <i class="fa-solid fa-spinner fa-spin text-brandGold text-3xl"></i>
-        <p>Loading professional article...</p>
+        <p class="text-sm">Loading article...</p>
       </div>
     </article>
   </main>
 
-  <!-- Footer -->
-  <!-- <footer class="relative bg-brandBlue text-brandLilacLight font-sans border-t-2 border-brandGold/30 mt-20">
-    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
-        <div class="lg:col-span-4 space-y-5">
-          <a href="index.html" class="flex items-center gap-3.5">
-            <div class="h-12 w-12 shrink-0 rounded-xl bg-white/10 p-1 flex items-center justify-center border border-white/20">
-              <img src="Online quran ilm academy logo new.png" alt="Logo" class="h-full w-full object-contain rounded-lg">
-            </div>
-            <span class="font-display text-lg font-bold text-white">Online Quran Ilm Academy</span>
-          </a>
-          <p class="text-sm text-brandLilac">Spreading the light of Quran globally with expert certified tutors and authentic Tajweed.</p>
-        </div>
-        <div class="lg:col-span-2 lg:col-start-6 space-y-3">
-          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h2>
-          <ul class="space-y-2 text-sm text-brandLilac">
-            <li><a href="index.html" class="hover:text-brandGold">› Home</a></li>
-            <li><a href="about.html" class="hover:text-brandGold">› About Us</a></li>
-            <li><a href="courses.html" class="hover:text-brandGold">› Courses</a></li>
-            <li><a href="contact.html" class="hover:text-brandGold">› Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="lg:col-span-3 space-y-4">
-          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Contact</h2>
-          <ul class="space-y-2 text-sm text-brandLilac">
-            <li><a href="mailto:info@onlinequranilmacademy.com" class="hover:text-brandGold">info@onlinequranilmacademy.com</a></li>
-            <li><a href="tel:+923198427973" class="hover:text-brandGold">+92 319 8427973</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer> -->
-
-<footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D8A43E]/30 overflow-hidden">
+  <!-- FOOTER -->
+  <footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D8A43E]/30 overflow-hidden">
     
     <!-- Top Decorative Glow / Wave Accent -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#D8A43E] to-transparent opacity-70"></div>
@@ -558,7 +464,7 @@
             <li><a href="about.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> About Us</a></li>
             <li><a href="courses.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Courses</a></li>
             <li><a href="library.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Library</a></li>
-            <li><a href="blog.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Blogs</a></li>
+            <li><a href="blog.html" aria-current="page" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Blogs</a></li>
             <li><a href="contact.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Contact Us</a></li>
             <li><a href="enroll.html" class="hover:text-[#D8A43E] transition flex items-center gap-2"><span class="text-[#D8A43E]">›</span> Enroll Now</a></li>
           </ul>
@@ -627,207 +533,130 @@
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <!-- Script to load & render Markdown post from GitHub -->
-  <script>
-    function toggleMobileMenu() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- Marked.js for Markdown parsing -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+  (function () {
+    'use strict';
+
+    /* ---------- Scroll animations (AOS) ---------- */
+    if (window.AOS) {
+      AOS.init({
+        duration: 650,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 40
+      });
     }
 
-    async function fetchPost() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const slug = urlParams.get('slug');
-      const container = document.getElementById('article-container');
+    /* ---------- Footer Year ---------- */
+    var yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  })();
 
-      if (!slug) {
-        container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Article not found.</h1><p class="text-gray-600 mt-2">No slug provided in URL.</p>`;
-        return;
-      }
+  /* ---------- Unified Mobile Menu Toggle ---------- */
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('menu-btn');
+    if (menu) {
+      const isHidden = menu.classList.toggle('hidden');
+      if (btn) btn.setAttribute('aria-expanded', !isHidden);
+    }
+  }
 
-      const owner = 'abdullahwaghji';
-      const repo = 'bright-semolina-8208c4';
+  /* ---------- Fetch & Render Blog Post from GitHub ---------- */
+  async function fetchPost() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+    const container = document.getElementById('article-container');
 
+    if (!slug) {
+      container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Article not found.</h1><p class="text-gray-600 mt-2">No slug provided in URL.</p>`;
+      return;
+    }
+
+    const owner = 'abdullahwaghji';
+    const repo = 'bright-semolina-8208c4';
+    const branches = ['main', 'master'];
+    let fileRes = null;
+
+    for (const branch of branches) {
       try {
-        const fileRes = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/_posts/${slug}.md`);
-        if (!fileRes.ok) throw new Error("Post not found");
-        
-        const markdownText = await fileRes.text();
-
-        const parts = markdownText.split('---');
-        let title = "Blog Post";
-        let date = "";
-        let image = "";
-        let bodyMarkdown = markdownText;
-
-        if (parts.length >= 3) {
-          const frontmatter = parts[1];
-          bodyMarkdown = parts.slice(2).join('---');
-
-          const titleMatch = frontmatter.match(/title:\s*"?(.*?)"?$/m);
-          if (titleMatch) title = titleMatch[1].replace(/"/g, '');
-
-          const dateMatch = frontmatter.match(/date:\s*(.*?)$/m);
-          if (dateMatch) date = dateMatch[1].trim().split('T')[0];
-
-          const imageMatch = frontmatter.match(/image:\s*(.*?)$/m);
-          if (imageMatch) image = imageMatch[1].trim();
+        const res = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_posts/${slug}.md`);
+        if (res.ok) {
+          fileRes = res;
+          break;
         }
-
-        document.getElementById('page-title').innerText = `${title} | Online Quran Ilm Academy`;
-
-        container.innerHTML = `
-          <div class="space-y-4 border-b border-brandLilac/30 pb-6">
-            <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-gray-500">
-              <span class="bg-brandLilacLight text-brandBlue px-3 py-1 rounded-full"><i class="fa-regular fa-calendar text-brandGold"></i> ${date || 'Recent'}</span>
-              <span class="bg-brandGold/20 text-brandBlue px-3 py-1 rounded-full font-bold">Islamic Insights</span>
-            </div>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-brandBlue leading-tight font-display">${title}</h1>
-          </div>
-
-          ${image ? `<div class="overflow-hidden rounded-2xl shadow-md border border-brandLilac/40"><img src="${image}" alt="${title}" class="w-full h-auto max-h-[450px] object-cover hover:scale-105 transition duration-500"></div>` : ''}
-
-          <div class="prose max-w-none text-gray-700 leading-relaxed space-y-6 pt-4 text-base sm:text-lg">
-            ${marked.parse(bodyMarkdown)}
-          </div>
-
-          <!-- Author / Call to action box -->
-          <div class="bg-brandLilacLight border border-brandLilac p-6 sm:p-8 rounded-2xl mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="space-y-2 text-center sm:text-left">
-              <h4 class="font-bold text-brandBlue text-lg">Start Learning Quran with Certified Tutors</h4>
-              <p class="text-xs sm:text-sm text-gray-600">Book your 3 free trial classes today and experience live interactive coaching.</p>
-            </div>
-            <a href="enroll.html" class="bg-brandGold hover:bg-[#c29135] text-brandBlue font-bold px-6 py-3 rounded-xl text-sm transition shadow-md shrink-0">Book Free Trial →</a>
-          </div>
-        `;
-      } catch (err) {
-        console.error(err);
-        container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Error</h1><p class="text-gray-600 mt-2">Could not load the article content.</p>`;
+      } catch (e) {
+        // Try next branch
       }
     }
 
-    fetchPost();
-  </script>
+    if (!fileRes || !fileRes.ok) {
+      container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Article Not Found</h1><p class="text-gray-600 mt-2">Could not find the markdown file for slug: <b>${slug}</b></p>`;
+      return;
+    }
+
+    try {
+      const markdownText = await fileRes.text();
+      const parts = markdownText.split('---');
+      let title = "Blog Post";
+      let date = "";
+      let image = "";
+      let bodyMarkdown = markdownText;
+
+      if (parts.length >= 3) {
+        const frontmatter = parts[1];
+        bodyMarkdown = parts.slice(2).join('---');
+
+        const titleMatch = frontmatter.match(/title:\s*"?(.*?)"?$/m);
+        if (titleMatch) title = titleMatch[1].replace(/"/g, '');
+
+        const dateMatch = frontmatter.match(/date:\s*(.*?)$/m);
+        if (dateMatch) date = dateMatch[1].trim().split('T')[0];
+
+        const imageMatch = frontmatter.match(/image:\s*(.*?)$/m);
+        if (imageMatch) image = imageMatch[1].trim();
+      }
+
+      document.getElementById('page-title').innerText = `${title} | Online Quran Ilm Academy`;
+
+      container.innerHTML = `
+        <div class="space-y-4 border-b border-brandLilac/30 pb-6">
+          <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-gray-500">
+            <span class="bg-brandLilacLight text-brandBlue px-3 py-1 rounded-full"><i class="fa-regular fa-calendar text-brandGold"></i> ${date || 'Recent'}</span>
+            <span class="bg-brandGold/20 text-brandBlue px-3 py-1 rounded-full font-bold">Islamic Insights</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-brandBlue leading-tight font-display">${title}</h1>
+        </div>
+
+        ${image ? `<div class="overflow-hidden rounded-2xl shadow-md border border-brandLilac/40"><img src="${image}" alt="${title}" class="w-full h-auto max-h-[450px] object-cover hover:scale-105 transition duration-500"></div>` : ''}
+
+        <div class="prose max-w-none text-gray-700 leading-relaxed space-y-6 pt-4 text-base sm:text-lg">
+          ${marked.parse(bodyMarkdown)}
+        </div>
+
+        <div class="bg-brandLilacLight border border-brandLilac p-6 sm:p-8 rounded-2xl mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center sm:text-left">
+            <h4 class="font-bold text-brandBlue text-lg">Start Learning Quran with Certified Tutors</h4>
+            <p class="text-xs sm:text-sm text-gray-600">Book your 3 free trial classes today and experience live interactive coaching.</p>
+          </div>
+          <a href="enroll.html" class="bg-brandGold hover:bg-[#c29135] text-brandBlue font-bold px-6 py-3 rounded-xl text-sm transition shadow-md shrink-0">Book Free Trial →</a>
+        </div>
+      `;
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Error</h1><p class="text-gray-600 mt-2">Could not parse the article content.</p>`;
+    }
+  }
+
+  fetchPost();
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="page-title">Blog Article | Online Quran Ilm Academy</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: '#013977',
-            brandLilac: '#D6C7F0',
-            brandLilacLight: '#F3EFFF',
-            brandGold: '#D8A43E',
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
-<body class="bg-brandLilacLight font-sans text-brandBlue antialiased">
-
-
-  <header class="bg-white border-b border-brandLilac/40 shadow-sm py-4 px-6 flex justify-between items-center">
-    <a href="index.html" class="font-bold text-brandBlue text-lg">Online Quran Ilm Academy</a>
-    <a href="blog.html" class="text-sm font-semibold text-brandBlue hover:text-brandGold transition">← Back to Blogs</a>
-  </header>
-
-
-  <main class="max-w-4xl mx-auto px-4 py-12">
-    <div id="article-container" class="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-brandLilac/50 space-y-6">
-      <div id="loading" class="text-center py-12 text-gray-500 font-medium">Loading article...</div>
-    </div>
-  </main>
-
-  <script>
-    async function fetchPost() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const slug = urlParams.get('slug');
-      const container = document.getElementById('article-container');
-
-      if (!slug) {
-        container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Article not found.</h1><p class="text-gray-600 mt-2">No slug provided in URL.</p>`;
-        return;
-      }
-
-      try {
-      
-        const response = await window.fetch(`_posts/${slug}.md`);
-        if (!response.ok) throw new Error("Post not found");
-        
-        const markdownText = await response.text();
-        
-
-        const parts = markdownText.split('---');
-        let title = "Blog Post";
-        let date = "";
-        let image = "";
-        let bodyMarkdown = markdownText;
-
-        if (parts.length >= 3) {
-          const frontmatter = parts[1];
-          bodyMarkdown = parts.slice(2).join('---');
-
- 
-          const titleMatch = frontmatter.match(/title:\s*"?(.*?)"?$/m);
-          if (titleMatch) title = titleMatch[1];
-
-          const dateMatch = frontmatter.match(/date:\s*(.*?)$/m);
-          if (dateMatch) date = dateMatch[1];
-
-          const imageMatch = frontmatter.match(/image:\s*(.*?)$/m);
-          if (imageMatch) image = imageMatch[1];
-        }
-
-
-        document.getElementById('page-title').innerText = `${title} | Online Quran Ilm Academy`;
-
-        
-        container.innerHTML = `
-          <div class="space-y-4">
-            ${date ? `<span class="text-xs font-semibold text-gray-400"><i class="fa-regular fa-calendar text-brandGold"></i> ${date}</span>` : ''}
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-brandBlue leading-tight">${title}</h1>
-          </div>
-          ${image ? `<img src="${image}" alt="${title}" class="w-full h-auto rounded-2xl shadow-md max-h-[400px] object-cover">` : ''}
-          <div class="prose max-w-none text-gray-700 leading-relaxed space-y-4 pt-4">
-            ${marked.parse(bodyMarkdown)}
-          </div>
-        `;
-      } catch (err) {
-        console.error(err);
-        container.innerHTML = `<h1 class="text-2xl font-bold text-red-600">Error</h1><p class="text-gray-600 mt-2">Could not load the article.</p>`;
-      }
-    }
-
-    fetchPost();
-  </script>
-</body>
-</html> -->

@@ -57,7 +57,7 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
+ <script>
   tailwind.config = {
     theme: {
       extend: {
@@ -74,6 +74,33 @@
       }
     }
   };
+</script>  
+<style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.12s ease-in-out;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
 </script>
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
@@ -274,7 +301,7 @@
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
           </li>
           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
@@ -286,7 +313,7 @@
             <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Library</a>
           </li>
            <li>
-            <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
+            <a href="fees.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Fee Plans</a>
           </li>
           <li>
             <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
@@ -315,7 +342,7 @@
       <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
         <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+            <a href="index.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Home</a>
           </li>
           <li>
             <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
@@ -324,10 +351,10 @@
             <a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Courses</a>
           </li>
           <li>
-            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
+              <li>
+            <a href="fees.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Fee Plans</a>
           </li>
-            <li>
-            <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
+            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
           </li>
           <li>
             <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
@@ -362,7 +389,9 @@
         <button onclick="changeCurrency('GBP')" id="btn-GBP" class="curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight">GBP (£)</button>
         <button onclick="changeCurrency('EUR')" id="btn-EUR" class="curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight">EUR (€)</button>
         <button onclick="changeCurrency('CAD')" id="btn-CAD" class="curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight">CAD ($)</button>
-        <button onclick="changeCurrency('PKR')" id="btn-PKR" class="curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight">PKR (₨)</button>
+        <button onclick="switchCurrency('AUD')" id="btn-AUD" class="currency-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all duration-200 text-gray-600 hover:text-[#013977]">AUD Plan</button>
+
+        <!-- <button onclick="changeCurrency('PKR')" id="btn-PKR" class="curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight">PKR (₨)</button> -->
       </div>
     </div>
 
@@ -448,8 +477,43 @@
     </div>
 
   </main>
-       9. FOOTER
-       ============================================================ -->
+
+  <!-- FOOTER -->
+  <!-- <footer class="relative bg-brandBlue text-brandLilacLight font-sans border-t-2 border-brandGold/30 mt-20">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4 space-y-5">
+          <a href="index.html" class="flex items-center gap-3.5">
+            <div class="h-12 w-12 shrink-0 rounded-xl bg-white/10 p-1 flex items-center justify-center border border-white/20">
+              <img src="Online quran ilm academy logo new.png" alt="Logo" class="h-full w-full object-contain rounded-lg">
+            </div>
+            <span class="font-display text-lg font-bold text-white">Online Quran Ilm Academy</span>
+          </a>
+          <p class="text-sm text-brandLilac">Spreading the light of Quran globally with expert certified tutors and authentic Tajweed.</p>
+        </div>
+        <div class="lg:col-span-2 lg:col-start-6 space-y-3">
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h5>
+          <ul class="space-y-2 text-sm text-brandLilac">
+            <li><a href="index.html" class="hover:text-brandGold transition">› Home</a></li>
+            <li><a href="about.html" class="hover:text-brandGold transition">› About Us</a></li>
+            <li><a href="courses.html" class="hover:text-brandGold transition">› Courses</a></li>
+            <li><a href="fees.html" class="hover:text-brandGold transition">› Fee Plans</a></li>
+            <li><a href="contact.html" class="hover:text-brandGold transition">› Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 space-y-4">
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h5>
+          <ul class="space-y-2 text-sm text-brandLilac">
+            <li><a href="mailto:info@onlinequranilmacademy.com" class="hover:text-brandGold transition">info@onlinequranilmacademy.com</a></li>
+            <li><a href="tel:+923198427973" class="hover:text-brandGold transition">+92 319 8427973</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/10 text-center text-xs text-brandLilac">
+        <p>&copy; <span id="year">2026</span> Online Quran Ilm Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer> -->
 <footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D8A43E]/30 overflow-hidden">
     
     <!-- Top Decorative Glow / Wave Accent -->
@@ -689,6 +753,60 @@
       document.getElementById(`tabContent${stepNum}`).classList.remove('hidden');
       document.getElementById(`tabBtn${stepNum}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandBlue text-white shadow-md";
     }
-  </script> 
+  </script>
+  <!-- SCRIPT: Currency Switcher & Mobile Menu -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('menu-btn');
+      const isHidden = menu.classList.toggle('hidden');
+      if (btn) btn.setAttribute('aria-expanded', !isHidden);
+    }
+
+    // Currency Conversion Rates & Symbols with Smooth Transition
+    const pricingData = {
+      USD: { symbol: '$', p1: '35', p2: '50', p3: '70' },
+      GBP: { symbol: '£', p1: '28', p2: '40', p3: '55' },
+      EUR: { symbol: '€', p1: '32', p2: '45', p3: '65' },
+      CAD: { symbol: 'CA$', p1: '45', p2: '65', p3: '90' },
+      PKR: { symbol: 'Rs ', p1: '9,500', p2: '14,000', p3: '19,500' }
+    };
+
+    function changeCurrency(currency) {
+      // Update active button styling
+      document.querySelectorAll('.curr-btn').forEach(btn => {
+        btn.className = "curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-brandBlue border border-brandLilac hover:bg-brandLilacLight";
+      });
+      const activeBtn = document.getElementById(`btn-${currency}`);
+      if (activeBtn) {
+        activeBtn.className = "curr-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-brandBlue text-white shadow-md";
+      }
+
+      // Apply fade transition effect on price elements
+      const p1 = document.getElementById('price-1');
+      const p2 = document.getElementById('price-2');
+      const p3 = document.getElementById('price-3');
+
+      [p1, p2, p3].forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(10px)';
+      });
+
+      setTimeout(() => {
+        const data = pricingData[currency];
+        p1.innerText = data.symbol + data.p1;
+        p2.innerText = data.symbol + data.p2;
+        p3.innerText = data.symbol + data.p3;
+
+        [p1, p2, p3].forEach(el => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      }, 200);
+    }
+
+    // Set footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
