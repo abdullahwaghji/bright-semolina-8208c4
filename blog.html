@@ -79,7 +79,7 @@
   /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
   body {
     opacity: 0;
-    transition: opacity 0.12s ease-in-out;
+    transition: opacity 0.11s ease-in-out;
   }
 </style>
 
@@ -275,24 +275,22 @@
   <!-- ============================================================
        1. HEADER / NAVBAR (Sticky & Glassmorphism Modern Design)
        ============================================================ -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-[#D6C7F0]/30 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-brandLilac/40 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
 
       <!-- Logo + Academy Title & Tagline -->
       <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
         <img 
-          src="images/Online quran ilm academy logo new.png" 
-          alt="Online Quran ilm Academy Logo" 
+          src="images\Online quran ilm academy logo new.png" 
+          alt="Online Quran Ilm Academy Logo" 
           class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
-          width="1023"
-          height="1024"
         />
         <div class="flex flex-col justify-center">
-          <span class="font-display text-lg font-extrabold text-[#013977] leading-tight sm:text-xl lg:text-2xl group-hover:text-[#D97706] transition-colors">
+          <span class="font-display text-lg font-extrabold text-brandBlue leading-tight sm:text-xl lg:text-2xl group-hover:text-brandGold transition-colors">
             Online Quran ilm Academy
           </span>
-          <span class="text-[10px] sm:text-xs font-medium text-[#013977]/75 tracking-wider uppercase">
-           <span class="text-[#D97706]">  Spreading the Light of Quran</span>
+          <span class="text-[10px] sm:text-xs font-medium text-brandBlue/75 tracking-wider uppercase">
+            <span class="text-brandGold">Spreading the Light of Quran</span>
           </span>
         </div>
       </a>
@@ -300,71 +298,60 @@
       <!-- Desktop Navigation Links -->
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
-         <li>
-            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
-          </li>
           <li>
+            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition-all">Home</a>
+          </li>
+           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
           </li>
-            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
+          <li>
+            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition-all">Courses</a>
           </li>
           <li>
-            <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Library</a>
+            <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition-all">Library</a>
           </li>
             <li>
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
-          <li>
-            <a href="blog.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+        <li>
+            <a href="blog.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold">Blogs</a>
           </li>
           <li>
-            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
+            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition-all">Contact Us</a>
           </li>
         </ul>
       </nav>
 
       <!-- CTA Button & Mobile Hamburger -->
-      <div class="flex items-center gap-3">
+   <div class="flex items-center gap-3">
         <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-[#D97706] px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D97706]/20 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-lg min-[480px]:inline-flex">
           <i class="fa-solid fa-user-plus text-xs" aria-hidden="true"></i> Enroll Now
         </a>
 
-        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D6C7F0] text-[#013977] hover:bg-[#F3EFFF] transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-          <i data-icon="open" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
-          <i data-icon="close" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
+        <button id="menu-btn" type="button" onclick="toggleMobileMenu()" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brandLilac text-brandBlue hover:bg-brandLilacLight transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i id="open-icon" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          <i id="close-icon" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden border-t border-[#D6C7F0]/30 bg-white lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-brandLilac/30 bg-white lg:hidden">
       <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
         <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
-          <li>
-            <a href="index.html"  class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Home</a>
-          </li>
-          <li>
+          <li><a href="index.html" class="block rounded-xl px-4 py-3 hover:bg-brandLilacLight hover:text-brandBlue transition">Home</a></li>
+<li>
             <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
-          </li>
-          <li>
-            <a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Courses</a>
-          </li>
-          <li>
-            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
-          </li>
+          </li>          <li><a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-brandLilacLight hover:text-brandBlue transition">Courses</a></li>
+          <li><a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-brandLilacLight hover:text-brandBlue transition">Library</a></li>
             <li>
             <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
           </li>
-          <li>
-            <a href="blog.html" aria-current="page" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
-          </li>
-          <li>
-            <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
-          </li>
+          <li><a href="blog.html" aria-current="page" class="block rounded-xl bg-brandLilacLight px-4 py-3 text-brandBlue font-bold">Blogs</a></li>
+          <li><a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-brandLilacLight hover:text-brandBlue transition">Contact Us</a></li>
         </ul>
-
         <div class="mt-5 pt-4 border-t border-gray-100">
-          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 font-bold text-white shadow-md hover:bg-[#b56305] transition">
+          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-brandGold px-5 py-3 font-bold text-brandBlue shadow-md hover:bg-[#c29135] transition">
             <i class="fa-solid fa-user-plus text-sm" aria-hidden="true"></i> Enroll Now
           </a>
         </div>

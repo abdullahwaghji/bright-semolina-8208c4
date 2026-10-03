@@ -6,33 +6,33 @@
 
   <!-- ============================================================
        PRIMARY SEO
-       TODO: replace "Noor Al-Quran Academy" and "yourdomain.com"
+       TODO: replace "Online Quran ilm Academy" and "yourdomain.com"
        with your real academy name and domain everywhere in this file.
        ============================================================ -->
-  <title>Learn Quran Online with Certified Tutors | Noor Al-Quran Academy</title>
+  <title>Learn Quran Online with Certified Tutors | Online Quran ilm Academy</title>
   <meta name="description" content="Enroll your child in live 1-on-1 online Quran classes. Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies with certified male and female tutors. Book a free trial.">
   <meta name="keywords" content="online Quran academy, learn Quran online, Quran classes for kids, Noorani Qaida online, Hifz classes online, Tajweed course, female Quran tutor">
-  <meta name="author" content="Noor Al-Quran Academy">
+  <meta name="author" content="Online Quran ilm Academy">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://www.yourdomain.com/">
+  <link rel="canonical" href="https://onlinequranilmacademy.com/">
   <meta name="theme-color" content="#06382E">
 
   <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Noor Al-Quran Academy">
-  <meta property="og:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta property="og:site_name" content="Online Quran ilm Academy">
+  <meta property="og:title" content="Learn Quran Online with Certified Tutors | Online Quran ilm Academy">
   <meta property="og:description" content="Live 1-on-1 Quran classes for children. Certified male and female tutors, flexible timings and a free trial class.">
-  <meta property="og:url" content="https://www.yourdomain.com/">
-  <meta property="og:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+  <meta property="og:url" content="https://onlinequranilmacademy.com/">
+  <meta property="og:image" content="https://onlinequranilmacademy.com/images/og-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Learn Quran Online with Certified Tutors | Noor Al-Quran Academy">
+  <meta name="twitter:title" content="Learn Quran Online with Certified Tutors | Online Quran ilm Academy">
   <meta name="twitter:description" content="Live 1-on-1 Quran classes for children. Certified tutors, flexible timings and a free trial class.">
-  <meta name="twitter:image" content="https://www.yourdomain.com/images/og-cover.jpg">
+  <meta name="twitter:image" content="https://onlinequranilmacademy.com/images/og-cover.jpg">
 
   <!-- Favicon (inline SVG, swap for your own files later) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230B6B54'/%3E%3Ccircle cx='19' cy='20' r='11' fill='%23C9A24A'/%3E%3Ccircle cx='23' cy='16' r='9' fill='%230B6B54'/%3E%3C/svg%3E">
@@ -68,15 +68,42 @@
             gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
             mist:   '#F4F9F7'
           },
-          fontFamily: {
-            display: ['outfit', 'inter', 'Montserrat'],
-            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+             fontFamily: {
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
           }
         }
       }
     };
   </script>
-<style>
+   <style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.111s ease-in-out;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
+<!-- <style>
   /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
   body {
     opacity: 0;
@@ -102,10 +129,11 @@
       }, 100);
     }
   });
-</script>
+</script> -->
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
        ============================================================ -->
+  
   <style>
     html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -164,7 +192,7 @@
   </style>
 
   <!-- If JavaScript is disabled, show animated elements anyway -->
-  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript> -->
 
   <!-- ============================================================
        STRUCTURED DATA (JSON-LD) – helps Google understand the site
@@ -173,7 +201,7 @@
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Noor Al-Quran Academy",
+    "name": "Online Quran ilm Academy",
     "url": "https://www.yourdomain.com/",
     "logo": "https://www.yourdomain.com/images/logo.png",
     "description": "Online Quran academy offering live one-to-one classes in Noorani Qaida, Quran reading with Tajweed, Hifz and Islamic Studies for children and adults.",
@@ -273,9 +301,9 @@
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
           <li>
-            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-[#013977] bg-[#F3EFFF] font-bold">Home</a>
+           <li>
+            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
           </li>
-          <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
           </li>
           <li>
@@ -711,5 +739,103 @@
             }
         }
     </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Scroll animations (AOS) ----------
+         Animations are switched off for visitors who prefer reduced motion. */
+      if (window.AOS) {
+        AOS.init({
+          duration: 650,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 40,
+          disable: function () {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          }
+        });
+      }
+
+      /* ---------- Mobile menu ---------- */
+      var header = document.getElementById('site-header');
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = menuBtn.querySelector('[data-icon="open"]');
+      var iconClose = menuBtn.querySelector('[data-icon="close"]');
+
+      function setMenu(open) {
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      menuBtn.addEventListener('click', function () {
+        setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) setMenu(false);
+      });
+
+      /* ---------- Header shadow once the page scrolls ---------- */
+      function onScroll() {
+        header.classList.toggle('shadow-md', window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---------- FAQ accordion (one answer open at a time) ---------- */
+      var triggers = document.querySelectorAll('.faq-trigger');
+
+      function setFaq(trigger, open) {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        trigger.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('data-open', String(open));
+      }
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+          triggers.forEach(function (t) { setFaq(t, false); });
+          setFaq(trigger, willOpen);
+        });
+      });
+
+      /* ---------- Footer year ---------- */
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('open-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const btn = document.getElementById('menu-btn');
+      
+      const isOpen = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isOpen);
+      openIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+    }
+
+    function switchTab(stepNum) {
+      document.querySelectorAll('.journey-content').forEach(el => el.classList.add('hidden'));
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`tabBtn${i}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandLilacLight text-brandBlue hover:bg-brandLilac";
+      }
+      document.getElementById(`tabContent${stepNum}`).classList.remove('hidden');
+      document.getElementById(`tabBtn${stepNum}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandBlue text-white shadow-md";
+    }
+  </script>
 </body>
 </html>

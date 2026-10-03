@@ -100,7 +100,7 @@
         </a>
       </div>
       <div class="flex items-center space-x-2 shrink-0">
-        <span class="bg-[#D8A43E] text-white px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-[11px] shadow-sm tracking-wide">
+        <span class="bg-[#D97706] text-white px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-[11px] shadow-sm tracking-wide">
           24/7 Live Support
         </span>
         <a href="enroll.html?trial=1" class="hidden sm:flex text-[#D6C7F0] hover:text-white font-medium transition items-center gap-1">
@@ -111,45 +111,100 @@
   </div>
 
   <!-- HEADER / NAVBAR -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-brandLilac/40 bg-white/95 backdrop-blur-md shadow-sm">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-[#D6C7F0]/30 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Home">
-        <img src="images/Online quran ilm academy logo new.png" alt="Logo" class="h-12 w-auto sm:h-14 md:h-16 object-contain">
+
+      <!-- Logo + Academy Title & Tagline -->
+      <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
+        <img 
+          src="images/Online quran ilm academy logo new.png" 
+          alt="Online Quran ilm Academy Logo" 
+          class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+          width="1023"
+          height="1024"
+        />
         <div class="flex flex-col justify-center">
-          <span class="font-display text-lg font-extrabold text-brandBlue leading-tight sm:text-xl">Online Quran ilm Academy</span>
-          <span class="text-[10px] sm:text-xs font-medium text-brandBlue/75 uppercase"><span class="text-brandGold">Spreading the Light of Quran</span></span>
+          <span class="font-display text-lg font-extrabold text-[#013977] leading-tight sm:text-xl lg:text-2xl group-hover:text-[#D97706] transition-colors">
+            Online Quran ilm Academy
+          </span>
+          <span class="text-[10px] sm:text-xs font-medium text-[#013977]/75 tracking-wider uppercase">
+           <span class="text-[#D97706]">  Spreading the Light of Quran</span>
+          </span>
         </div>
       </a>
-      <nav class="hidden lg:block">
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
-          <li><a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Home</a></li>
-          <li><a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">About Us</a></li>
-          <li><a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Courses</a></li>
-          <li><a href="library.html" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold" aria-current="page">Library</a></li>
-          <li><a href="fees.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Fee Plans</a></li>
-          <li><a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Blogs</a></li>
-          <li><a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition">Contact Us</a></li>
+           <li>
+            <a href="index.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-brandBlue hover:bg-brandLilacLight transition-all">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
+          </li>
+            <li>
+            <a href="library.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold">Library</a>
+          </li>
+            <li>
+            <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact Us</a>
+          </li>
         </ul>
       </nav>
+
+      <!-- CTA Button & Mobile Hamburger -->
       <div class="flex items-center gap-3">
-        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-brandGold px-6 py-2.5 text-sm font-bold text-brandBlue shadow-md min-[480px]:inline-flex hover:bg-[#c29135] transition">Enroll Now</a>
-        <button id="menu-btn" type="button" onclick="toggleMobileMenu()" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brandLilac text-brandBlue hover:bg-brandLilacLight lg:hidden" aria-expanded="false"><i class="fa-solid fa-bars text-xl"></i></button>
+        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-[#D97706] px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D97706]/20 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-lg min-[480px]:inline-flex">
+          <i class="fa-solid fa-user-plus text-xs" aria-hidden="true"></i> Enroll Now
+        </a>
+
+        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D6C7F0] text-[#013977] hover:bg-[#F3EFFF] transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i data-icon="open" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          <i data-icon="close" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden border-t border-brandLilac/30 bg-white lg:hidden px-4 py-5 shadow-lg">
-      <ul class="space-y-1 text-base font-semibold text-gray-700">
-        <li><a href="index.html" class="block px-4 py-2 rounded-xl">Home</a></li>
-        <li><a href="about.html" class="block px-4 py-2 rounded-xl">About Us</a></li>
-        <li><a href="courses.html" class="block px-4 py-2 rounded-xl">Courses</a></li>
-        <li><a href="library.html" class="block px-4 py-2 text-brandBlue font-bold bg-brandLilacLight rounded-xl">Library</a></li>
-        <li><a href="fees.html" class="block px-4 py-2 rounded-xl">Fee Plans</a></li>
-        <li><a href="blog.html" class="block px-4 py-2 rounded-xl">Blogs</a></li>
-        <li><a href="contact.html" class="block px-4 py-2 rounded-xl">Contact Us</a></li>
-      </ul>
-      <div class="mt-4 pt-4 border-t border-gray-100">
-        <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-brandGold px-5 py-3 font-bold text-brandBlue shadow-md">Enroll Now</a>
-      </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden border-t border-[#D6C7F0]/30 bg-white lg:hidden">
+      <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+        <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
+                  <li><a href="index.html" class="block rounded-xl px-4 py-3 hover:bg-brandLilacLight hover:text-brandBlue transition">Home</a></li>
+
+          <li>
+            <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
+          </li>
+          <li>
+            <a href="courses.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Courses</a>
+          </li>
+          <li>
+                      <li><a href="library.html" aria-current="page" class="block rounded-xl bg-brandLilacLight px-4 py-3 text-brandBlue font-bold">Library</a></li>
+
+            <li>
+            <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
+          </li>
+          <li>
+            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 font-bold text-white shadow-md hover:bg-[#b56305] transition">
+            <i class="fa-solid fa-user-plus text-sm" aria-hidden="true"></i> Enroll Now
+          </a>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -394,6 +449,104 @@
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Scroll animations (AOS) ----------
+         Animations are switched off for visitors who prefer reduced motion. */
+      if (window.AOS) {
+        AOS.init({
+          duration: 650,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 40,
+          disable: function () {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          }
+        });
+      }
+
+      /* ---------- Mobile menu ---------- */
+      var header = document.getElementById('site-header');
+      var menuBtn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = menuBtn.querySelector('[data-icon="open"]');
+      var iconClose = menuBtn.querySelector('[data-icon="close"]');
+
+      function setMenu(open) {
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      menuBtn.addEventListener('click', function () {
+        setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) setMenu(false);
+      });
+
+      /* ---------- Header shadow once the page scrolls ---------- */
+      function onScroll() {
+        header.classList.toggle('shadow-md', window.scrollY > 8);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---------- FAQ accordion (one answer open at a time) ---------- */
+      var triggers = document.querySelectorAll('.faq-trigger');
+
+      function setFaq(trigger, open) {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        trigger.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('data-open', String(open));
+      }
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+          triggers.forEach(function (t) { setFaq(t, false); });
+          setFaq(trigger, willOpen);
+        });
+      });
+
+      /* ---------- Footer year ---------- */
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('open-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const btn = document.getElementById('menu-btn');
+      
+      const isOpen = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isOpen);
+      openIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+    }
+
+    function switchTab(stepNum) {
+      document.querySelectorAll('.journey-content').forEach(el => el.classList.add('hidden'));
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`tabBtn${i}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandLilacLight text-brandBlue hover:bg-brandLilac";
+      }
+      document.getElementById(`tabContent${stepNum}`).classList.remove('hidden');
+      document.getElementById(`tabBtn${stepNum}`).className = "px-6 py-3 rounded-xl font-bold text-sm transition bg-brandBlue text-white shadow-md";
+    }
   </script>
 </body>
 </html>

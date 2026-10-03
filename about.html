@@ -37,11 +37,11 @@
       }
     };
   </script>
-<style>
+ <style>
   /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
   body {
     opacity: 0;
-    transition: opacity 0.12s ease-in-out;
+    transition: opacity 0.111s ease-in-out;
   }
 </style>
 
@@ -64,6 +64,63 @@
     }
   });
 </script>
+<script>
+  // SPA Router Engine - Prevents full page reload and keeps Navbar rock-solid
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    
+    // Check if it's an internal link
+    if (link && link.href && link.href.startsWith(window.location.origin) && 
+        !link.getAttribute('target') && !link.getAttribute('download') && 
+        !link.getAttribute('href').startsWith('#') && !link.classList.contains('no-spa')) {
+      
+      e.preventDefault();
+      const targetUrl = link.href;
+
+      // Optional: Update active state in navbar visually right away
+      document.querySelectorAll('.nav-link').forEach(el => el.removeAttribute('aria-current'));
+      link.setAttribute('aria-current', 'page');
+
+      // Fetch the target page in the background
+      fetch(targetUrl)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'html5');
+
+          // 1. Update the main content area (Make sure your main content has an id="main" or id="content")
+          const newMain = doc.querySelector('main') || doc.querySelector('#main');
+          const currentMain = document.querySelector('main') || document.querySelector('#main');
+
+          if (newMain && currentMain) {
+            currentMain.innerHTML = newMain.innerHTML;
+          } else {
+            // Fallback if no main tag: change whole body except header
+            window.location.href = targetUrl;
+            return;
+          }
+
+          // 2. Update page title for SEO
+          document.title = doc.title;
+
+          // 3. Push history state so browser back/forward buttons work smoothly
+          window.history.pushState({ path: targetUrl }, '', targetUrl);
+
+          // Scroll to top smoothly or instantly
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        })
+        .catch(err => {
+          // Fallback if fetch fails
+          window.location.href = targetUrl;
+        });
+    }
+  });
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', function() {
+    window.location.reload();
+  });
+</script>
   <style>
     html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
     :focus-visible { outline: 3px solid #D8A43E; outline-offset: 3px; border-radius: 4px; }
@@ -84,7 +141,7 @@
 <body class="bg-brandLilacLight font-sans text-brandBlue antialiased">
 
   <!-- Skip Link -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brandGold focus:px-4 focus:py-2 focus:font-semibold focus:text-brandBlue">Skip to main content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brandGold focus:px-4 focus:py-2 focus:font-semibold focus:text-brandBlue">Skip to main content</a>
 
   <!-- ================= TOP ANNOUNCEMENT & CONTACT BAR ================= -->
   <div class="bg-[#013977] text-white text-[10px] sm:text-sm py-2 px-2 sm:px-4 border-b border-[#D6C7F0]/20">
@@ -122,7 +179,7 @@
       <!-- Logo + Academy Title & Tagline -->
       <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
         <img 
-          src="images\Online quran ilm academy logo new.png" 
+          src="images\Online quran ilm academy logo new (1).png" 
           alt="Online Quran Ilm Academy Logo" 
           class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
         />

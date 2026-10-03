@@ -31,7 +31,7 @@
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Learn Quran Online with Certified Tutors | Online Quran ilm Academy">
-  <meta name="twitter:description" content="Live 1-on-1 Quran classes for children. Certified tutors, flexible timings and a free trial class.">
+  <meta name="twitter:description" conte-nt="Live 1-on-1 Quran classes for children. Certified tutors, flexible timings and a free trial class.">
   <meta name="twitter:image" content="https://onlinequranilmacademy.com/images\Online quran ilm academy logo new.png">
 
   <!-- Favicon (inline SVG, swap for your own files later) -->
@@ -66,6 +66,7 @@
             brandLilac: '#D6C7F0',
             brandLilacLight: '#F3EFFF',
             brandGold: '#D8A43E',
+            
           },
           fontFamily: {
             display: ['Outfit', 'Inter', 'sans-serif'],
@@ -75,6 +76,53 @@
       }
     };
   </script>
+  <!-- <style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script> -->
+  <!-- <script>
+    /* Brand palette + fonts for the whole site.
+       Reuse this same config block on every page so colours stay consistent. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jade:   { 50:'#F1F8F5', 100:'#DCEFE8', 200:'#B7DDD0', 500:'#0B6B54', 600:'#095A47', 700:'#084C3C', 800:'#06382E', 900:'#042A22' },
+            lagoon: { 50:'#EAF6F6', 100:'#CFEAEA', 500:'#0E7C7B', 600:'#0B6564', 700:'#094F4F' },
+            gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
+            mist:   '#F4F9F7'
+          },
+          fontFamily: {
+            display: ['outfit', 'inter', 'Montserrat'],
+            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script> -->
   <style>
   /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
   body {
@@ -102,26 +150,6 @@
     }
   });
 </script>
-  <!-- <script>
-    /* Brand palette + fonts for the whole site.
-       Reuse this same config block on every page so colours stay consistent. */
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            jade:   { 50:'#F1F8F5', 100:'#DCEFE8', 200:'#B7DDD0', 500:'#0B6B54', 600:'#095A47', 700:'#084C3C', 800:'#06382E', 900:'#042A22' },
-            lagoon: { 50:'#EAF6F6', 100:'#CFEAEA', 500:'#0E7C7B', 600:'#0B6564', 700:'#094F4F' },
-            gold:   { 100:'#F6EBCB', 200:'#EBD59A', 400:'#D9B45B', 500:'#C9A24A', 600:'#A8842F', 700:'#856512' },
-            mist:   '#F4F9F7'
-          },
-          fontFamily: {
-            display: ['outfit', 'inter', 'Montserrat'],
-            sans: ['Figtree', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script> -->
 
   <!-- ============================================================
        CUSTOM CSS (only what Tailwind utilities can't do cleanly)
@@ -230,7 +258,6 @@
   </style>
 
   <!-- If JavaScript is disabled, show animated elements anyway -->
-  <noscript><style>[data-aos]{opacity:1!important;transform:none!important}</styl></noscript>
 
   <!-- ============================================================
        STRUCTURED DATA (JSON-LD) – helps Google understand the site
@@ -348,7 +375,7 @@
       <!-- Logo + Academy Title & Tagline -->
       <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
         <img 
-          src="images/Online quran ilm academy logo new.png" 
+          src="images/Online quran ilm academy logo new (1).png" 
           alt="Online Quran ilm Academy Logo" 
           class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
           width="1023"
@@ -368,7 +395,7 @@
       <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
           <li>
-            <a href="index.htmlg" aria-current="page"  class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Home</a>
+            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold">Home</a>
           </li>
           <li>
             <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About Us</a>
@@ -1138,7 +1165,7 @@
               You do not need to be a scholar to support your child's Quran journey. Learn how a short daily routine, a quiet corner and a little praise can build a habit that lasts, even on school days.
             </p>
             <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
-              <p class="text-sm text-jade-800/70"><i class="fa-regular fa-user mr-2" aria-hidden="true"></i>By the Noor Al-Quran team</p>
+              <p class="text-sm text-jade-800/70"><i class="fa-regular fa-user mr-2" aria-hidden="true"></i>By the Online Quran ilm Academy</p>
               <a href="blog.html" class="inline-flex items-center gap-2 rounded-full bg-jade-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-jade-600">
                 Read Article <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
               </a>
