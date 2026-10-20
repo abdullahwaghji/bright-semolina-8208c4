@@ -1,286 +1,1351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="page-title">Read 15-Line Al Quran Online | Online Quran Ilm Academy</title>
-  <meta name="description" content="Read the Holy Quran online in authentic 15-line Indo-Pak page format with lightning-fast performance, Tajweed support, search by Surah, bookmarks, and font size adjustment at Online Quran Ilm Academy.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Read Holy Quran Online by Juz & Surah (1-114) | Online Quran Ilm Academy</title>
+  <meta name="description" content="Read and study the Holy Quran online with 30 Paras (Juz), 114 Surahs dropdowns, verified Urdu & English translations, word-by-word meaning breakdown, audio recitation, and Tajweed practice." />
+  <meta name="keywords" content="Read Quran Online, Online Quran Academy, Quran Para 1 to 30, Learn Quran with Tajweed, Quran Urdu Translation, Quran English Translation, 114 Surahs Index" />
+  <meta name="author" content="Online Quran Ilm Academy" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://onlinequranilmacademy.com/juz.html" />
+  <meta name="theme-color" content="#013977" />
+
+  <!-- GEO -->
+  <meta name="geo.region" content="PK-SD" />
+  <meta name="geo.placename" content="Karachi" />
+  <meta name="geo.position" content="24.8607;67.0011" />
+  <meta name="ICBM" content="24.8607, 67.0011" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Online Quran ilm Academy" />
+  <meta property="og:title" content="Read Holy Quran Online by Juz & Surah | Online Quran Ilm Academy" />
+  <meta property="og:description" content="Interactive Quran reading portal with 30 Paras, 114 Surahs, Urdu & English translations, and synchronized audio recitation." />
+  <meta property="og:url" content="https://onlinequranilmacademy.com/juz.html" />
+  <meta property="og:image" content="https://onlinequranilmacademy.com/images/online-qu.ran-ilm-academy-logo-new.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Read Holy Quran Online by Juz & Surah | Online Quran Ilm Academy" />
+  <meta name="twitter:description" content="Read Holy Quran online with verified Urdu & English translations and interactive word breakdown." />
+  <meta name="twitter:image" content="https://onlinequranilmacademy.com/images/online-qu.ran-ilm-academy-logo-new.webp" />
+
+  <link rel="icon" type="image/png" href="images/online-qu.ran-ilm-academy-logo-new.webp" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brandBlue: '#013977', brandLilac: '#D6C7F0', brandLilacLight: '#F3EFFF', brandGold: '#D8A43E' },
-          fontFamily: { display: ['Outfit', 'Inter', 'sans-serif'], arabic: ['Amiri', 'serif'], sans: ['Inter', 'sans-serif'] }
+          colors: {
+            brandBlue: '#013977',
+            brandLilac: '#D6C7F0',
+            brandLilacLight: '#F3EFFF',
+            brandGold: '#D8A43E',
+            
+          },
+          fontFamily: {
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
         }
       }
     };
   </script>
+
+  </script>
   <style>
+  /* Transition duration ko 0.25s se kam kar ke 0.12s kar diya hai */
+  body {
+    opacity: 0;
+    transition: opacity 0.111s ease-in-out;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.opacity = '1';
+  });
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin) && !link.getAttribute('target') && !link.getAttribute('download')) {
+      e.preventDefault();
+      const targetUrl = link.href;
+      document.body.style.opacity = '0';
+      
+      /* Timeout ko 200ms se kam kar ke 100ms kar diya hai taake page jaldi redirect ho */
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 100);
+    }
+  });
+</script>
+
+  <!-- ============================================================
+       CUSTOM CSS (only what Tailwind utilities can't do cleanly)
+       ============================================================ -->
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    /* Visible keyboard focus everywhere */
+    :focus-visible { outline: 3px solid #C9A24A; outline-offset: 3px; border-radius: 4px; }
+
+    /* Calm the default AOS travel distance (it is 100px by default) */
+    [data-aos="fade-up"]    { transform: translate3d(0, 24px, 0); }
+    [data-aos="fade-left"]  { transform: translate3d(28px, 0, 0); }
+    [data-aos="fade-right"] { transform: translate3d(-28px, 0, 0); }
+
+    /* Islamic geometric pattern (8-point star) used in the hero + blog placeholder */
+    .geo-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9A24A' stroke-opacity='.28' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .hero-pattern {
+      -webkit-mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+              mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.55) 45%, transparent 85%);
+    }
+
+    /* Star medallion: two overlapping squares (one rotated) behind an icon */
+    .medallion {
+      position: relative; display: inline-grid; place-items: center; flex-shrink: 0;
+      width: 3.5rem; height: 3.5rem; isolation: isolate;
+      color: #fff; font-size: 1.1rem; --m-bg: #0B6B54;
+    }
+    .medallion::before, .medallion::after {
+      content: ""; position: absolute; inset: .5rem; z-index: -1;
+      background: var(--m-bg); border-radius: .3rem;
+    }
+    .medallion::after { transform: rotate(45deg); }
+    .medallion--gold   { --m-bg: #C9A24A; color: #042A22; }
+    .medallion--lagoon { --m-bg: #0E7C7B; }
+    .medallion--dark   { --m-bg: #06382E; color: #EBD59A; }
+
+    /* Desktop nav underline */
     .nav-link { position: relative; }
-    .nav-link::after { content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 2px; background: #D8A43E; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+    .nav-link::after {
+      content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 2px;
+      background: #C9A24A; transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    }
     .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
-    .quran-line { border-bottom: 1px dashed rgba(217, 164, 62, 0.4); padding-bottom: 0.75rem; padding-top: 0.75rem; }
+
+    /* FAQ accordion: smooth height using grid rows */
+    .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq-panel > div { overflow: hidden; visibility: hidden; transition: visibility 0s linear .3s; }
+    .faq-panel[data-open="true"] { grid-template-rows: 1fr; }
+    .faq-panel[data-open="true"] > div { visibility: visible; transition-delay: 0s; }
+    .faq-icon { transition: transform .25s ease; }
+    .faq-trigger[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-panel, .faq-panel > div, .faq-icon, .nav-link::after { transition: none; }
+    }
+    /* 1. Force Lock Body and HTML Rendering to prevent page flash */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 2. Absolute Rigidity for Navbar Wrapper (Stops all jumps and movements) */
+  header#site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Prevents any sub-pixel shaking during page transitions */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  /* 3. Smooth Underline Hover Effect */
+  .nav-link { 
+    position: relative; 
+  }
+  .nav-link::after {
+    content: ""; 
+    position: absolute; 
+    left: .75rem; 
+    right: .75rem; 
+    bottom: .15rem; 
+    height: 2px;
+    background: #D8A43E; 
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform .15s ease-in-out;
+  }
+  .nav-link:hover::after, .nav-link[aria-current="page"]::after { 
+    transform: scaleX(1); 
+  }
+
+  /* 4. Disable heavy fade-in animations that cause layout shifts */
+  body {
+    animation: none !important;
+  }
+  </style>
+
+
+  <!-- Tailwind -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#013977',
+            brandLilac: '#D6C7F0',
+            brandLilacLight: '#F3EFFF',
+            brandGold: '#D8A43E'
+          },
+          fontFamily: {
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            arabic: ['"Noto Naskh Arabic"', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Online Quran ilm Academy",
+    "url": "https://onlinequranilmacademy.com/",
+    "logo": "https://onlinequranilmacademy.com/images/online-quran-ilm-academy-logo-new.webp",
+    "description": "Online Quran academy offering live one-to-one classes in Noorani Qaida, Quran reading with Tajweed, Hifz, and Islamic Studies.",
+    "email": "info@onlinequranilmacademy.com",
+    "telephone": "+92-319-8427973",
+    "areaServed": "Worldwide",
+    "sameAs": [
+      "https://www.facebook.com/onlinequranilmacademy",
+      "https://www.instagram.com/onlinequranilmacademy/",
+      "https://www.youtube.com/@OnlineQuranilmAcademy"
+    ]
+  }
+  </script>
+
+  <style>
+    .font-arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-weight: 400;
+      line-height: 2.8;
+      word-spacing: 2px;
+    }
+    mark {
+      background-color: #fde047;
+      color: #0f172a;
+      padding: 0.1em 0.3em;
+      border-radius: 0.25rem;
+      font-weight: bold;
+    }
   </style>
 </head>
-<body class="bg-brandLilacLight font-sans text-brandBlue antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-jade-900">Skip to main content</a>
+<!-- ============================================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ============================================================ -->
 
-  <!-- TOP BAR -->
-  <div class="bg-[#013977] text-white text-[10px] sm:text-sm py-2 px-2 sm:px-4 border-b border-[#D6C7F0]/20">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center space-x-4 text-[#F3EFFF]/90 truncate">
-        <a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D6C7F0] transition flex items-center gap-1"><i class="fa-solid fa-envelope text-[#D8A43E]"></i> info@onlinequranilmacademy.com</a>
-      </div>
-      <a href="enroll.html?trial=1" class="bg-[#D8A43E] text-white px-3 py-0.5 rounded-full font-bold text-xs">Book Free Trial</a>
+<!-- TOP ANNOUNCEMENT & CONTACT BAR (Optimized for Mobile Portrait Single-Line) -->
+<div class="bg-[#013977] text-white text-[10px] sm:text-sm py-2 px-2 sm:px-4 border-b border-[#D6C7F0]/20">
+  <div class="max-w-7xl mx-auto flex flex-row justify-between items-center gap-1">
+    <!-- Left Contact Info (Compact truncation for mobile) -->
+    <div class="flex items-center space-x-2 sm:space-x-4 text-[#F3EFFF]/90 truncate">
+      <a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D6C7F0] transition flex items-center gap-1 truncate">
+        <i class="fa-solid fa-envelope text-[#D97706] shrink-0"></i>
+        <span class="truncate">info@onlinequranilmacademy.com</span>
+      </a>
+      <span class="text-white/30 hidden sm:inline">|</span>
+      <a href="tel:+923198427973" class="hover:text-[#D6C7F0] transition flex items-center gap-1 shrink-0">
+        <i class="fa-solid fa-phone text-[#D97706]"></i>
+        <span>+92 319 8427973</span>
+      </a>
+    </div>
+
+    <!-- Right CTAs -->
+    <div class="flex items-center space-x-2 shrink-0">
+      <span class="bg-[#D97706] text-white px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-[11px] shadow-sm tracking-wide">
+        24/7 Live Support
+      </span>
+      <a href="enroll.html?trial=1" class="hidden sm:flex text-[#D6C7F0] hover:text-white font-medium transition items-center gap-1">
+        <i class="fa-regular fa-calendar-check text-xs"></i> Book Free Trial
+      </a>
     </div>
   </div>
+</div>
+       
+ 
+  <!-- ============================================================
+       1. HEADER / NAVBAR (Sticky & Glassmorphism Modern Design)
+       ============================================================ -->
+  <header id="site-header" class="sticky top-0 z-50 border-b border-[#D6C7F0]/30 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
 
-  <!-- HEADER -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-brandLilac/40 bg-white/95 backdrop-blur-md shadow-sm">
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="flex items-center gap-3 group py-1">
-        <img src="images/Online quran ilm academy logo new.png" alt="Logo" class="h-12 w-auto sm:h-14 object-contain">
-        <span class="font-display text-lg font-extrabold text-brandBlue">Online Quran Ilm Academy</span>
+      <!-- Logo + Academy Title & Tagline -->
+      <a href="index.html" class="flex items-center gap-3 group py-1" aria-label="Online Quran Ilm Academy Home">
+        <img 
+          src="images/online-quran-ilm-academy-logo-new.webp" 
+          alt="Online Quran ilm Academy Logo" 
+          class="h-12 w-auto sm:h-14 md:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+          width="1023"
+          height="1024"
+        />
+        <div class="flex flex-col justify-center">
+          <span class="font-display text-lg font-extrabold text-[#013977] leading-tight sm:text-xl lg:text-2xl group-hover:text-[#D97706] transition-colors">
+            Online Quran ilm Academy
+          </span>
+          <span class="text-[10px] sm:text-xs font-medium text-[#013977]/75 tracking-wider uppercase">
+           <span class="text-[#D97706]">  Spreading the Light of Quran</span>
+          </span>
+        </div>
       </a>
-      <nav class="hidden lg:block">
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden lg:block">
         <ul class="flex items-center gap-1 text-[0.95rem] font-semibold text-gray-700">
-          <li><a href="index.html" class="nav-link rounded-lg px-3.5 py-2">Home</a></li>
-          <li><a href="library.html" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold" aria-current="page">Library</a></li>
-          <li><a href="fees.html" class="nav-link rounded-lg px-3.5 py-2">Fee Plans</a></li>
-          <li><a href="blog.html" class="nav-link rounded-lg px-3.5 py-2">Blogs</a></li>
-          <li><a href="contact.html" class="nav-link rounded-lg px-3.5 py-2">Contact Us</a></li>
+          <li>
+            <a href="index.html" aria-current="page" class="nav-link rounded-lg px-3.5 py-2 text-brandBlue bg-brandLilacLight font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">About</a>
+          </li>
+          <!-- <li>
+            <a href="courses.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Courses</a>
+          </li> -->
+          <li class="relative group">
+  <a href="courses.html"  class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">
+    <span>Courses</span>
+    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 group-hover:rotate-180 text-brandGold"></i>
+  </a>
+
+  <!-- Dropdown Menu Box -->
+  <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-72 sm:w-80">
+    <div class="bg-white rounded-2xl shadow-2xl border border-brandLilac/60 p-3 space-y-1">
+      
+      <!-- 1. Noorani Qaida Course -->
+      <a href="noorani-qaida.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-book-open text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Noorani Qaida Course</div>
+          <div class="text-[11px] text-gray-500">Foundation for kids & beginners</div>
+        </div>
+      </a>
+
+      <!-- 2. Quran Reading with Tajweed -->
+      <a href="online-quran-reading.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-quran text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Reading with Tajweed</div>
+          <div class="text-[11px] text-gray-500">Fluent recitation & Makharij rules</div>
+        </div>
+      </a>
+
+      <!-- 3. Quran Memorization (Hifz) Course -->
+      <a href="online-quran-memorization.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-brain text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Memorization (Hifz)</div>
+          <div class="text-[11px] text-gray-500">Structured daily revision & tracking</div>
+        </div>
+      </a>
+
+      <!-- 4. Quran Translation & Tafseer Course -->
+      <a href="online-tafseer-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-language text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Translation & Tafseer</div>
+          <div class="text-[11px] text-gray-500">Understand word-by-word meanings</div>
+        </div>
+      </a>
+
+      <!-- 5. Islamic Studies & Duas Course -->
+      <a href="online-islamic-studies-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-kaaba text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Islamic Studies & Daily Duas</div>
+          <div class="text-[11px] text-gray-500">Salah method, Aqaaid & Islamic manners</div>
+        </div>
+      </a>
+
+      <!-- 6. Online Arabic Language Course -->
+      <a href="0nline-arabic-language-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-comment-dots text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Online Arabic Language</div>
+          <div class="text-[11px] text-gray-500">Conversational & classical Arabic</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</li>
+          <li>
+            <a href="library.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Library</a>
+          </li>
+                    <li>
+            <a href="fees.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Fee/Hadya</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">Contact</a>
+          </li>
         </ul>
+      </nav>
+
+      <!-- CTA Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="enroll.html" class="hidden items-center gap-2 rounded-full bg-[#D97706] px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D97706]/20 transition-all hover:-translate-y-0.5 hover:bg-[#b56305] hover:shadow-lg min-[480px]:inline-flex">
+          <i class="fa-solid fa-user-plus text-xs" aria-hidden="true"></i> Enroll Now
+        </a>
+
+        <button id="menu-btn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D6C7F0] text-[#013977] hover:bg-[#F3EFFF] transition lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <i data-icon="open" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          <i data-icon="close" class="fa-solid fa-xmark hidden text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden border-t border-[#D6C7F0]/30 bg-white lg:hidden">
+      <nav aria-label="Mobile Navigation" class="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+        <ul class="flex flex-col space-y-1 text-base font-semibold text-gray-700">
+          <li>
+            <a href="index.html" aria-current="page" class="block rounded-xl bg-[#F3EFFF] px-4 py-3 text-[#013977] font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">About Us</a>
+          </li>
+          <li class="relative group">
+  <a href="courses.html"  class="nav-link rounded-lg px-3.5 py-2 hover:text-[#013977] hover:bg-[#F3EFFF] transition-all">
+    <span>Courses</span>
+    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 group-hover:rotate-180 text-brandGold"></i>
+  </a>
+
+  <!-- Dropdown Menu Box -->
+  <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-72 sm:w-80">
+    <div class="bg-white rounded-2xl shadow-2xl border border-brandLilac/60 p-3 space-y-1">
+      
+      <!-- 1. Noorani Qaida Course -->
+      <a href="noorani-qaida.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-book-open text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Noorani Qaida Course</div>
+          <div class="text-[11px] text-gray-500">Foundation for kids & beginners</div>
+        </div>
+      </a>
+
+      <!-- 2. Quran Reading with Tajweed -->
+      <a href="online-quran-reading.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-quran text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Reading with Tajweed</div>
+          <div class="text-[11px] text-gray-500">Fluent recitation & Makharij rules</div>
+        </div>
+      </a>
+
+      <!-- 3. Quran Memorization (Hifz) Course -->
+      <a href="online-quran-memorization.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-brain text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Memorization (Hifz)</div>
+          <div class="text-[11px] text-gray-500">Structured daily revision & tracking</div>
+        </div>
+      </a>
+
+      <!-- 4. Quran Translation & Tafseer Course -->
+      <a href="online-tafseer-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-language text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Quran Translation & Tafseer</div>
+          <div class="text-[11px] text-gray-500">Understand word-by-word meanings</div>
+        </div>
+      </a>
+
+      <!-- 5. Islamic Studies & Duas Course -->
+      <a href="online-islamic-studies-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-kaaba text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Islamic Studies & Daily Duas</div>
+          <div class="text-[11px] text-gray-500">Salah method, Aqaaid & Islamic manners</div>
+        </div>
+      </a>
+
+      <!-- 6. Online Arabic Language Course -->
+      <a href="Online-arabic-language-course.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-brandLilacLight transition group/item">
+        <div class="p-2 bg-brandBlue/10 text-brandBlue rounded-lg group-hover/item:bg-brandGold group-hover/item:text-brandBlue transition">
+          <i class="fa-solid fa-comment-dots text-base"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm text-brandBlue group-hover/item:text-accentAmber transition">Online Arabic Language</div>
+          <div class="text-[11px] text-gray-500">Conversational & classical Arabic</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</li>
+          <li>
+            <a href="library.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Library</a>
+          </li>
+            <li>
+            <a href="fees.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Fee Plans</a>
+          </li>
+          <li>
+            <a href="blog.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Blogs</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block rounded-xl px-4 py-3 hover:bg-[#F3EFFF] hover:text-[#013977] transition">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <a href="enroll.html" class="flex items-center justify-center gap-2 rounded-full bg-[#D97706] px-5 py-3 font-bold text-white shadow-md hover:bg-[#b56305] transition">
+            <i class="fa-solid fa-user-plus text-sm" aria-hidden="true"></i> Enroll Now
+          </a>
+        </div>
       </nav>
     </div>
   </header>
-
-  <!-- MAIN READER -->
-  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full space-y-8">
-    
-    <!-- PAGE HEADING & SEO INTRO -->
-    <div class="text-center space-y-2">
-      <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-brandBlue">Read 15-Line Al Quran Online</h1>
-      <p class="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Welcome to <strong>Online Quran Ilm Academy</strong>'s digital Mushaf reader. Experience seamless online Quran reading in authentic 15-line Indo-Pak layout designed for students, huffaz, and daily reciters worldwide with crystal-clear Uthmani script and smooth navigation.
-      </p>
-    </div>
-
-    <!-- CONTROLS BAR (Search, Juz Dropdown, Font Size, Bookmark) -->
-    <div class="bg-brandBlue p-4 sm:p-6 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between gap-4 text-white">
-      
-      <!-- Juz Selector -->
-      <div class="w-full md:w-1/3">
-        <label class="block text-xs text-brandGold uppercase font-bold mb-1">Select Juz / Para</label>
-        <select id="juz-dropdown" onchange="onDropdownChange(this.value)" class="w-full bg-white/10 border border-white/30 text-white text-sm font-semibold rounded-xl px-4 py-2.5 focus:outline-none focus:border-brandGold cursor-pointer">
-          <!-- Populated via JS -->
-        </select>
-      </div>
-
-      <!-- Search by Surah Name -->
-      <div class="w-full md:w-1/3">
-        <label class="block text-xs text-brandGold uppercase font-bold mb-1">Search Surah</label>
-        <input type="text" id="surah-search" placeholder="Type Surah name (e.g. Yaseen)..." oninput="filterSurahs(this.value)" class="w-full bg-white/10 border border-white/30 text-white placeholder-gray-300 text-sm font-semibold rounded-xl px-4 py-2.5 focus:outline-none focus:border-brandGold">
-      </div>
-
-      <!-- Actions: Font Size & Bookmark -->
-      <div class="w-full md:w-auto flex items-center justify-end gap-3 pt-2 md:pt-5">
-        <div class="flex items-center bg-white/10 border border-white/30 rounded-xl overflow-hidden">
-          <button onclick="adjustFontSize(-2)" class="px-3 py-2 text-white hover:bg-white/20 font-bold text-sm" title="Decrease Font Size"><i class="fa-solid fa-minus"></i></button>
-          <span class="px-2 text-xs font-bold text-brandGold" id="font-size-indicator">Text</span>
-          <button onclick="adjustFontSize(2)" class="px-3 py-2 text-white hover:bg-white/20 font-bold text-sm" title="Increase Font Size"><i class="fa-solid fa-plus"></i></button>
-        </div>
-        <button onclick="saveBookmark()" class="bg-brandGold text-brandBlue px-4 py-2.5 rounded-xl font-bold text-sm hover:bg-amber-400 transition flex items-center gap-2 shadow">
-          <i class="fa-solid fa-bookmark"></i> Bookmark
-        </button>
-      </div>
-    </div>
-
-    <!-- 15-Line Quran Page Card (Increased Width & Height) -->
-    <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-lg border border-brandLilac/60 space-y-8 text-center">
-      <div class="border-b border-brandLilac/30 pb-4 space-y-1 flex flex-col sm:flex-row justify-between items-center">
+  <!-- Header -->
+  <!-- <header class="bg-brandBlue text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="library.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-brandGold text-brandBlue flex items-center justify-center font-bold text-xl shadow-inner">📖</div>
         <div>
-          <span id="page-subtitle" class="text-xs font-bold text-brandGold uppercase tracking-wider">Authentic 15-Line Indo-Pak Format</span>
-          <h2 id="juz-heading" class="text-2xl sm:text-3xl font-extrabold text-brandBlue font-display">Juz 1</h2>
+          <span class="font-display font-bold text-lg leading-tight block tracking-wide text-white">ONLINE QURAN</span>
+          <span class="text-xs text-brandLilac tracking-wider uppercase font-semibold">ILM ACADEMY</span>
         </div>
-        <div id="bookmark-badge" class="hidden text-xs bg-brandLilacLight text-brandBlue px-3 py-1 rounded-full font-bold border border-brandLilac">
-          <i class="fa-solid fa-bookmark text-brandGold"></i> Bookmarked Page
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-medium text-sm">
+        <a href="library.html" class="text-brandLilac hover:text-white transition-colors">← Back to Library</a>
+        <a href="/courses/" class="hover:text-brandLilac transition-colors">Courses</a>
+        <a href="juz.html" class="text-brandGold font-semibold border-b-2 border-brandGold pb-1">Quran Reader</a>
+      </nav>
+
+      <a href="/free-trial/" class="bg-brandGold hover:bg-yellow-500 text-slate-900 font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm text-sm">
+        Book Free Trial
+      </a>
+    </div>
+  </header> -->
+
+  <!-- Hero & Controls -->
+  <section class="bg-gradient-to-b from-brandBlue to-slate-900 text-white pt-10 pb-12 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto text-center space-y-4">
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        Read & Search the <span class="text-brandGold">Holy Quran</span> Online
+      </h1>
+      <p class="text-brandLilac max-w-2xl mx-auto text-sm sm:text-base">
+        Explore 30 Paras or 114 Surahs with verified Urdu & English translations, word meanings, and audio recitation.
+      </p>
+
+      <div class="bg-white/15 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/10 shadow-2xl mt-8 grid grid-cols-1 md:grid-cols-12 gap-4 text-slate-900 text-left">
+
+        <!-- Juz -->
+        <div class="md:col-span-4">
+          <label for="juzSelect" class="block text-xs font-semibold text-brandLilac mb-1">Select Juz (Para 1 to 30):</label>
+          <select id="juzSelect" class="w-full bg-white text-slate-900 px-4 py-3 rounded-xl border-2 border-transparent focus:border-brandGold focus:outline-none shadow-sm text-sm font-medium cursor-pointer">
+            <option value="1">Juz 1 (Alif Lam Meem)</option>
+            <option value="2">Juz 2 (Sayaqool)</option>
+            <option value="3">Juz 3 (Tilka 'r-Rusul)</option>
+            <option value="4">Juz 4 (Lan Tanalu)</option>
+            <option value="5">Juz 5 (Wal Muhsanat)</option>
+            <option value="6">Juz 6 (La Yuhibbu-llah)</option>
+            <option value="7">Juz 7 (Wa Iza Sami'u)</option>
+            <option value="8">Juz 8 (Wa Lau Annana)</option>
+            <option value="9">Juz 9 (Qal Al-Mala'u)</option>
+            <option value="10">Juz 10 (Wa'lamu)</option>
+            <option value="11">Juz 11 (Yatazeroon)</option>
+            <option value="12">Juz 12 (Wa Mamin Da'abbat)</option>
+            <option value="13">Juz 13 (Wa Ma Ubri'u)</option>
+            <option value="14">Juz 14 (Rubama)</option>
+            <option value="15">Juz 15 (Subhanallazi)</option>
+            <option value="16">Juz 16 (Qala Alam)</option>
+            <option value="17">Juz 17 (Iqtaraba)</option>
+            <option value="18">Juz 18 (Qad Aflaha)</option>
+            <option value="19">Juz 19 (Wa Qalallazina)</option>
+            <option value="20">Juz 20 (A'man Khalaq)</option>
+            <option value="21">Juz 21 (Utlu Ma Ohiya)</option>
+            <option value="22">Juz 22 (Wa Manyaqnut)</option>
+            <option value="23">Juz 23 (Wa Maliya)</option>
+            <option value="24">Juz 24 (Faman Azlamu)</option>
+            <option value="25">Juz 25 (Elaihe Yuruddu)</option>
+            <option value="26">Juz 26 (Ha'a Meem)</option>
+            <option value="27">Juz 27 (Qala Fama Khatbukum)</option>
+            <option value="28">Juz 28 (Qad Sami'allah)</option>
+            <option value="29">Juz 29 (Tabarakallazi)</option>
+            <option value="30">Juz 30 (Amma Yatasa'aloon)</option>
+          </select>
+        </div>
+
+        <!-- Surah -->
+        <div class="md:col-span-4">
+          <label for="surahSelect" class="block text-xs font-semibold text-brandLilac mb-1">Select Surah (1 to 114):</label>
+          <select id="surahSelect" class="w-full bg-white text-slate-900 px-4 py-3 rounded-xl border-2 border-transparent focus:border-brandGold focus:outline-none shadow-sm text-sm font-medium cursor-pointer">
+            <option value="">-- Or Select Surah --</option>
+          </select>
+        </div>
+
+        <!-- Search -->
+        <div class="md:col-span-4">
+          <label for="quranSearchInput" class="block text-xs font-semibold text-brandLilac mb-1">Search & Highlight Word on Page:</label>
+          <div class="flex gap-2">
+            <input type="text" id="quranSearchInput" placeholder="e.g. Mercy, Sabr, رحمت..."
+              class="w-full bg-white text-slate-900 px-4 py-3 rounded-xl border-2 border-transparent focus:border-brandGold focus:outline-none shadow-sm text-sm font-medium" />
+            <button id="searchBtn" class="bg-brandGold hover:bg-yellow-500 text-slate-900 font-bold px-4 py-3 rounded-xl text-sm transition-colors shadow-sm" title="Highlight">🔍</button>
+          </div>
+          <p id="searchCount" class="text-xs text-brandLilac mt-1 h-4"></p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Exact 15 Lines Page Viewer Container (Larger min-height) -->
-      <div id="reader-container" class="min-h-[700px] bg-[#FDFBF7] border-4 border-amber-300 rounded-2xl p-6 sm:p-12 shadow-inner text-right relative flex flex-col justify-between">
-        <div id="loading-spinner" class="py-40 text-gray-400 space-y-3 absolute inset-0 bg-[#FDFBF7] z-10 flex flex-col items-center justify-center">
-          <i class="fa-solid fa-spinner fa-spin text-brandGold text-4xl"></i>
-          <p class="text-sm font-sans font-semibold">Loading 15 Lines Quran Page...</p>
+  <!-- Reader -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full">
+
+    <!-- Bookmark -->
+    <div class="bg-brandLilacLight border border-brandLilac rounded-xl p-4 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🔖</span>
+        <div>
+          <p class="text-xs text-brandBlue font-bold uppercase tracking-wider">Quick Bookmark Feature</p>
+          <p id="bookmarkStatus" class="text-sm text-slate-700 font-medium">No active bookmark saved yet.</p>
         </div>
-        <!-- 15 Lines Rendered Here with Underlines -->
-        <div id="verses-box" class="space-y-3 font-arabic text-2xl sm:text-3xl leading-[2.6] text-gray-900 hidden"></div>
-        <div class="text-center pt-6 text-xs font-sans text-amber-800 font-bold" id="page-number-footer">— Page 1 —</div>
       </div>
-
-      <!-- Bottom Pagination Bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-brandLilac/30">
-        <button onclick="changePage(-1)" class="px-6 py-3 rounded-xl bg-brandLilacLight text-brandBlue font-bold text-sm hover:bg-brandLilac transition flex items-center gap-2">
-          <i class="fa-solid fa-chevron-left"></i> Previous Page
-        </button>
-        <span id="page-counter" class="text-xs font-bold text-gray-600">Page 1 of 604</span>
-        <button onclick="changePage(1)" class="px-6 py-3 rounded-xl bg-brandBlue text-white font-bold text-sm hover:bg-[#012a59] transition flex items-center gap-2">
-          Next Page <i class="fa-solid fa-chevron-right"></i>
-        </button>
+      <div class="flex gap-2">
+        <button id="openBookmarkBtn" class="hidden bg-brandGold text-slate-900 hover:bg-yellow-500 text-xs font-bold px-4 py-2.5 rounded-lg transition-colors shadow-sm">Open Bookmark</button>
+        <button id="saveBookmarkBtn" class="bg-brandBlue text-white hover:bg-slate-800 text-xs font-bold px-4 py-2.5 rounded-lg transition-colors shadow-sm">Save Current View</button>
       </div>
     </div>
 
+    <div id="quranContainer" class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden min-h-[400px]">
+      <div class="bg-slate-100 border-b border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 id="currentTitle" class="font-display font-bold text-lg text-brandBlue">Juz (Para) 1</h2>
+          <p id="currentSubtitle" class="text-xs text-slate-500">Loading details...</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="fontUp" class="px-3 py-1 bg-white border rounded text-xs font-bold hover:bg-slate-50 shadow-sm">A+</button>
+          <button id="fontDown" class="px-3 py-1 bg-white border rounded text-xs font-bold hover:bg-slate-50 shadow-sm">A-</button>
+        </div>
+      </div>
+
+      <div id="versesList" class="p-6 sm:p-10 space-y-8 min-h-[300px]">
+        <div class="text-center py-20 text-slate-400 font-medium">⌛ Loading Quranic Verses & Translations...</div>
+      </div>
+    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-brandBlue text-[#F3EFFF] py-12 border-t-2 border-brandGold/30 mt-20">
-    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-[#D6C7F0] space-y-2">
-      <p>Empowering students worldwide with authentic Quranic education & Tajweed.</p>
-      <p>&copy; <span id="year">2026</span> Online Quran Ilm Academy. All rights reserved.</p>
+  <!-- Audio Bar -->
+  <div id="audioBar" class="bg-slate-900 text-white border-t border-slate-800 py-3 px-4 fixed bottom-0 left-0 right-0 z-40 hidden shadow-2xl">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-brandGold text-xl">🔊</span>
+        <div>
+          <p id="audioAyahTitle" class="text-xs font-bold text-brandLilac">Playing Verse</p>
+          <p class="text-xs text-slate-400">Mishary Rashid Alafasy</p>
+        </div>
+      </div>
+      <audio id="quranAudio" controls class="h-8 max-w-xs sm:max-w-md w-full focus:outline-none"></audio>
     </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="relative bg-[#013977] text-[#F3EFFF] font-sans border-t-2 border-[#D97706]/30 overflow-hidden">
+    
+    <!-- Top Decorative Glow / Wave Accent -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-[#D97706] to-transparent opacity-70"></div>
+
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+
+      <!-- Unique Feature: Quick Interactive Banner Inside Footer -->
+      <div class="mb-14 rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl backdrop-blur-md">
+        <div class="space-y-1 text-center lg:text-left">
+          <span class="text-xs uppercase tracking-widest text-[#D97706] font-semibold">Start Your Journey Today</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-white">Not sure which course fits your child?</h3>
+          <p class="text-sm text-[#D6C7F0]">Get a free 1-on-1 trial session evaluated by our certified expert tutors.</p>
+        </div>
+        <a href="enroll.html" class="shrink-0 rounded-xl bg-[#D97706] hover:bg-[#B56305] text-[#013977] font-bold px-7 py-3.5 text-sm transition shadow-lg transform hover:-translate-y-0.5">
+          Book Free Trial Class
+        </a>
+      </div>
+
+      <!-- Main Footer Grid (5 Columns for Perfect Distribution) -->
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
+
+        <!-- Brand + Logo Image + Newsletter -->
+        <div class="lg:col-span-4 space-y-5">
+          <a href="index.html" class="flex items-center gap-3.5 group" aria-label="Online Quran Ilm Academy home">
+            <!-- Uploaded Logo Image Integrated -->
+            <div class="h-12 w-12 shrink-0 rounded-xl bg-white/10 p-1 flex items-center justify-center border border-white/20 shadow-md">
+              <img src="images/online-quran-ilm-academy-logo-new.webp" alt="Online Quran Ilm Academy Logo" class="h-full w-full object-contain rounded-lg">
+            </div>
+            <span class="font-display text-lg font-bold text-white tracking-wide leading-snug">Online Quran ilm Academy</span>
+          </a>
+          
+          <p class="text-sm leading-relaxed text-[#D6C7F0]">
+            Spreading the light of Quran globally with expert certified male & female tutors, authentic Tajweed rules, and interactive 1-on-1 digital learning for kids and adults in USA, UK, Canada, Australia & worldwide.
+          </p>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-2 gap-2.5 pt-1">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 p-2.5 rounded-xl text-xs">
+              <span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
+              <span class="text-white font-medium">100% Certified Tutors</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 p-2.5 rounded-xl text-xs">
+              <span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
+              <span class="text-white font-medium">Flexible 24/7 Schedule</span>
+            </div>
+          </div>
+
+          <!-- Netlify Newsletter Form -->
+          <form name="newsletter-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-2 pt-2">
+            <label for="nl-email" class="text-xs font-semibold uppercase tracking-wider text-[#D97706] block">Get free Quran learning tips for kids</label>
+            <input type="hidden" name="form-name" value="newsletter-signup">
+            <input type="hidden" name="subject" value="New Newsletter Subscriber - Online Quran ilm Academy">
+            <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+  
+            <div class="flex gap-2">
+              <input id="nl-email" type="email" name="email" required autocomplete="email" placeholder="Your email address" class="min-w-0 flex-1 rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder-[#D6C7F0]/50 focus:border-[#D97706] focus:outline-none transition">
+              <button type="submit" class="shrink-0 rounded-xl bg-[#D97706] hover:bg-[#B56305] text-[#013977] font-bold px-5 py-2.5 text-sm transition shadow-lg">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <nav aria-label="Quick links" class="lg:col-span-2">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Quick Links</h2>
+          <ul class="space-y-2.5 text-sm text-[#D6C7F0]">
+            <li><a href="index.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Home</a></li>
+            <li><a href="about.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> About Us</a></li>
+            <li><a href="fees.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Fee Plans</a></li>
+            <li><a href="blog.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Blogs</a></li>
+            <li><a href="faqs.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Help & FAQs</a></li>
+            <li><a href="contact.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Contact Us</a></li>
+            <li><a href="enroll.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Enroll Now</a></li>
+                  <li><a href="female-quran-teachers.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span>Female Quran Teachers</a></li>
+          </ul>
+        </nav>
+
+        <!-- Courses -->
+        <nav aria-label="Courses" class="lg:col-span-2">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Quran Courses</h2>
+          <ul class="space-y-2.5 text-sm text-[#D6C7F0]">
+            <li><a href="noorani-qaida.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Noorani Qaida</a></li>
+            <li><a href="quran-reading-tajweed.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Quran Reading & Tajweed</a></li>
+            <li><a href="courses.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Quran Memorization (Hifz)</a></li>
+            <li><a href="online-arabic-language-course.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Arabic Language Course</a></li>
+            <li><a href="quran-translation-tafseer.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Quran Translation & Tafseer</a></li>
+            <li><a href="courses.html" class="hover:text-[#D97706] transition flex items-center gap-2"><span class="text-[#D97706]">›</span> Islamic Studies & Duas</a></li>
+          </ul>
+        </nav>
+
+        <!-- Legal & Policies Column -->
+        <nav aria-label="Legal and policies" class="lg:col-span-2">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Legal & Trust</h2>
+          <ul class="space-y-2.5 text-sm text-[#D6C7F0]">
+            <li><a href="privacy-policy.html" class="hover:text-[#D97706] transition flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-[10px] text-[#D97706]"></i> Privacy & Cookie Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-[#D97706] transition flex items-center gap-1.5"><i class="fa-solid fa-file-contract text-[10px] text-[#D97706]"></i> Terms & Conditions</a></li>
+            <li><a href="refund-policy.html" class="hover:text-[#D97706] transition flex items-center gap-1.5"><i class="fa-solid fa-hand-holding-dollar text-[10px] text-[#D97706]"></i> Fee & Refund Policy</a></li>
+            <li><a href="enroll.html?trial=1" class="hover:text-[#D97706] transition text-[#D97706] font-bold flex items-center gap-1.5"><i class="fa-solid fa-star text-[10px]"></i> Book 3-Day Free Trial</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact & Socials -->
+        <div class="lg:col-span-2 space-y-4">
+          <h2 class="font-display text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-2 mb-4">Contact Us</h2>
+          <ul class="space-y-2.5 text-sm text-[#D6C7F0]">
+            <li class="flex items-start gap-2.5"><i class="fa-regular fa-envelope mt-1 w-4 text-[#D97706] shrink-0" aria-hidden="true"></i><a href="mailto:info@onlinequranilmacademy.com" class="hover:text-[#D97706] transition break-all">info@onlinequranilmacademy.com</a></li>
+            <li class="flex items-start gap-2.5"><i class="fa-solid fa-phone mt-1 w-4 text-[#D97706] shrink-0" aria-hidden="true"></i><a href="tel:+923198427973" class="hover:text-[#D97706] transition">+92 319 8427973</a></li>
+            <li class="flex items-start gap-2.5"><i class="fa-brands fa-whatsapp mt-1 w-4 text-[#D97706] shrink-0" aria-hidden="true"></i><a href="https://wa.me/923198427973" class="hover:text-[#D97706] transition" rel="noopener">Chat on WhatsApp</a></li>
+            <li class="flex items-start gap-2.5"><i class="fa-regular fa-clock mt-1 w-4 text-[#D97706] shrink-0" aria-hidden="true"></i>Classes available 24/7</li>
+          </ul>
+          
+          <!-- Social Media Icons -->
+          <div class="pt-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#D6C7F0]/70 block mb-2">Connect With Us</span>
+            <ul class="flex gap-2.5" aria-label="Social media">
+              <li><a href="https://www.facebook.com/onlinequranilmacademy" target="_blank" rel="noopener" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D97706] hover:text-[#013977] text-white"><i class="fa-brands fa-facebook-f text-xs" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/onlinequranilmacademy/" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D97706] hover:text-[#013977] text-white"><i class="fa-brands fa-instagram text-xs" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/@OnlineQuranilmAcademy" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 transition hover:bg-[#D97706] hover:text-[#013977] text-white"><i class="fa-brands fa-youtube text-xs" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar: Payments + Copyright & Developer Attribution -->
+  <div class="border-t border-white/10 bg-[#012a59]">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 px-4 py-6 text-xs sm:px-6 lg:px-8">
+    
+    <!-- Accepted Payments -->
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <span class="text-[#D6C7F0]/70 font-medium text-[11px] sm:text-xs">Secure Payments Accepted:</span>
+      <ul class="flex items-center gap-3 text-white" aria-label="Accepted payment methods">
+        <li><i class="fa-brands fa-cc-visa text-xl" aria-hidden="true"></i><span class="sr-only">Visa</span></li>
+        <li><i class="fa-brands fa-cc-mastercard text-xl" aria-hidden="true"></i><span class="sr-only">Mastercard</span></li>
+        <li><i class="fa-brands fa-cc-paypal text-xl" aria-hidden="true"></i><span class="sr-only">PayPal</span></li>
+        <li class="inline-flex items-center gap-1 rounded-lg bg-white/10 px-2 py-0.5 text-[10px] sm:text-[11px] font-semibold"><i class="fa-solid fa-mobile-screen-button text-[#D97706]" aria-hidden="true"></i> Western Union</li>
+      </ul>
+    </div>
+
+    <!-- Copyright & Developed By (Now Perfectly Centered) -->
+    <div class="text-center text-[#D6C7F0]/90 text-[11px] sm:text-xs space-y-2">
+      <p>
+        &copy; <span id="year">2026</span> Online Quran ilm Academy. All rights reserved.
+        <br class="sm:hidden" /> <!-- Mobile par text ko clean break dene ke liye -->
+        Design & Developed by <a href="https://abdullahwaghji.github.io/Abdullahfarooqwaghjee.com/" target="_blank" rel="noopener" class="text-white font-bold hover:text-[#D97706] transition">AFW</a>
+      </p>
+      
+      <!-- Policy Links -->
+      <div class="flex flex-wrap items-center justify-center gap-3 text-[10px] sm:text-[11px] text-[#D6C7F0]/70">
+        <a href="privacy-policy.html" class="hover:text-[#D97706] transition underline-offset-2 hover:underline">Privacy Policy</a>
+        <span>•</span>
+        <a href="terms-conditions.html" class="hover:text-[#D97706] transition underline-offset-2 hover:underline">Terms & Conditions</a>
+        <span>•</span>
+        <a href="refund-policy.html" class="hover:text-[#D97706] transition underline-offset-2 hover:underline">Refund Policy</a>
+         <span>•</span>
+        <a href="sitemap.html" class="hover:text-[#D97706] transition underline-offset-2 hover:underline">Sitemap</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
   </footer>
 
+
   <script>
-    const juzNames = [
-      "Alif Lam Meem (الم)", "Sayaqool (سَيَقُولُ)", "Tilkal Rusul (تِلْكَ الرُّسُلُ)", "Lan Tanaalo (لَنْ تَنَالُوا)", 
-      "Wal Mohsanat (وَالْمُحْصَنَاتُ)", "La Yuhibbullah (لَا يُحِبُّ اللَّهُ)", "Wa Iza Samiu (وَإِذَا سَمِعُوا)", "Wa Lau Annana (وَلَوْ أَنَّنَا)", 
-      "Qalal Malao (قَالَ الْمَلأُ)", "Wa Aalamoo (وَاعْلَمُوا)", "Yatazeroon (يَعْتَذِرُونَ)", "Wa Ma Min Daabat (وَمَا مِنْ دَابَّةٍ)", 
-      "Wa Ma Ubrioo (وَمَا أُبَرِّئُ)", "Rubama (رُبَمَا)", "Subhanallazi (سُبْحَانَ الَّذِي)", "Alam Tara (أَلَمْ تَرَ)", 
-      "Aqtarabo (اقْتَرَبَ لِلنَّاسِ)", "Qadd Aflaha (قَدْ أَفْلَحَ)", "Wa Qaalallazeena (وَقَالَ الَّذِينَ)", "A’man Khalaq (أَمَّنْ خَلَقَ)", 
-      "Utlu Ma Oohi (اتْلُ مَا أُوحِيَ)", "Wa Man Yaqnut (وَمَنْ يَقْنُتْ)", "Wa Ma Anzalna (وَمَا أَنْزَلْنَا)", "Fa Innamayuhi (فَإِنَّمَا يُحْصَى)", 
-      "Ilaihi Yuraddu (إِلَيْهِ يُرَدُّ)", "Ha Meem (حم)", "Qala Fam Khatubukum (قَالَ فَمَ خَطْبُكُمْ)", "Qad Sami Allah (قَدْ سَمِعَ اللَّهُ)", 
-      "Tabaraka Allazi (تَبَارَكَ الَّذِي)", "Amma Yatasaaloon (عَمَّ يَتَسَاءَلُونَ)"
-    ];
+  (() => {
+    'use strict';
 
-    const juzStartPages = [
-      1, 22, 42, 62, 82, 102, 122, 142, 162, 182, 
-      202, 222, 242, 262, 282, 302, 322, 342, 362, 382, 
-      402, 422, 442, 462, 482, 502, 522, 542, 562, 582
-    ];
+    const API = 'https://api.alquran.cloud/v1';
+    const BISMILLAH = 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ';
 
-    let currentPage = 1;
-    let currentFontSize = 28; // Default text size in px
+    let currentFontSize = 28;
+    let allSurahs = [];
+    let ayahStore = {};          // global ayah number -> data for modal
+    let loadToken = 0;           // guards against out-of-order responses
+    let currentView = { type: 'juz', num: 1 };
 
-    const dropdown = document.getElementById('juz-dropdown');
-    juzNames.forEach((name, index) => {
-      const opt = document.createElement('option');
-      opt.value = juzStartPages[index];
-      opt.innerText = `Juz ${index + 1} - ${name.split('(')[0]}`;
-      dropdown.appendChild(opt);
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+    /* ---------- Init ---------- */
+    document.addEventListener('DOMContentLoaded', async () => {
+      $('juzSelect').addEventListener('change', e => { $('surahSelect').value = ''; loadJuz(e.target.value); });
+      $('surahSelect').addEventListener('change', e => { if (e.target.value) { $('juzSelect').value = ''; loadSurah(e.target.value); } });
+      $('quranSearchInput').addEventListener('input', highlightKeywords);
+      $('searchBtn').addEventListener('click', highlightKeywords);
+      $('fontUp').addEventListener('click', () => changeFont(3));
+      $('fontDown').addEventListener('click', () => changeFont(-3));
+      $('saveBookmarkBtn').addEventListener('click', saveBookmark);
+      $('openBookmarkBtn').addEventListener('click', openBookmark);
+
+      // Event delegation for per-verse buttons
+      $('versesList').addEventListener('click', onVerseClick);
+
+      checkBookmark();
+      await loadSurahList();   // populate dropdown before first render (headers need names)
+      loadJuz(1);
     });
 
-    async function loadQuranPage(pageNum) {
-      currentPage = parseInt(pageNum);
-      if (currentPage < 1) currentPage = 1;
-      if (currentPage > 604) currentPage = 604;
-
-      window.history.replaceState({}, '', `library.html?page=${currentPage}`);
-
-      let currentJuzIndex = 0;
-      for (let i = 0; i < juzStartPages.length; i++) {
-        if (currentPage >= juzStartPages[i]) currentJuzIndex = i;
+    /* ---------- Surah list ---------- */
+    async function loadSurahList() {
+      try {
+        const res = await fetch(`${API}/surah`).then(r => r.json());
+        if (res.code === 200) {
+          allSurahs = res.data;
+          const sel = $('surahSelect');
+          sel.innerHTML = '<option value="">-- Or Select Surah --</option>' +
+            allSurahs.map(s => `<option value="${s.number}">Surah ${s.number}. ${esc(s.englishName)} (${esc(s.name)})</option>`).join('');
+        }
+      } catch (e) {
+        console.error('Surah list error:', e);
       }
+    }
 
-      dropdown.value = juzStartPages[currentJuzIndex];
-      document.getElementById('page-counter').innerText = `Page ${currentPage} of 604 (Juz ${currentJuzIndex + 1})`;
-      document.getElementById('juz-heading').innerText = `Juz ${currentJuzIndex + 1} (${juzNames[currentJuzIndex].split('(')[1].replace(')', '')})`;
-      document.getElementById('page-number-footer').innerText = `— ${currentPage} —`;
-      document.getElementById('page-title').innerText = `Page ${currentPage} (Juz ${currentJuzIndex + 1}) | Online Quran Ilm Academy`;
+    function getSurahMeta(num, fallback = {}) {
+      return allSurahs.find(s => s.number === num) || fallback;
+    }
 
-      // Check bookmark status
-      const savedBookmarkPage = localStorage.getItem('quran_bookmark');
-      if (savedBookmarkPage && parseInt(savedBookmarkPage) === currentPage) {
-        document.getElementById('bookmark-badge').classList.remove('hidden');
-      } else {
-        document.getElementById('bookmark-badge').classList.add('hidden');
-      }
+    /* ---------- Loaders ---------- */
+    function showLoading(msg) {
+      $('versesList').innerHTML = `<div class="text-center py-20 text-slate-400 font-medium">⌛ ${msg}</div>`;
+    }
 
-      document.getElementById('loading-spinner').style.display = 'flex';
-      document.getElementById('verses-box').style.display = 'none';
+    function showError(msg, retryCode) {
+      $('versesList').innerHTML = `
+        <div class="text-center py-12 px-4 space-y-3">
+          <p class="text-red-500 font-bold text-lg">⚠️ ${msg}</p>
+          <p class="text-slate-500 text-sm">Please check your network connection and try again.</p>
+          <button data-action="retry" data-retry="${retryCode}" class="bg-brandBlue text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors">🔄 Retry Loading</button>
+        </div>`;
+    }
+
+    async function fetchEdition(path) {
+      const [ar, en, ur] = await Promise.all([
+        fetch(`${API}/${path}/quran-uthmani`).then(r => r.json()),
+        fetch(`${API}/${path}/en.sahih`).then(r => r.json()).catch(() => null),
+        fetch(`${API}/${path}/ur.jalandhry`).then(r => r.json()).catch(() => null)
+      ]);
+      if (!ar || ar.code !== 200 || !ar.data) throw new Error('Invalid API data');
+      return {
+        arabic: ar.data,
+        english: en && en.code === 200 && en.data ? en.data.ayahs : [],
+        urdu: ur && ur.code === 200 && ur.data ? ur.data.ayahs : []
+      };
+    }
+
+    async function loadJuz(juzNum) {
+      juzNum = parseInt(juzNum, 10);
+      if (!juzNum) return;
+      const token = ++loadToken;
+      currentView = { type: 'juz', num: juzNum };
+
+      $('currentTitle').innerText = `Juz (Para) ${juzNum}`;
+      $('currentSubtitle').innerText = `Loading verses for Para ${juzNum}...`;
+      showLoading('Loading Quranic Verses & Translations...');
 
       try {
-        const res = await fetch(`https://api.quran.com/api/v4/quran/verses/uthmani?page_number=${currentPage}`);
-        const data = await res.json();
+        const d = await fetchEdition(`juz/${juzNum}`);
+        if (token !== loadToken) return;
+        renderJuz(d.arabic.ayahs, d.english, d.urdu);
+        $('currentSubtitle').innerText = `Para ${juzNum} • Total ${d.arabic.ayahs.length} Verses`;
+        localStorage.setItem('lastQuranPosition', `Juz ${juzNum}`);
+        highlightKeywords();
+      } catch (e) {
+        if (token !== loadToken) return;
+        console.error('Juz load error:', e);
+        showError('Failed to load Juz data.', `juz:${juzNum}`);
+      }
+    }
 
-        if (data && data.verses) {
-          let lines = [];
-          let currentLine = "";
-          
-          data.verses.forEach((v, idx) => {
-            currentLine += ` ${v.text_uthmani} <span class="text-xs font-sans text-brandGold">(${v.verse_key})</span> `;
-            if ((idx + 1) % Math.ceil(data.verses.length / 15) === 0 || idx === data.verses.length - 1) {
-              lines.push(currentLine);
-              currentLine = "";
-            }
-          });
+    async function loadSurah(surahNum) {
+      surahNum = parseInt(surahNum, 10);
+      if (!surahNum) return;
+      const token = ++loadToken;
+      currentView = { type: 'surah', num: surahNum };
 
-          let html = '';
-          lines.slice(0, 15).forEach(line => {
-            html += `<div class="quran-line">${line}</div>`;
-          });
+      const meta = getSurahMeta(surahNum);
+      $('currentTitle').innerText = meta.englishName ? `Surah ${surahNum}. ${meta.englishName} (${meta.name})` : `Surah ${surahNum}`;
+      $('currentSubtitle').innerText = 'Loading Surah...';
+      showLoading('Loading Surah...');
 
-          const versesBox = document.getElementById('verses-box');
-          versesBox.innerHTML = html;
-          versesBox.style.fontSize = `${currentFontSize}px`;
-        } else {
-          document.getElementById('verses-box').innerHTML = `<p class="text-center text-gray-500 font-sans">Could not load page verses.</p>`;
+      try {
+        const d = await fetchEdition(`surah/${surahNum}`);
+        if (token !== loadToken) return;
+        const s = d.arabic;
+        $('currentTitle').innerText = `Surah ${s.number}. ${s.englishName} (${s.name}) — ${s.englishNameTranslation}`;
+        $('currentSubtitle').innerText = `Revelation: ${s.revelationType} • Total Ayahs: ${s.numberOfAyahs}`;
+        renderSurah(s, d.english, d.urdu);
+        localStorage.setItem('lastQuranPosition', `Surah ${s.englishName}`);
+        highlightKeywords();
+      } catch (e) {
+        if (token !== loadToken) return;
+        console.error('Surah load error:', e);
+        showError('Failed to load Surah data.', `surah:${surahNum}`);
+      }
+    }
+
+    /* ---------- Rendering ---------- */
+    function surahHeaderHTML(num, meta) {
+      return `
+        <div class="my-8 p-5 bg-brandBlue text-white rounded-2xl shadow-md text-center space-y-1.5 border-b-4 border-brandGold">
+          <span class="text-xs font-bold text-brandGold uppercase tracking-widest bg-brandGold/20 px-3 py-1 rounded-full">Beginning of Surah</span>
+          <h3 class="font-display font-bold text-2xl text-white">Surah ${num}. ${esc(meta.englishName)} (${esc(meta.name)})</h3>
+          <p class="text-xs text-brandLilac">${esc(meta.englishNameTranslation || '')} • Revelation: ${esc(meta.revelationType || '')}</p>
+        </div>`;
+    }
+
+    function bismillahHTML(withTranslation) {
+      return `
+        <div class="text-center py-5 bg-brandLilacLight/30 rounded-2xl border border-brandLilac/40 mb-6 shadow-sm">
+          <p class="font-arabic text-2xl sm:text-3xl text-brandBlue font-bold tracking-wider" style="line-height:2">${BISMILLAH}</p>
+          ${withTranslation ? '<p class="text-xs text-slate-500 mt-1">In the name of Allah, the Entirely Merciful, the Especially Merciful</p>' : ''}
+        </div>`;
+    }
+
+    // The API prefixes the first ayah of most surahs with the Bismillah; strip it (4 words) since we show a banner.
+    function cleanArabic(text, surahNum, ayahInSurah) {
+      if (ayahInSurah === 1 && surahNum !== 1 && surahNum !== 9) {
+        const words = text.replace(/\uFEFF/g, '').trim().split(/\s+/);
+        if (words.length > 4 && normalizeAr(words.slice(0, 4).join(' ')) === normalizeAr(BISMILLAH)) {
+          return words.slice(4).join(' ');
         }
+      }
+      return text;
+    }
+
+    function renderJuz(arabicAyahs, englishAyahs, urduAyahs) {
+      const list = $('versesList');
+      ayahStore = {};
+      let html = '';
+      let lastSurah = null;
+
+      arabicAyahs.forEach((ayah, i) => {
+        const sNo = ayah.surah ? ayah.surah.number : null;
+        if (sNo && sNo !== lastSurah) {
+          lastSurah = sNo;
+          const meta = getSurahMeta(sNo, ayah.surah);
+          // Surah header only at the true start of the surah (ayah 1)
+          if (ayah.numberInSurah === 1) {
+            html += surahHeaderHTML(sNo, meta);
+            if (sNo !== 9 && sNo !== 1) html += bismillahHTML(false);
+            if (sNo === 1) html += bismillahHTML(false);
+          } else {
+            html += `<div class="my-6 p-3 bg-brandLilacLight rounded-xl border border-brandLilac text-center text-sm font-semibold text-brandBlue">
+                       Continuing Surah ${sNo}. ${esc(meta.englishName)} (${esc(meta.name)})</div>`;
+          }
+        }
+        html += verseCardHTML(ayah, englishAyahs[i], urduAyahs[i], sNo, `Juz ${currentView.num}`);
+      });
+      list.innerHTML = html;
+    }
+
+    function renderSurah(surah, englishAyahs, urduAyahs) {
+      const list = $('versesList');
+      ayahStore = {};
+      let html = surahHeaderHTML(surah.number, surah);
+      if (surah.number !== 9) html += bismillahHTML(true);
+
+      surah.ayahs.forEach((ayah, i) => {
+        html += verseCardHTML(ayah, englishAyahs[i], urduAyahs[i], surah.number, `Surah ${surah.englishName}`);
+      });
+      list.innerHTML = html;
+    }
+
+    function verseCardHTML(ayah, enObj, urObj, surahNum, contextTitle) {
+      const en = enObj ? enObj.text : '';
+      const ur = urObj ? urObj.text : '';
+      const ar = cleanArabic(ayah.text, surahNum, ayah.numberInSurah);
+
+      ayahStore[ayah.number] = { arabic: ar, english: en, urdu: ur, no: ayah.numberInSurah, surah: surahNum };
+
+      return `
+      <div id="ayah-card-${ayah.number}" class="verse-item pt-6 pb-6 border-b border-slate-100 space-y-4 transition-all duration-300 rounded-xl px-2 hover:bg-slate-50/80">
+        <div class="flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+          <span class="bg-brandLilacLight text-brandBlue px-2.5 py-1 rounded-md font-bold border border-brandLilac/30">
+            ${esc(contextTitle)} • Surah ${surahNum || ''} : Ayah ${ayah.numberInSurah}
+          </span>
+          <div class="flex items-center gap-3">
+            <button data-action="word" data-ayah="${ayah.number}"
+              class="text-brandBlue hover:text-brandGold font-semibold flex items-center gap-1 transition-colors bg-white border border-slate-200 px-2.5 py-1 rounded-lg shadow-sm">
+              🔍 Word Breakdown & Meanings
+            </button>
+            <button data-action="play" data-ayah="${ayah.number}" data-label="Surah ${surahNum} : Ayah ${ayah.numberInSurah}"
+              class="text-brandBlue hover:text-brandGold font-semibold flex items-center gap-1 transition-colors bg-brandLilacLight/50 px-3 py-1 rounded-lg">
+              ▶ Play Recitation
+            </button>
+          </div>
+        </div>
+
+        <p class="arabic-text font-arabic text-right text-slate-900" style="font-size:${currentFontSize}px; direction:rtl;">${esc(ar)}</p>
+
+        ${en ? `<p class="english-trans text-slate-600 text-xs sm:text-sm leading-relaxed text-left border-l-2 border-brandGold pl-3" dir="ltr">${esc(en)}</p>` : ''}
+        ${ur ? `<p class="urdu-trans text-slate-700 text-sm font-medium leading-loose text-right border-r-2 border-brandBlue pr-3 font-sans" dir="rtl">${esc(ur)}</p>` : ''}
+
+        <div class="bg-brandLilacLight/40 p-3 rounded-lg border border-brandLilac/20 flex flex-wrap items-center justify-between gap-2 mt-2">
+          <span class="text-xs font-semibold text-brandBlue">🎙️ Tajweed Audio Comparison Sandbox:</span>
+          <button data-action="toggle-rec" data-ayah="${ayah.number}"
+            class="bg-brandGold text-slate-900 hover:bg-yellow-500 font-bold text-xs px-3 py-1.5 rounded-md transition-all shadow-sm">
+            Record & Compare Recitation
+          </button>
+        </div>
+
+        <div id="recorder-box-${ayah.number}" class="hidden p-3 bg-white border border-brandGold/40 rounded-lg text-xs space-y-3">
+          <p class="text-slate-600 font-medium">Record your voice to check fluency, then play Qari audio side-by-side:</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <button data-action="rec-start" data-ayah="${ayah.number}" class="bg-red-500 text-white font-bold px-3 py-1.5 rounded">🔴 Start Recording</button>
+            <button data-action="rec-stop" data-ayah="${ayah.number}" class="bg-slate-700 text-white font-bold px-3 py-1.5 rounded">⏹️ Stop</button>
+            <audio id="playback-${ayah.number}" controls class="h-8 max-w-xs hidden"></audio>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    /* ---------- Click delegation ---------- */
+    function onVerseClick(e) {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const a = btn.dataset.action;
+      const n = btn.dataset.ayah;
+
+      if (a === 'play') playAudio(n, btn.dataset.label);
+      else if (a === 'word') openWordModal(n);
+      else if (a === 'toggle-rec') $('recorder-box-' + n).classList.toggle('hidden');
+      else if (a === 'rec-start') startRecord(n);
+      else if (a === 'rec-stop') stopRecord(n);
+      else if (a === 'retry') {
+        const [type, num] = btn.dataset.retry.split(':');
+        type === 'juz' ? loadJuz(num) : loadSurah(num);
+      }
+    }
+
+    /* ---------- Keyword highlight ---------- */
+    function highlightKeywords() {
+      const query = $('quranSearchInput').value.trim();
+      const counter = $('searchCount');
+      let total = 0;
+      const re = query.length >= 2 ? new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi') : null;
+
+      document.querySelectorAll('.verse-item').forEach(card => {
+        card.querySelectorAll('.arabic-text, .english-trans, .urdu-trans').forEach(p => {
+          const plain = p.textContent;
+          if (!re) { p.textContent = plain; return; }
+          const matches = plain.match(re);
+          if (matches) {
+            total += matches.length;
+            p.innerHTML = esc(plain).replace(new RegExp(`(${esc(query).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'), '<mark>$1</mark>');
+          } else {
+            p.textContent = plain;
+          }
+        });
+      });
+      counter.textContent = re ? `${total} match${total === 1 ? '' : 'es'} on this page` : '';
+    }
+
+    /* ---------- Audio ---------- */
+    function playAudio(ayahNumber, label) {
+      document.querySelectorAll('.verse-item').forEach(c => c.classList.remove('bg-brandLilacLight/80', 'ring-2', 'ring-brandGold'));
+      const card = $('ayah-card-' + ayahNumber);
+      if (card) {
+        card.classList.add('bg-brandLilacLight/80', 'ring-2', 'ring-brandGold');
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      const player = $('quranAudio');
+      player.src = `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${ayahNumber}.mp3`;
+      $('audioAyahTitle').innerText = `Playing ${label}`;
+      $('audioBar').classList.remove('hidden');
+      player.play().catch(() => {});
+    }
+
+    /* ---------- Word modal ---------- */
+    const normalizeAr = (s) => s
+      .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, '')   // harakat, tatweel, small marks
+      .replace(/[\u0671\u0622\u0623\u0625]/g, '\u0627')           // alef variants
+      .replace(/\u0649/g, '\u064A')
+      .trim();
+
+    const rawDictionary = {
+      "ٱلْحَمْدُ": "All Praise and Gratitude",
+      "لِلَّهِ": "Belongs to Allah",
+      "رَبِّ": "Lord / Master / Sustainer",
+      "ٱلْعَٰلَمِينَ": "The Worlds / All Creation",
+      "ٱلرَّحْمَٰنِ": "The Entirely Merciful",
+      "ٱلرَّحِيمِ": "The Especially Merciful",
+      "مَٰلِكِ": "Master / Owner",
+      "مَالِكِ": "Master / Owner",
+      "يَوْمِ": "Day / Period",
+      "ٱلدِّينِ": "Judgment / Recompense",
+      "إِيَّاكَ": "You Alone",
+      "نَعْبُدُ": "We Worship / Serve",
+      "وَإِيَّاكَ": "And You Alone",
+      "نَسْتَعِينُ": "We Ask For Help",
+      "ٱهْدِنَا": "Guide Us",
+      "ٱهِدْنَا": "Guide Us",
+      "ٱلصِّرَٰطَ": "The Path / Way",
+      "ٱلْمُسْتَقِيمَ": "The Straight",
+      "بِسْمِ": "In the name of",
+      "ٱللَّهِ": "Allah"
+    };
+    const dictionary = {};
+    Object.keys(rawDictionary).forEach(k => { dictionary[normalizeAr(k)] = rawDictionary[k]; });
+
+    function openWordModal(ayahNumber) {
+      const d = ayahStore[ayahNumber];
+      if (!d) return;
+      closeModal('wordAnalysisModal');
+
+      const modal = document.createElement('div');
+      modal.id = 'wordAnalysisModal';
+      modal.className = 'fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+      modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
+
+      const words = d.arabic.replace(/\uFEFF/g, '').split(/\s+/).filter(Boolean);
+      const wordHTML = words.map(w => `
+        <span data-word="${esc(w)}" class="cursor-pointer bg-brandLilacLight hover:bg-brandGold hover:text-slate-900 border border-brandLilac px-3 py-2 rounded-lg text-brandBlue font-arabic text-xl transition-all shadow-sm">${esc(w)}</span>`).join('');
+
+      modal.innerHTML = `
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-4 text-slate-800 max-h-[90vh] overflow-y-auto">
+          <div class="flex items-center justify-between border-b pb-3">
+            <h3 class="font-display font-bold text-lg text-brandBlue">Word Breakdown & Analysis (Surah ${d.surah} : Ayah ${d.no})</h3>
+            <button data-close class="text-slate-400 hover:text-slate-700 font-bold text-lg">✕</button>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-slate-500 mb-2">Tap individual Arabic words below to view their meaning:</p>
+            <div id="modalWords" class="flex flex-wrap gap-2 justify-end bg-slate-50 p-4 rounded-xl border border-slate-200" dir="rtl">${wordHTML}</div>
+            <p id="selectedWordInfo" class="text-xs text-brandBlue font-semibold mt-2 text-right">Tip: Click any word above to view its meaning.</p>
+          </div>
+          ${d.urdu ? `
+          <div class="bg-brandLilacLight/40 p-3.5 rounded-xl border border-brandLilac/50 space-y-1">
+            <p class="font-bold text-xs text-brandBlue uppercase tracking-wider">Urdu Translation (اردو ترجمہ):</p>
+            <p class="text-slate-800 text-sm font-medium font-sans leading-loose text-right" dir="rtl">${esc(d.urdu)}</p>
+          </div>` : ''}
+          ${d.english ? `
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1">
+            <p class="font-bold text-xs text-slate-600 uppercase tracking-wider">English Translation:</p>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed" dir="ltr">${esc(d.english)}</p>
+          </div>` : ''}
+          <div class="text-right pt-2">
+            <button data-close class="bg-brandBlue text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md hover:bg-slate-800 transition-colors">Close</button>
+          </div>
+        </div>`;
+
+      modal.addEventListener('click', e => {
+        if (e.target.closest('[data-close]')) { modal.remove(); return; }
+        const span = e.target.closest('[data-word]');
+        if (span) selectWord(modal, span);
+      });
+      document.body.appendChild(modal);
+    }
+
+    function selectWord(modal, el) {
+      modal.querySelectorAll('[data-word]').forEach(s => s.classList.remove('bg-brandGold', 'text-slate-900', 'ring-2', 'ring-slate-900'));
+      el.classList.add('bg-brandGold', 'text-slate-900', 'ring-2', 'ring-slate-900');
+      const word = el.dataset.word;
+      const meaning = dictionary[normalizeAr(word)];
+      $('selectedWordInfo').innerHTML = `Selected Word: <strong class="text-slate-900">${esc(word)}</strong> — ` +
+        (meaning ? esc(meaning) : 'Meaning not in the quick dictionary yet (common words like ٱلْحَمْدُ or رَبِّ are available).');
+    }
+
+    function closeModal(id) { const m = $(id); if (m) m.remove(); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal('wordAnalysisModal'); closeModal('bookmarkGuideModal'); } });
+
+    /* ---------- Voice recorder ---------- */
+    const recorders = {};
+    const chunks = {};
+
+    async function startRecord(n) {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const rec = new MediaRecorder(stream);
+        recorders[n] = rec;
+        chunks[n] = [];
+        rec.ondataavailable = e => chunks[n].push(e.data);
+        rec.onstop = () => {
+          const blob = new Blob(chunks[n], { type: rec.mimeType || 'audio/webm' });
+          const playback = $('playback-' + n);
+          if (playback) { playback.src = URL.createObjectURL(blob); playback.classList.remove('hidden'); }
+          stream.getTracks().forEach(t => t.stop());
+        };
+        rec.start();
       } catch (err) {
-        document.getElementById('verses-box').innerHTML = `<p class="text-center text-red-500 font-sans">Network error while fetching Quran API.</p>`;
+        alert('Microphone permission required.');
       }
-
-      document.getElementById('loading-spinner').style.display = 'none';
-      document.getElementById('verses-box').style.display = 'block';
     }
 
-    function onDropdownChange(pageVal) {
-      loadQuranPage(pageVal);
+    function stopRecord(n) {
+      const rec = recorders[n];
+      if (rec && rec.state !== 'inactive') rec.stop();
     }
 
-    function changePage(dir) {
-      loadQuranPage(currentPage + dir);
+    /* ---------- Font ---------- */
+    function changeFont(delta) {
+      const next = currentFontSize + delta;
+      if (next < 18 || next > 60) return;
+      currentFontSize = next;
+      document.querySelectorAll('.arabic-text').forEach(el => { el.style.fontSize = currentFontSize + 'px'; });
     }
 
-    function adjustFontSize(delta) {
-      currentFontSize += delta;
-      if (currentFontSize < 20) currentFontSize = 20;
-      if (currentFontSize > 40) currentFontSize = 40;
-      const versesBox = document.getElementById('verses-box');
-      versesBox.style.fontSize = `${currentFontSize}px`;
-    }
-
+    /* ---------- Bookmarks ---------- */
     function saveBookmark() {
-      localStorage.setItem('quran_bookmark', currentPage);
-      document.getElementById('bookmark-badge').classList.remove('hidden');
-      alert(`Page ${currentPage} successfully bookmarked!`);
+      const title = $('currentTitle').innerText;
+      localStorage.setItem('quranBookmark', JSON.stringify({ ...currentView, title }));
+      checkBookmark();
+
+      closeModal('bookmarkGuideModal');
+      const m = document.createElement('div');
+      m.id = 'bookmarkGuideModal';
+      m.className = 'fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+      m.innerHTML = `
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 text-slate-800 text-center">
+          <div class="w-12 h-12 bg-brandLilacLight text-brandBlue rounded-full flex items-center justify-center mx-auto text-2xl">🔖</div>
+          <h3 class="font-display font-bold text-xl text-brandBlue">Position Saved!</h3>
+          <p class="text-sm text-slate-600">Saved: <strong class="text-brandBlue">${esc(title)}</strong></p>
+          <div class="bg-brandLilacLight/50 p-3 rounded-xl text-xs text-slate-700 border border-brandLilac">
+            <p class="font-bold mb-1">To bookmark this page in your browser:</p>
+            <p>Press <kbd class="bg-white px-2 py-1 rounded border shadow-sm font-mono font-bold">Ctrl + D</kbd></p>
+          </div>
+          <button data-close class="w-full bg-brandBlue text-white font-bold py-2.5 rounded-xl hover:bg-slate-800 text-sm">Got it!</button>
+        </div>`;
+      m.addEventListener('click', e => { if (e.target === m || e.target.closest('[data-close]')) m.remove(); });
+      document.body.appendChild(m);
     }
 
-    function filterSurahs(query) {
-      if (!query) return;
-      const q = query.toLowerCase();
-      // Simple helper alert or navigation suggestion when typing
+    function readBookmark() {
+      try { return JSON.parse(localStorage.getItem('quranBookmark')); } catch { return null; }
     }
 
-    // Initialize from URL query
-    const urlParams = new URLSearchParams(window.location.search);
-    const p = urlParams.get('page') || urlParams.get('p');
-    if (p && !isNaN(p)) {
-      loadQuranPage(parseInt(p));
-    } else {
-      // Check if bookmark exists
-      const savedBookmark = localStorage.getItem('quran_bookmark');
-      if (savedBookmark) {
-        loadQuranPage(parseInt(savedBookmark));
-      } else {
-        loadQuranPage(1);
+    function checkBookmark() {
+      const b = readBookmark();
+      if (b && b.title) {
+        $('bookmarkStatus').innerText = `Active Bookmark: ${b.title}`;
+        $('openBookmarkBtn').classList.remove('hidden');
       }
     }
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    function openBookmark() {
+      const b = readBookmark();
+      if (!b) return;
+      if (b.type === 'surah') { $('juzSelect').value = ''; $('surahSelect').value = b.num; loadSurah(b.num); }
+      else { $('surahSelect').value = ''; $('juzSelect').value = b.num; loadJuz(b.num); }
+    }
+  })();
   </script>
 </body>
 </html>
